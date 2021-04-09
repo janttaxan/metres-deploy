@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Рассказово</title>
+  <meta name="theme-color" content="#c9e0e04d">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+  <link rel="stylesheet" href="styles/main.min.css">
+</head>
+<body class="rasskazovo">
+  <header class="headerTop">
+  <div class="container headerTop__container">
+    <a class="headerTop__logo" href="/">
+      <img class="headerTop__logoImg" src="./img/svg/logo-metres.svg" alt="logo">
+      <span class="headerTop__logoText">Новостройки Москвы и Московской Области</span>
+    </a>
+    <div class="headerTop__linksContainer">
+      <a class="headerTop__favorites" href="#favorites">
+        <svg
+          class="headerTop__favoritesIcon"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.42795 2.56581C2.35973 1.5561 3.63826 1 5.02831 1C6.06734 1 7.01889 1.3282 7.8566 1.97541C8.2793 2.3021 8.66231 2.70178 9 3.16828C9.33755 2.70192 9.7207 2.3021 10.1435 1.97541C10.9811 1.3282 11.9327 1 12.9717 1C14.3617 1 15.6404 1.5561 16.5722 2.56581C17.4928 3.56372 18 4.92701 18 6.40473C18 7.92567 17.4327 9.31791 16.2147 10.7863C15.1252 12.0998 13.5592 13.4332 11.7458 14.9772C11.1265 15.5044 10.4247 16.1021 9.69585 16.7388C9.50331 16.9072 9.25626 17 9 17C8.74388 17 8.49669 16.9072 8.30443 16.739C7.57562 16.1023 6.87332 15.5043 6.25383 14.9767C4.44067 13.433 2.87471 12.0998 1.78514 10.7862C0.567169 9.31791 0 7.92567 0 6.40459C0 4.92701 0.507156 3.56372 1.42795 2.56581Z"
+            fill="#B0558C"
+          />
+        </svg>
+        <span class="headerTop__favoritesText">Избранное</span>
+      </a>
+      <button class="headerTop__consultation">
+        Консультация
+      </button>
+    </div>
+  </div>
+</header>
+
+  <nav class="jkHeader">
+  <div class="container jkHeader__container">
+    <div class="jkHeader__menuWrapper">
+      <a class="jkHeader__logo" href="#">
+        <!-- если есть лого, вставляется img-->
+        <img class="jkHeader__logoImage" src="./img/contentJk/rasskazovo/rasskazovo-logo.svg" alt="логотип">
+
+        <!-- если нет лого, вставляется текст-->
+        <!-- <h3 class="jkHeader__logoText">Авентин</h3>-->
+      </a>
+      <ul class="jkHeader__menuList">
+        <li class="jkHeader__menuItem">
+          <a href="">Расположение</a>
+        </li>
+        <li class="jkHeader__menuItem">
+          <a href="">Квартиры</a>
+        </li>
+        <li class="jkHeader__menuItem">
+          <a href="">Отделка</a>
+        </li>
+        <li class="jkHeader__menuItem">
+          <a href="">Ход строительства</a>
+        </li>
+        <li class="jkHeader__menuItem">
+          <a href="">Условия покупки</a>
+        </li>
+        <li class="jkHeader__menuItem">
+          <a href="">Контакты</a>
+        </li>
+      </ul>
+    </div>
+    <a class="jkHeader__menuItem jkHeader__menuItem--phone" href="tel:88006488218">8 (800) 648-82-18</a>
+
+    <div class="jkHeader__mobileOptions">
+      <a class="jkHeader__mobilePhone" href="tel:88006488218">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.44136 15.6241C8.61128 18.218 11.2234 20.2603 14.2047 21.7053C15.3398 22.2433 16.8579 22.8815 18.5491 22.9909C18.654 22.9954 18.7543 23 18.8591 23C19.9942 23 20.9059 22.608 21.649 21.8011C21.6535 21.7965 21.6627 21.7874 21.6672 21.7783C21.9316 21.4592 22.2325 21.172 22.547 20.8666C22.7613 20.6614 22.9801 20.4472 23.1898 20.2283C24.1608 19.2163 24.1608 17.9308 23.1807 16.9507L20.4409 14.2109C19.976 13.7277 19.4198 13.4724 18.8363 13.4724C18.2528 13.4724 17.6921 13.7277 17.2134 14.2064L15.5814 15.8384C15.431 15.7518 15.276 15.6743 15.1301 15.6013C14.9478 15.5102 14.7791 15.4235 14.6287 15.3278C13.1426 14.3842 12.1529 13.058 10.8628 11.4762C10.2109 10.6511 9.4136 10.0535 9.10817 9.34687C9.53668 8.95939 9.93784 8.55367 10.3253 8.15707C10.4621 8.01575 10.6034 7.87443 10.7447 7.73311C11.2371 7.24078 11.5015 6.67095 11.5015 6.092C11.5015 5.51305 11.2416 4.94322 10.7447 4.45089L9.38625 3.09242C9.22669 2.93286 9.07626 2.77787 8.92127 2.61832C8.62039 2.30833 8.30585 1.98923 7.99586 1.70203C7.52632 1.24161 6.97473 1 6.39122 1C5.81227 1 5.25612 1.24161 4.76834 1.70659L3.06341 3.41152C2.44344 4.0315 2.09242 4.78367 2.01948 5.65437C1.93287 6.74389 2.13345 7.90178 2.65313 9.30129C3.4509 11.4666 4.65438 13.477 6.44136 15.6241ZM3.52948 5.71429C3.54533 5.51522 3.61566 5.1043 4.05329 4.66667L6.14853 2.57143C6.41293 2.31614 6.67234 2.57143 6.67234 2.57143C6.67234 2.57143 6.93631 2.83084 7.19615 3.09524C7.50158 3.37787 7.40997 3.3045 7.71996 3.61905C7.87495 3.7786 8.08422 3.97875 8.24377 4.14286L9.29139 5.19048C9.57402 5.47311 9.8152 5.95546 9.8152 6.2381C9.8152 6.52073 9.57402 6.47927 9.29139 6.76191C9.15007 6.90322 8.9089 7.1444 8.76758 7.28571C8.34362 7.71423 8.70245 8.21633 8.26482 8.60381C7.71996 8.33333 8.25114 8.61749 8.24203 8.62661C7.86366 9.00497 7.92292 9.36511 8.0141 9.63862C8.01865 9.6523 8.02321 9.66142 8.02777 9.67509C8.37879 10.5184 8.86656 11.3208 9.62785 12.2781C10.9954 13.9648 12.436 15.2731 14.0224 16.2806C14.2184 16.4082 14.4281 16.5085 14.6241 16.6088C14.8065 16.7 14.9751 16.7866 15.1256 16.8823C15.1438 16.8914 15.1575 16.9005 15.1757 16.9097C15.3262 16.9872 15.472 17.0236 15.6179 17.0236C15.9826 17.0236 16.3603 16.9598 16.4378 16.8823L17.1485 16.1905L18.1962 15.1429C18.4606 14.8785 18.5537 14.8196 18.8363 14.8196C18.8363 14.8196 19.066 14.9514 19.2438 15.1429L22.3866 17.7619C22.9337 18.3089 22.419 18.7544 21.8628 19.3333C21.6714 19.5385 21.5533 19.652 21.339 19.8571C21.0199 20.1671 20.7418 20.5064 20.4409 20.8666C19.9167 21.4318 19.666 21.7783 18.8591 21.7783C18.7816 21.7783 18.6933 21.7828 18.6158 21.7783C17.1205 21.6826 15.5734 20.8778 14.5295 20.381C11.694 19.0088 9.78502 17.0898 7.71996 14.619C6.01959 12.5722 4.81003 10.8994 4.05329 8.85714C3.58375 7.60352 3.45654 6.63057 3.52948 5.71429Z" fill="var(--jk-color)"/>
+        </svg>
+      </a>
+      <button class="jkHeader__mobileMenu">
+        <span class="jkHeader__mobileMenuLine"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+  <nav class="jkAnchorsNav lock-padding">
+  <div class="container">
+    <h3 class="jkAnchorsNav__title">ЖК «Рассказово»</h3>
+    <div class="jkAnchorsNav__scrollWrapper swiper-container">
+      <ul class="jkAnchorsNav__list swiper-wrapper">
+        <li class="jkAnchorsNav__item swiper-slide">
+          <a class="jkAnchorsNav__itemLink" href="#jkAbout">О ЖК</a>
+        </li>
+        <li class="jkAnchorsNav__item swiper-slide">
+          <a class="jkAnchorsNav__itemLink" href="#jkAdvantages">Преимущества</a>
+        </li>
+        <li class="jkAnchorsNav__item swiper-slide">
+          <a class="jkAnchorsNav__itemLink" href="#jkPromo">Скидки и акции</a>
+        </li>
+        <li class="jkAnchorsNav__item swiper-slide">
+          <a class="jkAnchorsNav__itemLink" href="#jkDocuments">Документация</a>
+        </li>
+        <li class="jkAnchorsNav__item swiper-slide">
+          <a class="jkAnchorsNav__itemLink" href="#jkDeveloper">О застройщике</a>
+        </li>
+        <li class="jkAnchorsNav__item swiper-slide">
+          <a class="jkAnchorsNav__itemLink" href="#jkOtherProjects">Похожие ЖК</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <main>
+    <div class="jkPreviewWrapper">
+  <section class="jkPreview" style="background-image: url('./img/contentJk/rasskazovo/preview.jpg')">
+    <div class="container jkPreview__container">
+      <div class="jkPreview__info">
+        <h1 class="jkPreview__heading">ЖК «Рассказово»</h1>
+        <p class="jkPreview__descr">
+          Жилой комплекс расположен на территории Новой Москвы.
+          В 15 минутах пешком от метро «Рассказовка» или 15 минутах
+          на автомобиле от станции метро «Саларьево».
+        </p>
+        <div class="jkPreview__featuresWrapper">
+          <ul class="jkPreview__featuresList">
+
+            <!--метро-->
+            <li class="jkPreview__featuresItem">
+              <div class="jkPreview__featuresIcon">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.3274 1.95688L10.6177 11.4847L3.76377 2.17851L0 17.7607H5.09335L6.02651 12.7771L10.5347 19.0432L15.0194 12.9145L15.9217 17.7882H21L17.3274 1.95688Z"
+                    fill="#FF3342"/>
+                </svg>
+              </div>
+              <div class="jkPreview__featuresText">
+                <h3 class="jkPreview__featuresTitle">м Домодедовская</h3>
+                <p class="jkPreview__featuresDescr">20 мин. на автомобиле</p>
+              </div>
+            </li>
+
+            <!--стоимость-->
+            <li class="jkPreview__featuresItem">
+              <div class="jkPreview__featuresIcon">
+                <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0)">
+                    <path d="M0.293156 11.9801L6.97004 3.86422C7.14273 3.66278 7.40172 3.49008 7.66075 3.43254L10.8265 2.77062C11.4309 1.10135 13.0138 0.00775146 14.7981 0.00775146C17.1005 0.00775146 19 1.87843 19 4.18079C19 6.25295 17.4171 8.00851 15.3738 8.29629V9.64895C15.3738 9.93676 15.2586 10.1958 15.086 10.426L8.38024 18.5419C7.94856 19.0599 7.17149 19.1463 6.65347 18.7146L0.465815 13.7069C0.206789 13.5055 0.0628834 13.2176 0.00534248 12.8723C-0.023447 12.5557 0.0628834 12.2391 0.293156 11.9801ZM15.4025 3.31742L15.3737 7.69194C17.1005 7.43292 18.4244 5.93638 18.4244 4.18083C18.4244 2.19503 16.7839 0.583342 14.7981 0.583342C13.3591 0.583342 12.1216 1.38917 11.5173 2.62671L13.9348 2.10866C14.3377 2.02234 14.7694 2.16624 15.0572 2.45402C15.2874 2.68425 15.4025 3.00082 15.4025 3.31742ZM0.811169 13.2464L7.02762 18.2829C7.31543 18.5131 7.74711 18.4556 7.94856 18.1966L14.6543 10.0519C14.7406 9.93676 14.7982 9.79286 14.7982 9.64895V8.32507C14.0499 8.32507 13.3592 8.15238 12.7548 7.80702C12.0641 8.29629 11.1431 8.2675 10.51 7.74945C9.70415 7.11628 9.58904 6.02268 10.251 5.18806C10.8841 4.38224 12.0641 4.29591 12.8411 4.92904C13.5894 5.53342 13.7333 6.59827 13.1865 7.3753C13.6757 7.60554 14.2225 7.74945 14.7981 7.74945C14.7981 7.74945 14.7981 7.74945 14.8269 7.74945L14.8557 3.31735C14.8557 3.14465 14.7981 2.97199 14.6543 2.85688C14.5104 2.71297 14.2801 2.62664 14.0499 2.68418L7.80465 3.97934C7.66075 4.00813 7.51684 4.09446 7.43051 4.20958L0.72484 12.3255C0.609722 12.4982 0.580933 12.6421 0.580933 12.8147C0.609722 12.9874 0.696051 13.1313 0.811169 13.2464ZM12.6972 7.08756C13.1002 6.54076 13.0138 5.79248 12.4958 5.38955C12.1792 5.13052 11.7763 5.0154 11.3158 5.15931C11.5173 5.93638 12.0065 6.62709 12.6972 7.08756ZM10.7978 5.47588C10.2797 6.02268 10.2797 6.82854 10.8841 7.31776C11.2582 7.63433 11.7763 7.69191 12.2368 7.49046C11.546 6.97245 11.0568 6.28174 10.7978 5.47588Z" fill="var(--jk-color)"/>
+                    <path d="M4.1213 10.3403C4.20762 10.2252 4.40911 10.1964 4.52423 10.3115L9.21531 14.1105C9.33043 14.1968 9.35922 14.3983 9.2441 14.5134C9.15777 14.6285 8.95629 14.6573 8.84117 14.5422L4.15008 10.7433C4.03497 10.6569 4.00618 10.4842 4.1213 10.3403Z" fill="var(--jk-color)"/>
+                    <path d="M5.5881 8.58475C5.67442 8.46963 5.87591 8.44084 5.99103 8.55596L10.6821 12.3549C10.7972 12.4412 10.826 12.6427 10.7109 12.7578C10.6246 12.8729 10.4231 12.9017 10.308 12.7866L5.61688 8.98768C5.50177 8.87256 5.50177 8.69987 5.5881 8.58475Z" fill="var(--jk-color)"/>
+                    <path d="M2.56658 12.211C2.68169 12.0959 2.85439 12.0671 2.96951 12.1534L7.66063 15.9812C7.77574 16.0675 7.80453 16.269 7.68942 16.3841C7.60309 16.4992 7.4016 16.528 7.28648 16.4129L2.5954 12.6139C2.48025 12.5276 2.45146 12.3261 2.56658 12.211Z" fill="var(--jk-color)"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="19" height="19" fill="white" transform="matrix(-1 0 0 1 19 0)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="jkPreview__featuresText">
+                <h3 class="jkPreview__featuresTitle">От 3 млн. ₽</h3>
+                <p class="jkPreview__featuresDescr">Стоимость квартир</p>
+              </div>
+            </li>
+
+            <!--площадь-->
+            <li class="jkPreview__featuresItem">
+              <div class="jkPreview__featuresIcon">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19.4028 20.7183V26H26V11.9155M26 11.9155H21.4861V8.69231M26 11.9155V1H1V9.45071M15.5833 20.7183H9.68056M9.68056 20.7183H1V9.45071M9.68056 20.7183V17.3462M1 9.45071H9.68056V3.46479V11.9155M9.68056 14.0282V11.9155M9.68056 11.9155H18.3611"
+                    stroke="var(--jk-color)"/>
+                </svg>
+              </div>
+              <div class="jkPreview__featuresText">
+                <h3 class="jkPreview__featuresTitle">От 45 м<sup>2</sup></h3>
+                <p class="jkPreview__featuresDescr">Площадь квартир</p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <a class="jkPreview__btn" href="#chooseFlat">
+        Выбрать квартиру
+      </a>
+    </div>
+  </section>
+</div>
+
+<div class="container">
+  <p class="jkPreview__descrMobile">
+    Жилой комплекс расположен на территории Новой Москвы.
+    В 15 минутах пешком от метро «Рассказовка» или 15 минутах
+    на автомобиле от станции метро «Саларьево».
+  </p>
+</div>
+
+    <section class="jkTriggers">
+  <div class="container">
+    <ul class="jkTriggers__list">
+
+      <li class="jkTriggers__item jkTriggers__item--st">
+        <a class="jkTriggers__link" href="">
+          <h3 class="jkTriggers__title">Студии</h3>
+          <span class="jkTriggers__area">18 — 28 м<sup>2</sup></span>
+          <span class="jkTriggers__price">
+            от <span class="jkTriggers__priceNum">1.6</span> млн ₽
+          </span>
+          <span class="jkTriggers__icon"></span>
+        </a>
+      </li>
+
+      <li class="jkTriggers__item jkTriggers__item--1k">
+        <a class="jkTriggers__link" href="">
+          <h3 class="jkTriggers__title">1 комнатные</h3>
+          <span class="jkTriggers__area">35.4 — 44.4 м<sup>2</sup></span>
+          <span class="jkTriggers__price">
+            от <span class="jkTriggers__priceNum">7.4</span> млн ₽
+          </span>
+          <span class="jkTriggers__icon"></span>
+        </a>
+      </li>
+
+      <li class="jkTriggers__item jkTriggers__item--2k">
+        <a class="jkTriggers__link" href="">
+          <h3 class="jkTriggers__title">2 комнатные</h3>
+          <span class="jkTriggers__area">53.6 — 66.2 м<sup>2</sup></span>
+          <span class="jkTriggers__price">
+            от <span class="jkTriggers__priceNum">10.7</span> млн ₽
+          </span>
+          <span class="jkTriggers__icon"></span>
+        </a>
+      </li>
+
+      <li class="jkTriggers__item jkTriggers__item--3k">
+        <a class="jkTriggers__link" href="">
+          <h3 class="jkTriggers__title">3 комнатные</h3>
+          <span class="jkTriggers__area">78.2 — 88.6 м<sup>2</sup></span>
+          <span class="jkTriggers__price">
+            от <span class="jkTriggers__priceNum">11.6</span> млн ₽
+          </span>
+          <span class="jkTriggers__icon"></span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+    <section class="jkAbout" id="jkAbout">
+  <div class="container">
+    <!--  .jkAbout__textBlock  -->
+    <div class="textBlock jkAbout__textBlock">
+
+  <div class="textBlock__head">
+    <h2 class="textBlock__heading">
+      «Рассказово» — продуманный до мелочей жилой комплекс
+    </h2>
+    <a class="textBlock__videoBtn" href="">
+      <span class="textBlock__videoIcon"></span>
+      <span class="textBlock__videoText">Видео о ЖК</span>
+    </a>
+  </div>
+
+  <div class="textBlock__content showHideContent">
+    <p class="textBlock__p">
+      Уникальность комплекса в его архитектуре все дома построены в стиле Москвы 30-х годов, создавая неповторимое
+      ощущение присутствия романтики того времени. Роскошные входные группы, отделанные мрамором, с высотой потолков 4,5
+      м, белыми лепными карнизами и стойкой ресепшн с авторской отделкой создают атмосферу уюта, полностью отражая дух и
+      воплощение уникальной архитектурной концепции 30-40 годов, являясь ее логическим продолжением.
+    </p>
+    <p class="textBlock__p">
+      Преимущество локации заключается в благоприятной экологической обстановке с трех сторон комплекс окружен
+      Ульяновским лесопарком и отсутствием промышленных предприятий, обеспечивая жителей чистым воздухом. До ближайшей
+      станции метро "Рассказовка" всего 850 метров, а до центра можно доехать за 30 минут.
+    </p>
+    <p class="textBlock__p">
+      Проект предполагает комплексное освоение территории, создание комфортной жилой застройки с развитой качественной
+      инфраструктурой:
+    </p>
+
+    <ul class="textBlock__list markList">
+      <li class="markList__item">
+        большое количество парковочных мест предусмотрены как закрытые подземные
+        паркинги, так и крытые наземные парковки с дополнительно выделенными открытыми
+        парковочными местами возле домов;
+      </li>
+      <li class="markList__item">
+        круглосуточно охраняемая территория, закрытая от посторонних для безопасности
+        каждого жителя;
+      </li>
+      <li class="markList__item">
+        двор-парк без машин, где можно не переживать за играющих детей;
+      </li>
+      <li class="markList__item">
+        социальные объекты: своя поликлиника, детские сады и школы;
+      </li>
+      <li class="markList__item">
+        здоровая среда: воркаут - площадки, обустроенные места для занятий спортом на свежем
+        воздухе, живописные места для утренних пробежек, велосипедные маршруты любой
+        сложности;
+      </li>
+      <li class="markList__item">
+        благоустроенная набережная лесного озера для тихих прогулок или семейного отдыха;
+      </li>
+      <li class="markList__item">
+        коммерческие объекты действующие магазины, кафе и салоны красоты.
+      </li>
+    </ul>
+
+
+    <div class="textBlock__rating">
+      <fieldset class="textBlock__ratingFieldset">
+        <legend class="textBlock__ratingTitle">Рейтинг пользователей</legend>
+        <div class="textBlock__ratingWrapper">
+          <div class="textBlock__ratingGroup">
+            <input class="textBlock__ratingInput" type="radio" name="rating" id="rating-1" value="1">
+            <label class="textBlock__ratingStar" for="rating-1" aria-label="Ужасно"></label>
+
+            <input class="textBlock__ratingInput" type="radio" name="rating" id="rating-2" value="2">
+            <label class="textBlock__ratingStar" for="rating-2" aria-label="Сносно"></label>
+
+            <input class="textBlock__ratingInput" type="radio" name="rating" id="rating-3" value="3">
+            <label class="textBlock__ratingStar" for="rating-3" aria-label="Нормально"></label>
+
+            <input class="textBlock__ratingInput" type="radio" name="rating" id="rating-4" value="4" checked>
+            <label class="textBlock__ratingStar" for="rating-4" aria-label="Хорошо"></label>
+
+            <input class="textBlock__ratingInput" type="radio" name="rating" id="rating-5" value="5">
+            <label class="textBlock__ratingStar" for="rating-5" aria-label="Отлично"></label>
+
+          </div>
+          <span class="textBlock__ratingInfo">4.63 (23 отзыва)</span>
+        </div>
+      </fieldset>
+      <a class="textBlock__ratingLink" href="">Перейти ко всем отзывам</a>
+    </div>
+
+
+    <div class="textBlock__toOfficial">
+      <p class="textBlock__toOfficialText">Официальный сайт ЖК Рассказово</p>
+      <a class="textBlock__toOfficialLink" href="">https://sz-rasskazovo.ru/</a>
+    </div>
+  </div>
+
+  <button class="textBlock__showHide showHideBtn">
+    <span class="textBlock__showHideText">Читать дальше</span>
+    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 4.5L9 9.5L14 4.5" stroke="var(--jk-color)" stroke-width="1.5"/>
+    </svg>
+  </button>
+
+</div>
+
+
+    <!--  .jkAbout__tableInfo  -->
+    <ul class="tableInfo jkAbout__tableInfo">
+  <li class="tableInfo__item">
+    <span class="tableInfo__prop">Срок сдачи</span>
+    <span class="tableInfo__value">I кв.2021 — I кв.2024; есть сданные.</span>
+  </li>
+  <li class="tableInfo__item">
+    <span class="tableInfo__prop">Количество корпусов</span>
+    <span class="tableInfo__value">10</span>
+  </li>
+  <li class="tableInfo__item">
+    <span class="tableInfo__prop">Отделка</span>
+    <span class="tableInfo__value">Без отделки</span>
+  </li>
+  <li class="tableInfo__item">
+    <span class="tableInfo__prop">Класс жилья</span>
+    <span class="tableInfo__value">Комфорт</span>
+  </li>
+  <li class="tableInfo__item">
+    <span class="tableInfo__prop">Тип дома</span>
+    <span class="tableInfo__value">Монолит</span>
+  </li>
+  <li class="tableInfo__item">
+    <span class="tableInfo__prop">Этажность</span>
+    <span class="tableInfo__value">9 — 11</span>
+  </li>
+  <li class="tableInfo__item">
+    <span class="tableInfo__prop">Парковка</span>
+    <span class="tableInfo__value">Наземные и подземные паркинги</span>
+  </li>
+</ul>
+
+
+    <!--  .jkAbout__sliderBlock  -->
+    <div class="swiper-container sliderBlock">
+  <div class="swiper-wrapper sliderBlock__wrapper">
+
+    <div class="swiper-slide sliderBlock__slide">
+      <img
+        class="sliderBlock__slideImage"
+        src="img/contentJk/rasskazovo/aboutSlide-1.jpg"
+        alt="Изображение галереи"
+      >
+      <p class="sliderBlock__slideText">
+        Во всех кварталах высажены уникальные деревья с самых экзотических мест
+        мира уникальные деревья мира мира уникальные деревья мира
+      </p>
+    </div>
+
+    <div class="swiper-slide sliderBlock__slide">
+      <img
+        class="sliderBlock__slideImage"
+        src="img/contentJk/rasskazovo/aboutSlide-2.jpg"
+        alt="Изображение галереи"
+      >
+      <p class="sliderBlock__slideText">
+        Феномен толпы неравномерен. Политическая легитимность интегрирует политический процесс в современной России.
+        В данном случае можно согласиться с Данилевским, считавшим, что политическое учение Руссо приводит
+        постиндустриализм.
+      </p>
+    </div>
+
+    <div class="swiper-slide sliderBlock__slide">
+      <img
+        class="sliderBlock__slideImage"
+        src="img/contentJk/rasskazovo/aboutSlide-1.jpg"
+        alt="Изображение галереи"
+      >
+    <!-- Текст может отсутствовать -->
+    </div>
+
+    <div class="swiper-slide sliderBlock__slide">
+      <img
+        class="sliderBlock__slideImage"
+        src="img/contentJk/rasskazovo/aboutSlide-2.jpg"
+        alt="Изображение галереи"
+      >
+      <p class="sliderBlock__slideText">
+        Во всех кварталах высажены уникальные деревья с самых экзотических мест
+        мира уникальные деревья мира мира уникальные деревья мира
+      </p>
+    </div>
+
+    <div class="swiper-slide sliderBlock__slide">
+      <img
+        class="sliderBlock__slideImage"
+        src="img/contentJk/rasskazovo/aboutSlide-1.jpg"
+        alt="Изображение галереи"
+      >
+      <p class="sliderBlock__slideText">
+        Во всех кварталах высажены уникальные деревья с самых экзотических мест
+        мира уникальные деревья мира мира уникальные деревья мира
+      </p>
+    </div>
+
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination sliderBlock__pagination"></div>
+  <!-- Add Arrows -->
+  <button class="swiper-button-next sliderBlock__btnNext">
+    <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 10L4.40945 6.16436C4.74624 5.78548 4.74624 5.21452 4.40945 4.83564L1 1" stroke="white"
+            stroke-width="1.5"/>
+    </svg>
+  </button>
+  <button class="swiper-button-prev sliderBlock__btnPrev">
+    <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 10L1.59055 6.16436C1.25376 5.78548 1.25376 5.21452 1.59055 4.83564L5 1" stroke="white"
+            stroke-width="1.5"/>
+    </svg>
+  </button>
+</div>
+
+
+    <div class="videoModal">
+  <div class="videoModal__body">
+    <div class="videoModal__content">
+      <button class="videoModal__close">
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="30.8355" height="3.01242"
+                transform="matrix(0.705401 -0.708809 0.705401 0.708809 0.121094 21.8564)" fill="#fff"/>
+          <rect width="30.8354" height="3.01242"
+                transform="matrix(0.706124 0.708088 -0.706124 0.708088 2.12695 0.0372772)" fill="#fff"/>
+        </svg>
+      </button>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+    <section class="jkAdvantages" id="jkAdvantages">
+  <div class="container">
+
+    <div class="jkAdvantages__head">
+      <h2 class="jkAdvantages__heading">Преимущества</h2>
+      <div class="jkAdvantages__navigation">
+        <button class="swiper-button-prev jkAdvantages__btnPrev">
+          <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 10L1.59055 6.16436C1.25376 5.78548 1.25376 5.21452 1.59055 4.83564L5 1"
+                  stroke="var(--jk-color)" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <button class="swiper-button-next jkAdvantages__btnNext">
+          <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 9.99927L4.40945 6.16363C4.74624 5.78475 4.74624 5.21379 4.40945 4.8349L1 0.999268"
+                  stroke="var(--jk-color)" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="swiper-container jkAdvantages__slider">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide jkAdvantages__slide">
+          <img
+            class="jkAdvantages__slideImage"
+            src="img/contentJk/rasskazovo/advantages-1.jpg"
+            alt="Развитая инфраструктура"
+          >
+          <h3 class="jkAdvantages__slideTitle">Развитая инфраструктура</h3>
+          <p class="jkAdvantages__slideDescr">
+            Закрытый двор-парк без машин с зонами отдыха, детскими и спортивными площадками.
+          </p>
+        </div>
+
+        <div class="swiper-slide jkAdvantages__slide">
+          <img
+            class="jkAdvantages__slideImage"
+            src="img/contentJk/rasskazovo/advantages-2.jpg"
+            alt="Развитая инфраструктура"
+          >
+          <h3 class="jkAdvantages__slideTitle">Лесопарк с трех сторон</h3>
+          <p class="jkAdvantages__slideDescr">
+            С трех сторон комплекс окружен Ульяновским лесопарком.
+          </p>
+        </div>
+
+        <div class="swiper-slide jkAdvantages__slide">
+          <img
+            class="jkAdvantages__slideImage"
+            src="img/contentJk/rasskazovo/advantages-3.jpg"
+            alt="Развитая инфраструктура"
+          >
+          <h3 class="jkAdvantages__slideTitle">Транспортная доступность</h3>
+          <p class="jkAdvantages__slideDescr">
+            Жилой комплекс расположен в 850 метров от станции метро «Рассказово»
+          </p>
+        </div>
+
+        <div class="swiper-slide jkAdvantages__slide">
+          <img
+            class="jkAdvantages__slideImage"
+            src="img/contentJk/rasskazovo/advantages-4.jpg"
+            alt="Развитая инфраструктура"
+          >
+          <h3 class="jkAdvantages__slideTitle">Развитая инфраструктура</h3>
+          <p class="jkAdvantages__slideDescr">
+            Закрытый двор-парк без машин с зонами отдыха, детскими и спортивными площадками.
+          </p>
+        </div>
+
+        <div class="swiper-slide jkAdvantages__slide">
+          <img
+            class="jkAdvantages__slideImage"
+            src="img/contentJk/rasskazovo/advantages-1.jpg"
+            alt="Развитая инфраструктура"
+          >
+          <h3 class="jkAdvantages__slideTitle">Развитая инфраструктура</h3>
+          <p class="jkAdvantages__slideDescr">
+            Закрытый двор-парк без машин с зонами отдыха, детскими и спортивными площадками.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="jkPromo" id="jkPromo">
+  <div class="container">
+    <h2 class="jkPromo__heading">Скидки и акции</h2>
+
+    <ul class="jkPromo__list">
+      <li class="jkPromo__listItem">
+        <a class="jkPromo__listLink" href="">
+          Ипотека на квартиры 4,5% до 20 марта
+        </a>
+      </li>
+      <li class="jkPromo__listItem">
+        <a class="jkPromo__listLink" href="">
+          Специальные условия при 100% оплате или ипотеке.
+        </a>
+      </li>
+      <li class="jkPromo__listItem">
+        <a class="jkPromo__listLink" href="">
+          При 50% первоначальном взносе — рассрочка от полугода.
+        </a>
+      </li>
+      <li class="jkPromo__listItem">
+        <a class="jkPromo__listLink" href="">
+          Материнский капитал
+        </a>
+      </li>
+    </ul>
+
+    <div class="jkPromo__help">
+      <span class="jkPromo__helpText">
+        Узнайте про персональные условия и дополнительные скидки по телефону:
+      </span>
+      <div class="jkPromo__helpLinks">
+        <a class="jkPromo__helpPhone" href="+74996488218">+7 (499) 648-82-18</a>
+        <a class="jkPromo__helpBtn" href="#modal?">Перезвоните мне</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="jkDocuments" id="jkDocuments">
+  <div class="container">
+    <h2 class="jkDocuments__heading">Проектная документация</h2>
+    <p class="jkDocuments__decsr">
+      В рамках исполнения требований 214 ФЗ актуальная документация по проекту размещена на сайте:
+      <a class="jkDocuments__link" href="https://наш.дом.рф">https://наш.дом.рф</a>
+    </p>
+  </div>
+</section>
+
+    <section class="jkDeveloper" id="jkDeveloper">
+  <div class="container jkDeveloper__container">
+    <h2 class="jkDeveloper__heading">Застройщик Sezar Group</h2>
+    <p class="jkDeveloper__subtitle">
+      Sezar Group — многопрофильный девелопер, работающий на рынке с 2003 года.
+    </p>
+
+    <div class="jkDeveloper__content showHideContent">
+      <p class="jkDeveloper__descr">
+        В настоящее время площадь проектов в стадии освоения — более 800 тыс. кв. м. В 2017 году холдинг Sezar Group
+        вошел в топ-10 девелоперов по количеству реализуемых квартир в Москве. Холдинг начал свою деятельность в
+        сегментах коммерческой и торговой недвижимости. В числе реализованных проектов: бизнес-центр класса B «Фортуна»,
+        ресторанный комплекс «Парадайz», ТРЦ «Мариэль». С 2012 года работает в сегменте жилой недвижимости.
+      </p>
+
+      <p class="jkDeveloper__descr">
+        Аллегро образует целотоновый соноропериод. Нота, так или иначе, изящно иллюстрирует звукоряд.
+      </p>
+
+      <ul class="jkDeveloper__list markList">
+        <li class="markList__item">
+          Доминантсептаккорд, как бы это ни казалось парадоксальным, варьирует хамбакер. Интервально-прогрессийная
+          континуальная форма, в том числе, изящно имитирует звукоряд.
+        </li>
+        <li class="markList__item">
+          Как мы уже знаем, глиссандирующая ритмоформула возможна.
+        </li>
+        <li class="markList__item">
+          Громкостнoй прогрессийный период, на первый взгляд, начинает автономный open-air, хотя это довольно часто
+          напоминает песни Джима Моррисона и Патти Смит.
+        </li>
+      </ul>
+
+    </div>
+
+    <button class="jkDeveloper__showHide showHideBtn">
+      <span class="jkDeveloper__showHideText">Читать дальше</span>
+      <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 4.5L9 9.5L14 4.5" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+
+    <a class="jkDeveloper__link" href="#to-all-jk">
+      <img class="jkDeveloper__linkImage" src="img/svg/logo-sezar.svg" alt="логотип">
+      <span class="jkDeveloper__linkText">Новостройки от застройщика</span>
+    </a>
+
+  </div>
+</section>
+
+
+    <section class="jkOtherProjects" id="jkOtherProjects">
+  <div class="container">
+    <h2 class="jkOtherProjects__heading">Вам может быть интересно</h2>
+    <ul class="jkOtherProjects__list">
+
+      <li class="jkOtherProjects__item">
+        <a class="jkOtherProjects__itemLink" href="">
+          <div class="jkOtherProjects__itemImageWrapper">
+            <img
+              class="jkOtherProjects__itemImage"
+              src="img/contentJk/aventin/preview.jpg"
+              alt="ЖК «Авентин»"
+            >
+          </div>
+          <div class="jkOtherProjects__itemInfo">
+            <h3 class="jkOtherProjects__itemTitle">ЖК «Авентин»</h3>
+            <div class="jkOtherProjects__itemLoaction">
+              <span class="jkOtherProjects__itemMetro">Бульвар Дмитрия Донского</span>
+
+              <!-- если пешком '--onFoot' -->
+              <!-- если на машине '--byCar' -->
+              <span class="jkOtherProjects__itemTimeToMetro jkOtherProjects__itemTimeToMetro--onFoot">40&nbsp;мин</span>
+            </div>
+            <span class="jkOtherProjects__itemPrice">От 6.2 млн ₽</span>
+          </div>
+        </a>
+      </li>
+
+      <li class="jkOtherProjects__item">
+        <a class="jkOtherProjects__itemLink" href="">
+          <div class="jkOtherProjects__itemImageWrapper">
+            <img
+              class="jkOtherProjects__itemImage"
+              src="img/contentJk/someJk/preview.jpg"
+              alt="ЖК «Авентин»"
+            >
+          </div>
+          <div class="jkOtherProjects__itemInfo">
+            <h3 class="jkOtherProjects__itemTitle">Еще пример жилого комплекса</h3>
+            <div class="jkOtherProjects__itemLoaction">
+              <span class="jkOtherProjects__itemMetro">Домодедовская</span>
+
+              <!-- если пешком '--onFoot' -->
+              <!-- если на машине '--byCar' -->
+              <span class="jkOtherProjects__itemTimeToMetro jkOtherProjects__itemTimeToMetro--byCar">8&nbsp;мин</span>
+            </div>
+            <span class="jkOtherProjects__itemPrice">От 6.2 млн ₽</span>
+          </div>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+  </main>
+
+  <nav class="jkMobileMenu">
+  <header class="jkMobileMenu__header">
+    <div class="container jkMobileMenu__headerContainer">
+      <a class="jkMobileMenu__logo" href="#">
+        <!-- если есть лого, вставляется img-->
+        <img class="jkMobileMenu__logoImage" src="./img/contentJk/rasskazovo/rasskazovo-logo.svg" alt="логотип">
+
+        <!-- если нет лого, вставляется текст-->
+        <!-- <h3 class="jkMobileMenu__logoText">Авентин</h3>-->
+      </a>
+
+      <button class="jkMobileMenu__close">
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="30.8355" height="3.01242"
+                transform="matrix(0.705401 -0.708809 0.705401 0.708809 0.121094 21.8564)" fill="#121212"/>
+          <rect width="30.8354" height="3.01242"
+                transform="matrix(0.706124 0.708088 -0.706124 0.708088 2.12695 0.0372772)" fill="#121212"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="jkMobileMenu__body">
+    <div class="container">
+      <ul class="jkMobileMenu__list">
+        <li class="jkMobileMenu__listItem">
+          <a href="">Расположение</a>
+        </li>
+        <li class="jkMobileMenu__listItem">
+          <a href="">Квартиры</a>
+        </li>
+        <li class="jkMobileMenu__listItem">
+          <a href="">Отделка</a>
+        </li>
+        <li class="jkMobileMenu__listItem">
+          <a href="">Ход строительства</a>
+        </li>
+        <li class="jkMobileMenu__listItem">
+          <a href="">Условия покупки</a>
+        </li>
+        <li class="jkMobileMenu__listItem">
+          <a href="">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="jkMobileMenu__footer">
+    <div class="container">
+      <a class="jkMobileMenu__phone" href="+78006488218">8 (800) 648-82-18</a>
+    </div>
+  </footer>
+</nav>
+
+  <footer class="footer">
+  <div class="container footer__container">
+
+    <div class="footer__listsWrapper">
+      <div class="footer__coreListWrapper">
+        <h4 class="footer__listTitle">Новостройки</h4>
+        <ul class="footer__list">
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Новостройки Москвы</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Новостройки Новой Москвы</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Новостройки Подмосковья</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">По районам Москвы</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">По метро</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">По городам Московской области</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__extraListWrapper">
+        <ul class="footer__list">
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Пользовательское соглашение</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Скидки и акции</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Карта сайта</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <a class="footer__phone" href="+78006488218">8 (800) 648-82-18</a>
+
+    <span class="footer__copy">&copy;&nbsp;2021, Метры.ру</span>
+  </div>
+</footer>
+
+<script src="js/main.min.js"></script>
+<script src="js/jkTemplate.min.js"></script>
+<script src="js/vendor.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Home page</title>
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+  <link rel="stylesheet" href="styles/main.min.css">
+
+  <style>
+    .homeP {
+      margin: 24px 0 0;
+      padding: 12px;
+      border: 1px solid #f5eca1;
+      background-color: #FFFAE2;
+      max-width: 440px;
+      font-size: 14px;
+      color: var(--grey-2);
+      border-radius: 8px;
+    }
+
+    .homeLinks {
+      padding: 32px 0;
+    }
+
+    .homeLink {
+      display: block;
+      padding: 24px 32px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      margin: 0 0 8px;
+      border-radius: 10px;
+    }
+
+    .homeLink:hover {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .homeLink h4 {
+      font-size: 24px;
+      margin: 0 0 12px;
+    }
+
+    .homeLink p {
+      color: var(--grey-2);
+    }
+
+  </style>
+</head>
+<body>
+<header class="headerTop">
+  <div class="container headerTop__container">
+    <a class="headerTop__logo" href="/">
+      <img class="headerTop__logoImg" src="./img/svg/logo-metres.svg" alt="logo">
+      <span class="headerTop__logoText">Новостройки Москвы и Московской Области</span>
+    </a>
+    <div class="headerTop__linksContainer">
+      <a class="headerTop__favorites" href="#favorites">
+        <svg
+          class="headerTop__favoritesIcon"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.42795 2.56581C2.35973 1.5561 3.63826 1 5.02831 1C6.06734 1 7.01889 1.3282 7.8566 1.97541C8.2793 2.3021 8.66231 2.70178 9 3.16828C9.33755 2.70192 9.7207 2.3021 10.1435 1.97541C10.9811 1.3282 11.9327 1 12.9717 1C14.3617 1 15.6404 1.5561 16.5722 2.56581C17.4928 3.56372 18 4.92701 18 6.40473C18 7.92567 17.4327 9.31791 16.2147 10.7863C15.1252 12.0998 13.5592 13.4332 11.7458 14.9772C11.1265 15.5044 10.4247 16.1021 9.69585 16.7388C9.50331 16.9072 9.25626 17 9 17C8.74388 17 8.49669 16.9072 8.30443 16.739C7.57562 16.1023 6.87332 15.5043 6.25383 14.9767C4.44067 13.433 2.87471 12.0998 1.78514 10.7862C0.567169 9.31791 0 7.92567 0 6.40459C0 4.92701 0.507156 3.56372 1.42795 2.56581Z"
+            fill="#B0558C"
+          />
+        </svg>
+        <span class="headerTop__favoritesText">Избранное</span>
+      </a>
+      <button class="headerTop__consultation">
+        Консультация
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <p class="homeP">
+      Примеры для того, чтобы проверить цвета и верстку логотипов. Перед передачей верстки лишние файлы будут удалены.
+    </p>
+    <div class="homeLinks">
+      <a class="homeLink" href="jk-template.html">
+        <h4>ЖК Рассказово</h4>
+        <p>Пример ЖК с логотипом</p>
+      </a>
+      <a class="homeLink" href="test-jk-1.html">
+        <h4>Второй пример</h4>
+        <p>Текст вместо логотипа</p>
+      </a>
+      <a class="homeLink" href="test-jk-2.html">
+        <h4>Третий пример</h4>
+        <p>Здесь можно посмотреть на длинный текст в логотипе</p>
+      </a>
+    </div>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer__container">
+
+    <div class="footer__listsWrapper">
+      <div class="footer__coreListWrapper">
+        <h4 class="footer__listTitle">Новостройки</h4>
+        <ul class="footer__list">
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Новостройки Москвы</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Новостройки Новой Москвы</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Новостройки Подмосковья</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">По районам Москвы</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">По метро</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">По городам Московской области</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__extraListWrapper">
+        <ul class="footer__list">
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Пользовательское соглашение</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Скидки и акции</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Карта сайта</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <a class="footer__phone" href="+78006488218">8 (800) 648-82-18</a>
+
+    <span class="footer__copy">&copy;&nbsp;2021, Метры.ру</span>
+  </div>
+</footer>
+
+<script src="js/main.min.js"></script>
+<script src="js/homepage.min.js"></script>
+<script src="js/vendor.min.js"></script>
+</body>
+</html>
