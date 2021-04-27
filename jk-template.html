@@ -24,14 +24,14 @@
   <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
   <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-  <link rel="stylesheet" href="styles/erycftegnruc.min.css">
+  <link rel="stylesheet" href="styles/main.min.css">
 </head>
 <body class="rasskazovo">
   <header class="headerTop">
   <div class="container headerTop__container">
     <a class="headerTop__logo" href=".">
       <img class="headerTop__logoImg" src="./img/svg/logo-metres.svg" alt="logo">
-      <span class="headerTop__logoText">Новостройки Москвы и Московской Области</span>
+      <span class="headerTop__logoText">Новостройки Москвы и Московской области</span>
     </a>
     <div class="headerTop__linksContainer">
 
@@ -56,7 +56,7 @@
   </div>
 </header>
 
-  <nav class="jkHeader">
+  <nav class="jkHeader lock-padding">
   <div class="container jkHeader__container">
     <div class="jkHeader__menuWrapper">
       <a class="jkHeader__logo" href="./jk-template.html">
@@ -82,9 +82,6 @@
         <li class="jkHeader__menuItem">
           <a href="./purchase">Условия покупки</a>
         </li>
-        <li class="jkHeader__menuItem">
-          <a href="">Контакты</a>
-        </li>
       </ul>
     </div>
     <!--
@@ -106,34 +103,6 @@
       <button class="jkHeader__mobileMenu">
         <span class="jkHeader__mobileMenuLine"></span>
       </button>
-    </div>
-  </div>
-</nav>
-
-  <nav class="jkAnchorsNav lock-padding">
-  <div class="container">
-    <h3 class="jkAnchorsNav__title">ЖК «Рассказово»</h3>
-    <div class="jkAnchorsNav__scrollWrapper swiper-container">
-      <ul class="jkAnchorsNav__list swiper-wrapper">
-        <li class="jkAnchorsNav__item swiper-slide">
-          <a class="jkAnchorsNav__itemLink" href="#jkAbout">О ЖК</a>
-        </li>
-        <li class="jkAnchorsNav__item swiper-slide">
-          <a class="jkAnchorsNav__itemLink" href="#jkAdvantages">Преимущества</a>
-        </li>
-        <li class="jkAnchorsNav__item swiper-slide">
-          <a class="jkAnchorsNav__itemLink" href="#jkPromo">Скидки и акции</a>
-        </li>
-        <li class="jkAnchorsNav__item swiper-slide">
-          <a class="jkAnchorsNav__itemLink" href="#jkDocuments">Документация</a>
-        </li>
-        <li class="jkAnchorsNav__item swiper-slide">
-          <a class="jkAnchorsNav__itemLink" href="#jkDeveloper">О застройщике</a>
-        </li>
-        <li class="jkAnchorsNav__item swiper-slide">
-          <a class="jkAnchorsNav__itemLink" href="#jkOtherProjects">Похожие ЖК</a>
-        </li>
-      </ul>
     </div>
   </div>
 </nav>
@@ -277,7 +246,7 @@
 </section>
 
     <section class="jkAbout" id="jkAbout">
-  <div class="container">
+  <div class="container jkAbout__container">
     <!--  .jkAbout__textBlock  -->
     <div class="textBlock jkAbout__textBlock">
 
@@ -496,6 +465,48 @@
 </div>
 
 
+    <!-- .jkAbout__simularJk (десктоп) -->
+    <aside class="simularJk jkAbout__simularJk">
+  <h3 class="simularJk__heading">Похожее предложение</h3>
+  <a class="simularJk__link" href="">
+    <div class="simularJk__imageWraper">
+      <img class="simularJk__image" src="img/contentJk/someJk/preview.jpg" alt="Фото жилого комплекса">
+    </div>
+    <div class="simularJk__info">
+      <h4 class="simularJk__title">ЖК «Акватория»</h4>
+      <span class="simularJk__price">от 2 870 000 ₽</span>
+      <span class="simularJk__metro">Домодедовская</span>
+    </div>
+  </a>
+</aside>
+
+
+    <!-- .jkAbout__simularJkMobile (мобильный) -->
+    <aside class="simularJkMobile jkAbout__simularJkMobile">
+  <div class="simularJkMobile__content">
+    <button class="simularJkMobile__toggleBtn">
+        <span class="simularJkMobile__toggleBtnIcon">
+          <svg class="simularJkMobile__toggleBtnArrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.66699 5.53809L6.00033 2.46116L9.33366 5.53809" stroke="white"/>
+          </svg>
+        </span>
+      Вас может заинтересовать
+    </button>
+    <a class="simularJkMobile__link" href="">
+      <div class="simularJkMobile__imageWraper">
+        <img class="simularJkMobile__image" src="img/contentJk/someJk/preview.jpg" alt="Фото жилого комплекса">
+      </div>
+      <div class="simularJkMobile__info">
+        <h4 class="simularJkMobile__title">ЖК «Акватория»</h4>
+        <span class="simularJkMobile__price">от 2 870 000 ₽</span>
+        <span class="simularJkMobile__metro">Домодедовская</span>
+      </div>
+    </a>
+  </div>
+</aside>
+
+
     <div class="videoModal">
   <div class="videoModal__body">
     <div class="videoModal__content">
@@ -507,10 +518,7 @@
                 transform="matrix(0.706124 0.708088 -0.706124 0.708088 2.12695 0.0372772)" fill="#fff"/>
         </svg>
       </button>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+      <div class="videoModal__player" id="ytplayer"></div>
     </div>
   </div>
 </div>
@@ -724,7 +732,7 @@
           <div class="jkOtherProjects__itemInfo">
             <h3 class="jkOtherProjects__itemTitle">ЖК «Авентин»</h3>
             <div class="jkOtherProjects__itemLoaction">
-              <span class="jkOtherProjects__itemMetro">Бульвар Дмитрия Донского</span>
+              <span class="jkOtherProjects__itemMetro metro">Бульвар Дмитрия Донского</span>
 
               <!-- если пешком '--onFoot' -->
               <!-- если на машине '--byCar' -->
@@ -804,9 +812,6 @@
         <li class="jkMobileMenu__listItem">
           <a href="./purchase">Условия покупки</a>
         </li>
-        <li class="jkMobileMenu__listItem">
-          <a href="">Контакты</a>
-        </li>
       </ul>
     </div>
   </div>
@@ -856,6 +861,9 @@
           </li>
           <li class="footer__listItem">
             <a class="footer__listLink" href="">Карта сайта</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Контакты</a>
           </li>
         </ul>
       </div>

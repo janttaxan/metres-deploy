@@ -24,14 +24,14 @@
   <link rel="apple-touch-icon" sizes="167x167" href="../img/favicons/apple-touch-icon-167x167.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
   <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
-  <link rel="stylesheet" href="../styles/erycftegnruc.min.css">
+  <link rel="stylesheet" href="../styles/main.min.css">
 </head>
 <body class="rasskazovo">
   <header class="headerTop">
   <div class="container headerTop__container">
     <a class="headerTop__logo" href="..">
       <img class="headerTop__logoImg" src="../img/svg/logo-metres.svg" alt="logo">
-      <span class="headerTop__logoText">Новостройки Москвы и Московской Области</span>
+      <span class="headerTop__logoText">Новостройки Москвы и Московской области</span>
     </a>
     <div class="headerTop__linksContainer">
 
@@ -56,7 +56,7 @@
   </div>
 </header>
 
-  <nav class="jkHeader">
+  <nav class="jkHeader lock-padding">
   <div class="container jkHeader__container">
     <div class="jkHeader__menuWrapper">
       <a class="jkHeader__logo" href="../jk-template.html">
@@ -81,9 +81,6 @@
         </li>
         <li class="jkHeader__menuItem">
           <a href="../purchase">Условия покупки</a>
-        </li>
-        <li class="jkHeader__menuItem">
-          <a href="">Контакты</a>
         </li>
       </ul>
     </div>
@@ -134,83 +131,90 @@
 
     <div class="flatsFiltersForm__group flatsFiltersForm__group--top">
       <!-- селект корпус /-->
-      <div class="baseSelect flatsFiltersForm__building" id="filters-desktop-building">
-        <span class="baseSelect__title">Корпус</span>
-        <button class="baseSelect__btn">
-          <span class="baseSelect__btnText">Все корпуса</span>
-          <svg class="baseSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+      <div class="baseMultiSelect flatsFiltersForm__building" id="filters-desktop-building">
+        <span class="baseMultiSelect__title">Корпус</span>
+        <button class="baseMultiSelect__btn">
+          <span class="baseMultiSelect__btnText">Все корпуса</span>
+          <svg class="baseMultiSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
                xmlns="http://www.w3.org/2000/svg">
             <path d="M4 4L9 9L14 4" stroke="#B99028" stroke-width="1.5"/>
           </svg>
         </button>
-        <div class="baseSelect__dropdown">
-          <ul class="baseSelect__options">
-            <li class="baseSelect__option baseSelect__option--selected">
-              <span class="baseSelect__optionText">Все корпуса</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+        <div class="baseMultiSelect__dropdown">
+          <ul class="baseMultiSelect__options">
+            <li class="baseMultiSelect__option baseMultiSelect__option--selected">
+              <span class="baseMultiSelect__optionText">Все корпуса</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 1</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 1</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 2</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 2</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 3</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 3</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 4</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 4</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 5</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 5</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 6</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 6</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 7</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 7</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 8</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 8</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 9</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 9</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 10</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
@@ -439,41 +443,41 @@
       </div>
 
       <!-- селект сроков выдачи ключей /-->
-      <div class="baseSelect flatsFiltersForm__date" id="filters-desktop-date">
-        <span class="baseSelect__title">Ключи до</span>
-        <button class="baseSelect__btn">
-          <span class="baseSelect__btnText">Не важно</span>
-          <svg class="baseSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+      <div class="baseMultiSelect flatsFiltersForm__date" id="filters-desktop-date">
+        <span class="baseMultiSelect__title">Ключи до</span>
+        <button class="baseMultiSelect__btn">
+          <span class="baseMultiSelect__btnText">Не важно</span>
+          <svg class="baseMultiSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
                xmlns="http://www.w3.org/2000/svg">
             <path d="M4 4L9 9L14 4" stroke="#B99028" stroke-width="1.5"/>
           </svg>
         </button>
-        <div class="baseSelect__dropdown">
-          <ul class="baseSelect__options">
-            <li class="baseSelect__option baseSelect__option--selected">
-              <span class="baseSelect__optionText">Не важно</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+        <div class="baseMultiSelect__dropdown">
+          <ul class="baseMultiSelect__options">
+            <li class="baseMultiSelect__option baseMultiSelect__option--selected">
+              <span class="baseMultiSelect__optionText">Все корпуса</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">1 квартал 2022</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">1 квартал 2022</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">3 квартал 2022</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">2 квартал 2022</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">1 квартал 2023</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">3 квартал 2022</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
@@ -682,83 +686,90 @@
 
     <div class="flatsFiltersForm__group flatsFiltersForm__group--top">
       <!-- селект корпус /-->
-      <div class="baseSelect flatsFiltersForm__building" id="filters-mobile-building">
-        <span class="baseSelect__title">Корпус</span>
-        <button class="baseSelect__btn">
-          <span class="baseSelect__btnText">Все корпуса</span>
-          <svg class="baseSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+      <div class="baseMultiSelect flatsFiltersForm__building" id="filters-mobile-building">
+        <span class="baseMultiSelect__title">Корпус</span>
+        <button class="baseMultiSelect__btn">
+          <span class="baseMultiSelect__btnText">Все корпуса</span>
+          <svg class="baseMultiSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
                xmlns="http://www.w3.org/2000/svg">
             <path d="M4 4L9 9L14 4" stroke="#B99028" stroke-width="1.5"/>
           </svg>
         </button>
-        <div class="baseSelect__dropdown">
-          <ul class="baseSelect__options">
-            <li class="baseSelect__option baseSelect__option--selected">
-              <span class="baseSelect__optionText">Все корпуса</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+        <div class="baseMultiSelect__dropdown">
+          <ul class="baseMultiSelect__options">
+            <li class="baseMultiSelect__option baseMultiSelect__option--selected">
+              <span class="baseMultiSelect__optionText">Все корпуса</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 1</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 1</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 2</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 2</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 3</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 3</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 4</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 4</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 5</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 5</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 6</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 6</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 7</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 7</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 8</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 8</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">Корпус 9</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 9</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Корпус 10</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
@@ -987,41 +998,41 @@
       </div>
 
       <!-- селект сроков выдачи ключей /-->
-      <div class="baseSelect flatsFiltersForm__date" id="filters-mobile-date">
-        <span class="baseSelect__title">Ключи до</span>
-        <button class="baseSelect__btn">
-          <span class="baseSelect__btnText">Не важно</span>
-          <svg class="baseSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+      <div class="baseMultiSelect flatsFiltersForm__date" id="filters-mobile-date">
+        <span class="baseMultiSelect__title">Ключи до</span>
+        <button class="baseMultiSelect__btn">
+          <span class="baseMultiSelect__btnText">Не важно</span>
+          <svg class="baseMultiSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
                xmlns="http://www.w3.org/2000/svg">
             <path d="M4 4L9 9L14 4" stroke="#B99028" stroke-width="1.5"/>
           </svg>
         </button>
-        <div class="baseSelect__dropdown">
-          <ul class="baseSelect__options">
-            <li class="baseSelect__option baseSelect__option--selected">
-              <span class="baseSelect__optionText">Не важно</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+        <div class="baseMultiSelect__dropdown">
+          <ul class="baseMultiSelect__options">
+            <li class="baseMultiSelect__option baseMultiSelect__option--selected">
+              <span class="baseMultiSelect__optionText">Все корпуса</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">1 квартал 2022</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">1 квартал 2022</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">3 квартал 2022</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">2 квартал 2022</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
             </li>
-            <li class="baseSelect__option">
-              <span class="baseSelect__optionText">1 квартал 2023</span>
-              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">3 квартал 2022</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
               </svg>
@@ -3600,7 +3611,7 @@
     <div class="flatsBottom">
   <div class="container flatsBottom__container">
     <div class="flatsBottom__pagination">
-      <ul class="basePagination">
+      <ul class="basePagination" itemscope itemtype="https://schema.org/BreadcrumbList">
   <li class="basePagination__item basePagination__item--prev basePagination__item--disable">
     <a class="basePagination__link">
       <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3610,24 +3621,53 @@
     </a>
   </li>
 
-  <li class="basePagination__item basePagination__item--active">
-    <a class="basePagination__link" href="#1">1</a>
+  <li
+    class="basePagination__item basePagination__item--active"
+    itemprop="itemListElement"
+    itemscope
+    itemtype="https://schema.org/ListItem"
+  >
+    <a class="basePagination__link" itemprop="item" href="#1">1</a>
+    <meta itemprop="position" content="1"/>
   </li>
 
-  <li class="basePagination__item">
-    <a class="basePagination__link" href="#2">2</a>
+  <li
+    itemprop="itemListElement"
+    itemscope
+    itemtype="https://schema.org/ListItem"
+    class="basePagination__item"
+  >
+    <a class="basePagination__link" itemprop="item" href="#2">2</a>
+    <meta itemprop="position" content="2"/>
   </li>
 
-  <li class="basePagination__item">
-    <a class="basePagination__link" href="#3">3</a>
+  <li
+    itemprop="itemListElement"
+    itemscope
+    itemtype="https://schema.org/ListItem"
+    class="basePagination__item"
+  >
+    <a class="basePagination__link" itemprop="item" href="#3">3</a>
+    <meta itemprop="position" content="3"/>
   </li>
 
-  <li class="basePagination__item">
+  <li
+    itemprop="itemListElement"
+    itemscope
+    itemtype="https://schema.org/ListItem"
+    class="basePagination__item"
+  >
     <a class="basePagination__link">...</a>
   </li>
 
-  <li class="basePagination__item">
-    <a class="basePagination__link" href="#44">44</a>
+  <li
+    itemprop="itemListElement"
+    itemscope
+    itemtype="https://schema.org/ListItem"
+    class="basePagination__item"
+  >
+    <a class="basePagination__link" itemprop="item" href="#44">44</a>
+    <meta itemprop="position" content="44"/>
   </li>
 
   <li class="basePagination__item basePagination__item--next">
@@ -3694,9 +3734,6 @@
         <li class="jkMobileMenu__listItem">
           <a href="../purchase">Условия покупки</a>
         </li>
-        <li class="jkMobileMenu__listItem">
-          <a href="">Контакты</a>
-        </li>
       </ul>
     </div>
   </div>
@@ -3746,6 +3783,9 @@
           </li>
           <li class="footer__listItem">
             <a class="footer__listLink" href="">Карта сайта</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Контакты</a>
           </li>
         </ul>
       </div>
