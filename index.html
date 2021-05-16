@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Home page</title>
+  <title>Новостройки Москвы и области</title>
   <meta name="theme-color" content="#fff">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport"
@@ -24,97 +24,4070 @@
   <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
   <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-  <link rel="stylesheet" href="styles/uirhgiurtghrgr.min.css">
-
-  <style>
-    .homeP {
-      margin: 24px 0 0;
-      padding: 12px;
-      border: 1px solid #f5eca1;
-      background-color: #FFFAE2;
-      max-width: 440px;
-      font-size: 14px;
-      color: var(--grey-2);
-      border-radius: 8px;
-    }
-
-    .homeLinks {
-      padding: 32px 0;
-    }
-
-    .homeLink {
-      display: block;
-      padding: 24px 32px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-      margin: 0 0 8px;
-      border-radius: 10px;
-    }
-
-    .homeLink:hover {
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .homeLink h4 {
-      font-size: 24px;
-      margin: 0 0 12px;
-    }
-
-    .homeLink p {
-      color: var(--grey-2);
-    }
-
-  </style>
+  <link rel="stylesheet" href="styles/main.min.css">
 </head>
 <body>
-  <header class="headerTop">
-  <div class="container headerTop__container">
-    <a class="headerTop__logo" href=".">
-      <img class="headerTop__logoImg" src="./img/svg/logo-metres.svg" alt="logo">
-      <span class="headerTop__logoText">Новостройки Москвы и Московской области</span>
-    </a>
-    <div class="headerTop__linksContainer">
 
-      <!-- .headerTop__favorites--hasItems  — класс для избранного, когда не пусто    -->
-      <a class="headerTop__favorites" href="#favorites">
-        <svg class="headerTop__favoritesIcon" width="23" height="22" viewBox="0 0 23 22" fill="none"
+  <header class="mainHeader lock-padding">
+  <div class="container mainHeader__container">
+    <div class="mainHeader__linksContainer">
+      <a class="mainHeader__logo" href="">
+        <img class="mainHeader__logoImg" src="./img/svg/logo-metres-text.svg" alt="logo">
+      </a>
+      <div class="baseSelect mainHeader__dropdown">
+        <button class="baseSelect__btn">
+          <span class="baseSelect__btnText">Новостройки</span>
+          <svg class="baseSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <div class="baseSelect__dropdown">
+          <ul class="baseSelect__options">
+            <li class="baseSelect__option">
+              <a class="baseSelect__optionText" href="">Новостройки Москвы</a>
+            </li>
+            <li class="baseSelect__option">
+              <a class="baseSelect__optionText" href="">Новостройки Подмосковья</a>
+            </li>
+            <li class="baseSelect__option">
+              <a class="baseSelect__optionText" href="">Новостройки Новой Москвы</a>
+            </li>
+            <li class="baseSelect__option">
+              <a class="baseSelect__optionText" href="">На карте</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a class="mainHeader__link" href="">Скидки до 30%</a>
+    </div>
+
+    <div class="mainHeader__linksContainer">
+      <!-- .mainHeader__favorites--hasItems  — класс для избранного, когда не пусто    -->
+      <a class="mainHeader__favorites" href="#favorites">
+        <svg class="mainHeader__favoritesIcon" width="23" height="22" viewBox="0 0 23 22" fill="none"
              xmlns="http://www.w3.org/2000/svg">
           <path
             d="M9.33194 7.00627L9.99971 7.97161L10.6675 7.00632C11.5132 5.78398 12.8676 5 14.3884 5C16.9134 5 19 7.16201 19 9.87815C19 10.9324 18.4944 12.1732 17.6078 13.5054C16.7329 14.82 15.5511 16.1289 14.3456 17.2998C13.1438 18.4672 11.9387 19.478 11.0322 20.1978C10.6083 20.5345 10.2511 20.8064 9.99191 21C9.73366 20.8131 9.37912 20.5511 8.9589 20.2263C8.0537 19.5265 6.85025 18.5401 5.65017 17.3896C4.4466 16.2358 3.26713 14.9366 2.39395 13.6134C1.51173 12.2765 1 11.0017 1 9.87811C1 8.09755 1.54506 6.90847 2.33022 6.1592C3.12593 5.39985 4.26516 5 5.6111 5C7.13235 5 8.48642 5.78398 9.33194 7.00627Z"
             stroke="#B0558C"/>
           <path
-            class="headerTop__favoritesIconDot"
+            class="mainHeader__favoritesIconDot"
             d="M22 4.5C22 6.433 20.433 8 18.5 8C16.567 8 15 6.433 15 4.5C15 2.567 16.567 1 18.5 1C20.433 1 22 2.567 22 4.5Z"
             fill="#EC3A3A" stroke="white" opacity="0" stroke-width="1.5"/>
         </svg>
-        <span class="headerTop__favoritesText">Избранное</span>
+        <span class="mainHeader__favoritesText">Избранное</span>
       </a>
-      <button class="headerTop__consultation">
+
+      <a class="mainHeader__link" href="tel:88006488218">8 (800) 648-82-18</a>
+
+      <button class="mainHeader__consultation">
         Консультация
       </button>
+
+      <a class="mainHeader__mobilePhone" href="tel:88006488218">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.44136 15.6241C8.61128 18.218 11.2234 20.2603 14.2047 21.7053C15.3398 22.2433 16.8579 22.8815 18.5491 22.9909C18.654 22.9954 18.7543 23 18.8591 23C19.9942 23 20.9059 22.608 21.649 21.8011C21.6535 21.7965 21.6627 21.7874 21.6672 21.7783C21.9316 21.4592 22.2325 21.172 22.547 20.8666C22.7613 20.6614 22.9801 20.4472 23.1898 20.2283C24.1608 19.2163 24.1608 17.9308 23.1807 16.9507L20.4409 14.2109C19.976 13.7277 19.4198 13.4724 18.8363 13.4724C18.2528 13.4724 17.6921 13.7277 17.2134 14.2064L15.5814 15.8384C15.431 15.7518 15.276 15.6743 15.1301 15.6013C14.9478 15.5102 14.7791 15.4235 14.6287 15.3278C13.1426 14.3842 12.1529 13.058 10.8628 11.4762C10.2109 10.6511 9.4136 10.0535 9.10817 9.34687C9.53668 8.95939 9.93784 8.55367 10.3253 8.15707C10.4621 8.01575 10.6034 7.87443 10.7447 7.73311C11.2371 7.24078 11.5015 6.67095 11.5015 6.092C11.5015 5.51305 11.2416 4.94322 10.7447 4.45089L9.38625 3.09242C9.22669 2.93286 9.07626 2.77787 8.92127 2.61832C8.62039 2.30833 8.30585 1.98923 7.99586 1.70203C7.52632 1.24161 6.97473 1 6.39122 1C5.81227 1 5.25612 1.24161 4.76834 1.70659L3.06341 3.41152C2.44344 4.0315 2.09242 4.78367 2.01948 5.65437C1.93287 6.74389 2.13345 7.90178 2.65313 9.30129C3.4509 11.4666 4.65438 13.477 6.44136 15.6241ZM3.52948 5.71429C3.54533 5.51522 3.61566 5.1043 4.05329 4.66667L6.14853 2.57143C6.41293 2.31614 6.67234 2.57143 6.67234 2.57143C6.67234 2.57143 6.93631 2.83084 7.19615 3.09524C7.50158 3.37787 7.40997 3.3045 7.71996 3.61905C7.87495 3.7786 8.08422 3.97875 8.24377 4.14286L9.29139 5.19048C9.57402 5.47311 9.8152 5.95546 9.8152 6.2381C9.8152 6.52073 9.57402 6.47927 9.29139 6.76191C9.15007 6.90322 8.9089 7.1444 8.76758 7.28571C8.34362 7.71423 8.70245 8.21633 8.26482 8.60381C7.71996 8.33333 8.25114 8.61749 8.24203 8.62661C7.86366 9.00497 7.92292 9.36511 8.0141 9.63862C8.01865 9.6523 8.02321 9.66142 8.02777 9.67509C8.37879 10.5184 8.86656 11.3208 9.62785 12.2781C10.9954 13.9648 12.436 15.2731 14.0224 16.2806C14.2184 16.4082 14.4281 16.5085 14.6241 16.6088C14.8065 16.7 14.9751 16.7866 15.1256 16.8823C15.1438 16.8914 15.1575 16.9005 15.1757 16.9097C15.3262 16.9872 15.472 17.0236 15.6179 17.0236C15.9826 17.0236 16.3603 16.9598 16.4378 16.8823L17.1485 16.1905L18.1962 15.1429C18.4606 14.8785 18.5537 14.8196 18.8363 14.8196C18.8363 14.8196 19.066 14.9514 19.2438 15.1429L22.3866 17.7619C22.9337 18.3089 22.419 18.7544 21.8628 19.3333C21.6714 19.5385 21.5533 19.652 21.339 19.8571C21.0199 20.1671 20.7418 20.5064 20.4409 20.8666C19.9167 21.4318 19.666 21.7783 18.8591 21.7783C18.7816 21.7783 18.6933 21.7828 18.6158 21.7783C17.1205 21.6826 15.5734 20.8778 14.5295 20.381C11.694 19.0088 9.78502 17.0898 7.71996 14.619C6.01959 12.5722 4.81003 10.8994 4.05329 8.85714C3.58375 7.60352 3.45654 6.63057 3.52948 5.71429Z"
+            fill="var(--jk-color)"/>
+        </svg>
+      </a>
+
+      <button class="mainHeader__mobileMenu">
+        <span class="mainHeader__mobileMenuLine"></span>
+      </button>
+
     </div>
   </div>
 </header>
 
+
   <main>
-    <div class="container">
-      <p class="homeP">
-        Примеры для того, чтобы проверить цвета и верстку логотипов. Перед передачей верстки лишние файлы будут удалены.
-      </p>
-      <div class="homeLinks">
-        <a class="homeLink" href="jk-template.html">
-          <h4>ЖК Рассказово</h4>
-          <p>Пример ЖК с логотипом</p>
-        </a>
-        <a class="homeLink" href="test-jk-1.html">
-          <h4>Второй пример</h4>
-          <p>Текст вместо логотипа</p>
-        </a>
-        <a class="homeLink" href="test-jk-2.html">
-          <h4>Третий пример</h4>
-          <p>Здесь можно посмотреть на длинный текст в логотипе</p>
-        </a>
+    <section class="homeHead">
+  <div class="container">
+    <h1 class="homeHead__heading">Новостройки Москвы и области</h1>
+  </div>
+</section>
+
+    <section class="jkFilters">
+  <div class="container">
+    <div class="jkFilters__desktopContainer">
+      <!--
+Адаптивный модуль фильтрации. Используется и в десктопе и модалке мобильного
+-->
+
+<div class="jkFiltersForm" id="filters-desktop">
+  <div class="jkFiltersForm__wrapper">
+    <div class="jkFiltersForm__group jkFiltersForm__group--top">
+
+      <div class="jkFiltersForm__name">
+        <input class="jkFiltersForm__nameInput" type="text" placeholder="Название ЖК">
+        <ul class="jkFiltersForm__nameButtonsList">
+          <li class="jkFiltersForm__nameButtonsItem">
+            <button class="jkFiltersForm__nameButton" id="filter-metro">Метро</button>
+          </li>
+          <li class="jkFiltersForm__nameButtonsItem">
+            <button class="jkFiltersForm__nameButton" id="filter-moscow">Район</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- чекбоксы выбора комнат -->
+      <div class="baseCheckboxGroup jkFiltersForm__rooms">
+        <span class="baseCheckboxGroup__title">Количество комнат</span>
+
+        <div class="checkboxItem baseCheckboxGroup__item">
+          <input
+            class="checkboxItem__input"
+            name="is danger"
+            type="checkbox"
+            id="filters-desktop-flat-st"
+          >
+          <label class="checkboxItem__label" for="filters-desktop-flat-st">Студия</label>
+        </div>
+
+        <div class="checkboxItem baseCheckboxGroup__item">
+          <input
+            class="checkboxItem__input"
+            name="is danger"
+            type="checkbox"
+            id="filters-desktop-flat-1"
+          >
+          <label class="checkboxItem__label" for="filters-desktop-flat-1">1</label>
+        </div>
+
+
+        <div class="checkboxItem baseCheckboxGroup__item">
+          <input
+            class="checkboxItem__input"
+            name="is danger"
+            type="checkbox"
+            id="filters-desktop-flat-2"
+          >
+          <label class="checkboxItem__label" for="filters-desktop-flat-2">2</label>
+        </div>
+
+
+        <div class="checkboxItem baseCheckboxGroup__item">
+          <input
+            class="checkboxItem__input"
+            name="is danger"
+            type="checkbox"
+            id="filters-desktop-flat-3"
+          >
+          <label class="checkboxItem__label" for="filters-desktop-flat-3">3</label>
+        </div>
+
+
+        <div class="checkboxItem baseCheckboxGroup__item">
+          <input
+            class="checkboxItem__input"
+            name="is danger"
+            type="checkbox"
+            id="filters-desktop-flat-4"
+          >
+          <label class="checkboxItem__label" for="filters-desktop-flat-4">4+</label>
+        </div>
+      </div>
+
+      <!-- Инпут ввода стоимости' -->
+      <div class="baseDoubleRangeInput jkFiltersForm__price" id="filters-desktop-price">
+        <span class="baseDoubleRangeInput__title">Стоимость, млн ₽</span>
+
+        <label class="baseDoubleRangeInput__minValue">
+          <input class="baseDoubleRangeInput__input baseDoubleRangeInput__input--min" value="0">
+        </label>
+        <label class="baseDoubleRangeInput__maxValue">
+          <input class="baseDoubleRangeInput__input baseDoubleRangeInput__input--max" value="0">
+        </label>
+
+        <div class="baseDoubleRangeInput__slider">
+          <div id="filters-desktop-change-price"></div>
+        </div>
+      </div>
+
+      <button class="jkFiltersForm__moreFiltersBtn" id="filters-desktop-show-hide-btn">
+        <span class="jkFiltersForm__moreFiltersBtnText">Еще фильтры</span>
+        <svg class="jkFiltersForm__moreFiltersBtnArrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="jkFiltersForm__group jkFiltersForm__group--selectedMetro">
+      <li class="jkFiltersForm__metroItem jkFiltersForm__metroItem--serpukhovskaya">
+        <span class="jkFiltersForm__metroItemText">Чертановская</span>
+        <button class="jkFiltersForm__metroItemDel">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.0006 11L2.81882 2.81818L1.00064 1" stroke="#656161" stroke-width="1.5"/>
+            <path d="M1.00095 11L9.18277 2.81818L11.001 1" stroke="#656161" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </li>
+      <li class="jkFiltersForm__metroItem jkFiltersForm__metroItem--zamoskvoretskaya">
+        <span class="jkFiltersForm__metroItemText">Речной вокзал</span>
+        <button class="jkFiltersForm__metroItemDel">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.0006 11L2.81882 2.81818L1.00064 1" stroke="#656161" stroke-width="1.5"/>
+            <path d="M1.00095 11L9.18277 2.81818L11.001 1" stroke="#656161" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </li>
+      <li class="jkFiltersForm__metroItem jkFiltersForm__metroItem--taganskaya">
+        <span class="jkFiltersForm__metroItemText">Волгоградский проспект</span>
+        <button class="jkFiltersForm__metroItemDel">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.0006 11L2.81882 2.81818L1.00064 1" stroke="#656161" stroke-width="1.5"/>
+            <path d="M1.00095 11L9.18277 2.81818L11.001 1" stroke="#656161" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </li>
+      <li class="jkFiltersForm__metroItem jkFiltersForm__metroItem--MCC">
+        <span class="jkFiltersForm__metroItemText">Бульвар Рокосовского</span>
+        <button class="jkFiltersForm__metroItemDel">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.0006 11L2.81882 2.81818L1.00064 1" stroke="#656161" stroke-width="1.5"/>
+            <path d="M1.00095 11L9.18277 2.81818L11.001 1" stroke="#656161" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </li>
+      <li class="jkFiltersForm__metroItem">
+        <button class="jkFiltersForm__metroItemMore">
+          Eще <span class="jkFiltersForm__metroItemMoreCount">100</span>
+        </button>
+      </li>
+      <li class="jkFiltersForm__metroItem">
+        <button class="jkFiltersForm__metroItemReset">Очистить</button>
+      </li>
+    </ul>
+
+    <div class="jkFiltersForm__group jkFiltersForm__group--bottom jkFiltersForm__hidden">
+
+      <!-- селект сроков выдачи ключей /-->
+      <div class="baseMultiSelect jkFiltersForm__date" id="filters-desktop-date">
+        <span class="baseMultiSelect__title">Срок сдачи до</span>
+        <button class="baseMultiSelect__btn">
+          <span class="baseMultiSelect__btnText">Не важно</span>
+          <svg class="baseMultiSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <div class="baseMultiSelect__dropdown">
+          <ul class="baseMultiSelect__options">
+            <li class="baseMultiSelect__option baseMultiSelect__option--selected">
+              <span class="baseMultiSelect__optionText">Не важно</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">1 квартал 2022</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">2 квартал 2022</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">3 квартал 2022</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- селект видов отделки /-->
+      <div class="baseSelect jkFiltersForm__decoration" id="filters-desktop-decoration">
+        <span class="baseSelect__title">Отделка</span>
+        <button class="baseSelect__btn">
+          <span class="baseSelect__btnText">Не важно</span>
+          <svg class="baseSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <div class="baseSelect__dropdown">
+          <ul class="baseSelect__options">
+            <li class="baseSelect__option baseSelect__option--selected">
+              <span class="baseSelect__optionText">Не важно</span>
+              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseSelect__option">
+              <span class="baseSelect__optionText">Черновая</span>
+              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseSelect__option">
+              <span class="baseSelect__optionText">Чистовая</span>
+              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseSelect__option">
+              <span class="baseSelect__optionText">Без отделки</span>
+              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Инпут ввода площади -->
+      <div class="baseDoubleRangeInput jkFiltersForm__area" id="filters-desktop-area">
+        <span class="baseDoubleRangeInput__title">Площадь, м<sup>2</sup></span>
+
+        <label class="baseDoubleRangeInput__minValue">
+          <input class="baseDoubleRangeInput__input baseDoubleRangeInput__input--min" value="0">
+        </label>
+        <label class="baseDoubleRangeInput__maxValue">
+          <input class="baseDoubleRangeInput__input baseDoubleRangeInput__input--max" value="0">
+        </label>
+
+        <div class="baseDoubleRangeInput__slider">
+          <div id="filters-desktop-change-area"></div>
+        </div>
+      </div>
+
+      <!-- селект класса жилья /-->
+      <div class="baseMultiSelect jkFiltersForm__houseClass" id="filters-desktop-house-сlass">
+        <span class="baseMultiSelect__title">Класс жилья</span>
+        <button class="baseMultiSelect__btn">
+          <span class="baseMultiSelect__btnText">Не важно</span>
+          <svg class="baseMultiSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <div class="baseMultiSelect__dropdown">
+          <ul class="baseMultiSelect__options">
+            <li class="baseMultiSelect__option baseMultiSelect__option--selected">
+              <span class="baseMultiSelect__optionText">Не важно</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Бизнес</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Комфорт</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- селект типа дома /-->
+      <div class="baseMultiSelect jkFiltersForm__houseType" id="filters-desktop-house-type">
+        <span class="baseMultiSelect__title">Тип дома</span>
+        <button class="baseMultiSelect__btn">
+          <span class="baseMultiSelect__btnText">Не важно</span>
+          <svg class="baseMultiSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <div class="baseMultiSelect__dropdown">
+          <ul class="baseMultiSelect__options">
+            <li class="baseMultiSelect__option baseMultiSelect__option--selected">
+              <span class="baseMultiSelect__optionText">Не важно</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Монолитный</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Кирпичный</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Панельный</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- селект типа квартиры /-->
+      <div class="baseMultiSelect jkFiltersForm__flatsType" id="filters-desktop-flats-type">
+        <span class="baseMultiSelect__title">Тип квартир</span>
+        <button class="baseMultiSelect__btn">
+          <span class="baseMultiSelect__btnText">Не важно</span>
+          <svg class="baseMultiSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <div class="baseMultiSelect__dropdown">
+          <ul class="baseMultiSelect__options">
+            <li class="baseMultiSelect__option baseMultiSelect__option--selected">
+              <span class="baseMultiSelect__optionText">Не важно</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Двухярусные</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Апартаменты</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">С двумя ванными</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Без балкона</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">С балконом</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+
+    <!-- Баблы(чекбоксы) дополнительных фильтров> /-->
+    <ul class="jkFiltersForm__bubbleList jkFiltersForm__hidden">
+      <li class="baseBubbleItem jkFiltersForm__bubbleItem">
+        <input
+          class="baseBubbleItem__input"
+          name="bubble"
+          type="checkbox"
+          id="filters-desktop-bubble-hypothec"
+        >
+        <label class="baseBubbleItem__label" for="filters-desktop-bubble-hypothec">Ипотека</label>
+      </li>
+      <li class="baseBubbleItem jkFiltersForm__bubbleItem">
+        <input
+          class="baseBubbleItem__input"
+          name="bubble"
+          type="checkbox"
+          id="filters-desktop-bubble-installment"
+        >
+        <label class="baseBubbleItem__label" for="filters-desktop-bubble-installment">Рассрочка</label>
+      </li>
+      <li class="baseBubbleItem jkFiltersForm__bubbleItem">
+        <input
+          class="baseBubbleItem__input"
+          name="bubble"
+          type="checkbox"
+          id="filters-desktop-bubble-low-rise"
+        >
+        <label class="baseBubbleItem__label" for="filters-desktop-bubble-low-rise">Малоэтажные комплексы</label>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jkFiltersForm__options">
+  <button class="jkFiltersForm__optionsReset">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11 11L2.81818 2.81818L1 1" stroke="#E52628" stroke-width="1.5"/>
+      <path d="M1.00049 11L9.18231 2.81818L11.0005 1" stroke="#E52628" stroke-width="1.5"/>
+    </svg>
+    <span>Очистить фильтр</span>
+  </button>
+
+  <div class="jkFiltersForm__optionsButtonsWrapper">
+    <button class="jkFiltersForm__optionsButtonMap">Показать на карте</button>
+    <a class="jkFiltersForm__optionsLink" href="">
+      Показать <span class="jkFiltersForm__optionsLinkCount">308</span> новостроек
+    </a>
+  </div>
+</div>
+
+    </div>
+
+    <div class="jkFilters__mobileContainer">
+      <button class="jkFilters__openFiltersBtn">
+        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+            <path d="M19.6667 15.8333H17.4475C17.0867 14.6325 15.9833 13.75 14.6667 13.75C13.35 13.75 12.2475 14.6325 11.8859 15.8333H1.33332C0.87332 15.8333 0.5 16.2067 0.5 16.6667C0.5 17.1267 0.87332 17.5 1.33332 17.5H11.8858C12.2466 18.7008 13.35 19.5833 14.6666 19.5833C15.9833 19.5833 17.0858 18.7008 17.4475 17.5H19.6666C20.1275 17.5 20.5 17.1267 20.5 16.6667C20.5 16.2067 20.1275 15.8333 19.6667 15.8333ZM14.6667 17.9167C13.9775 17.9167 13.4167 17.3559 13.4167 16.6667C13.4167 15.9775 13.9775 15.4167 14.6667 15.4167C15.3559 15.4167 15.9167 15.9775 15.9167 16.6667C15.9167 17.3559 15.3558 17.9167 14.6667 17.9167Z" fill="white"/>
+            <path d="M19.6667 2.50007H17.4475C17.0858 1.29925 15.9833 0.416748 14.6667 0.416748C13.35 0.416748 12.2475 1.29925 11.8858 2.50007H1.33332C0.87332 2.50007 0.5 2.87339 0.5 3.33339C0.5 3.79339 0.87332 4.16671 1.33332 4.16671H11.8858C12.2475 5.36757 13.35 6.25007 14.6667 6.25007C15.9834 6.25007 17.0859 5.36757 17.4475 4.16675H19.6667C20.1275 4.16675 20.5 3.79343 20.5 3.33343C20.5 2.87343 20.1275 2.50007 19.6667 2.50007ZM14.6667 4.58339C13.9775 4.58339 13.4167 4.02257 13.4167 3.33339C13.4167 2.64421 13.9775 2.08339 14.6667 2.08339C15.3559 2.08339 15.9167 2.64421 15.9167 3.33339C15.9167 4.02257 15.3558 4.58339 14.6667 4.58339Z" fill="white"/>
+            <path d="M19.6667 9.16657H9.11418C8.7525 7.96575 7.65 7.08325 6.33336 7.08325C5.01672 7.08325 3.91418 7.96575 3.55254 9.16657H1.33332C0.87332 9.16657 0.5 9.53989 0.5 9.99989C0.5 10.4599 0.87332 10.8332 1.33332 10.8332H3.5525C3.91418 12.034 5.01668 12.9165 6.33332 12.9165C7.64996 12.9165 8.7525 12.034 9.11414 10.8332H19.6666C20.1275 10.8332 20.5 10.4599 20.5 9.99989C20.5 9.53989 20.1275 9.16657 19.6667 9.16657ZM6.33332 11.2499C5.64414 11.2499 5.08332 10.6891 5.08332 9.99989C5.08332 9.31071 5.64414 8.74989 6.33332 8.74989C7.0225 8.74989 7.58332 9.31071 7.58332 9.99989C7.58332 10.6891 7.0225 11.2499 6.33332 11.2499Z" fill="white"/>
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <rect width="20" height="20" fill="white" transform="translate(0.5)"/>
+            </clipPath>
+          </defs>
+        </svg>
+        <span class="jkFilters__openFiltersBtnText">Фильтр поиска</span>
+      </button>
+    </div>
+  </div>
+  <!-- Модальное окно с фильтрами для мобильного -->
+  <!--
+Модальное окно получают 'display: none' при > 984px ширины экрана
+-->
+
+<div class="jkFiltersModal">
+  <header class="jkFiltersModal__header">
+    <div class="container jkFiltersModal__headerContainer">
+
+      <button class="jkFiltersModal__clearBtn">Очистить фильтр</button>
+
+      <button class="jkFiltersModal__close">
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="30.8355" height="3.01242"
+                transform="matrix(0.705401 -0.708809 0.705401 0.708809 0.121094 21.8564)" fill="#121212"/>
+          <rect width="30.8354" height="3.01242"
+                transform="matrix(0.706124 0.708088 -0.706124 0.708088 2.12695 0.0372772)" fill="#121212"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="jkFiltersModal__body">
+    <div class="container">
+      <!--
+Адаптивный модуль фильтрации. Используется и в десктопе и модалке мобильного
+-->
+
+<div class="jkFiltersForm" id="filters-mobile">
+  <div class="jkFiltersForm__wrapper">
+    <div class="jkFiltersForm__group jkFiltersForm__group--top">
+
+      <div class="jkFiltersForm__name">
+        <input class="jkFiltersForm__nameInput" type="text" placeholder="Название ЖК">
+        <ul class="jkFiltersForm__nameButtonsList">
+          <li class="jkFiltersForm__nameButtonsItem">
+            <button class="jkFiltersForm__nameButton" id="filter-metro">Метро</button>
+          </li>
+          <li class="jkFiltersForm__nameButtonsItem">
+            <button class="jkFiltersForm__nameButton" id="filter-moscow">Район</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- чекбоксы выбора комнат -->
+      <div class="baseCheckboxGroup jkFiltersForm__rooms">
+        <span class="baseCheckboxGroup__title">Количество комнат</span>
+
+        <div class="checkboxItem baseCheckboxGroup__item">
+          <input
+            class="checkboxItem__input"
+            name="is danger"
+            type="checkbox"
+            id="filters-mobile-flat-st"
+          >
+          <label class="checkboxItem__label" for="filters-mobile-flat-st">Студия</label>
+        </div>
+
+        <div class="checkboxItem baseCheckboxGroup__item">
+          <input
+            class="checkboxItem__input"
+            name="is danger"
+            type="checkbox"
+            id="filters-mobile-flat-1"
+          >
+          <label class="checkboxItem__label" for="filters-mobile-flat-1">1</label>
+        </div>
+
+
+        <div class="checkboxItem baseCheckboxGroup__item">
+          <input
+            class="checkboxItem__input"
+            name="is danger"
+            type="checkbox"
+            id="filters-mobile-flat-2"
+          >
+          <label class="checkboxItem__label" for="filters-mobile-flat-2">2</label>
+        </div>
+
+
+        <div class="checkboxItem baseCheckboxGroup__item">
+          <input
+            class="checkboxItem__input"
+            name="is danger"
+            type="checkbox"
+            id="filters-mobile-flat-3"
+          >
+          <label class="checkboxItem__label" for="filters-mobile-flat-3">3</label>
+        </div>
+
+
+        <div class="checkboxItem baseCheckboxGroup__item">
+          <input
+            class="checkboxItem__input"
+            name="is danger"
+            type="checkbox"
+            id="filters-mobile-flat-4"
+          >
+          <label class="checkboxItem__label" for="filters-mobile-flat-4">4+</label>
+        </div>
+      </div>
+
+      <!-- Инпут ввода стоимости' -->
+      <div class="baseDoubleRangeInput jkFiltersForm__price" id="filters-mobile-price">
+        <span class="baseDoubleRangeInput__title">Стоимость, млн ₽</span>
+
+        <label class="baseDoubleRangeInput__minValue">
+          <input class="baseDoubleRangeInput__input baseDoubleRangeInput__input--min" value="0">
+        </label>
+        <label class="baseDoubleRangeInput__maxValue">
+          <input class="baseDoubleRangeInput__input baseDoubleRangeInput__input--max" value="0">
+        </label>
+
+        <div class="baseDoubleRangeInput__slider">
+          <div id="filters-mobile-change-price"></div>
+        </div>
+      </div>
+
+      <button class="jkFiltersForm__moreFiltersBtn" id="filters-mobile-show-hide-btn">
+        <span class="jkFiltersForm__moreFiltersBtnText">Еще фильтры</span>
+        <svg class="jkFiltersForm__moreFiltersBtnArrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="jkFiltersForm__group jkFiltersForm__group--selectedMetro">
+      <li class="jkFiltersForm__metroItem jkFiltersForm__metroItem--serpukhovskaya">
+        <span class="jkFiltersForm__metroItemText">Чертановская</span>
+        <button class="jkFiltersForm__metroItemDel">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.0006 11L2.81882 2.81818L1.00064 1" stroke="#656161" stroke-width="1.5"/>
+            <path d="M1.00095 11L9.18277 2.81818L11.001 1" stroke="#656161" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </li>
+      <li class="jkFiltersForm__metroItem jkFiltersForm__metroItem--zamoskvoretskaya">
+        <span class="jkFiltersForm__metroItemText">Речной вокзал</span>
+        <button class="jkFiltersForm__metroItemDel">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.0006 11L2.81882 2.81818L1.00064 1" stroke="#656161" stroke-width="1.5"/>
+            <path d="M1.00095 11L9.18277 2.81818L11.001 1" stroke="#656161" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </li>
+      <li class="jkFiltersForm__metroItem jkFiltersForm__metroItem--taganskaya">
+        <span class="jkFiltersForm__metroItemText">Волгоградский проспект</span>
+        <button class="jkFiltersForm__metroItemDel">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.0006 11L2.81882 2.81818L1.00064 1" stroke="#656161" stroke-width="1.5"/>
+            <path d="M1.00095 11L9.18277 2.81818L11.001 1" stroke="#656161" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </li>
+      <li class="jkFiltersForm__metroItem jkFiltersForm__metroItem--MCC">
+        <span class="jkFiltersForm__metroItemText">Бульвар Рокосовского</span>
+        <button class="jkFiltersForm__metroItemDel">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.0006 11L2.81882 2.81818L1.00064 1" stroke="#656161" stroke-width="1.5"/>
+            <path d="M1.00095 11L9.18277 2.81818L11.001 1" stroke="#656161" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </li>
+      <li class="jkFiltersForm__metroItem">
+        <button class="jkFiltersForm__metroItemMore">
+          Eще <span class="jkFiltersForm__metroItemMoreCount">100</span>
+        </button>
+      </li>
+      <li class="jkFiltersForm__metroItem">
+        <button class="jkFiltersForm__metroItemReset">Очистить</button>
+      </li>
+    </ul>
+
+    <div class="jkFiltersForm__group jkFiltersForm__group--bottom jkFiltersForm__hidden">
+
+      <!-- селект сроков выдачи ключей /-->
+      <div class="baseMultiSelect jkFiltersForm__date" id="filters-mobile-date">
+        <span class="baseMultiSelect__title">Срок сдачи до</span>
+        <button class="baseMultiSelect__btn">
+          <span class="baseMultiSelect__btnText">Не важно</span>
+          <svg class="baseMultiSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <div class="baseMultiSelect__dropdown">
+          <ul class="baseMultiSelect__options">
+            <li class="baseMultiSelect__option baseMultiSelect__option--selected">
+              <span class="baseMultiSelect__optionText">Не важно</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">1 квартал 2022</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">2 квартал 2022</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">3 квартал 2022</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- селект видов отделки /-->
+      <div class="baseSelect jkFiltersForm__decoration" id="filters-mobile-decoration">
+        <span class="baseSelect__title">Отделка</span>
+        <button class="baseSelect__btn">
+          <span class="baseSelect__btnText">Не важно</span>
+          <svg class="baseSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <div class="baseSelect__dropdown">
+          <ul class="baseSelect__options">
+            <li class="baseSelect__option baseSelect__option--selected">
+              <span class="baseSelect__optionText">Не важно</span>
+              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseSelect__option">
+              <span class="baseSelect__optionText">Черновая</span>
+              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseSelect__option">
+              <span class="baseSelect__optionText">Чистовая</span>
+              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseSelect__option">
+              <span class="baseSelect__optionText">Без отделки</span>
+              <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Инпут ввода площади -->
+      <div class="baseDoubleRangeInput jkFiltersForm__area" id="filters-mobile-area">
+        <span class="baseDoubleRangeInput__title">Площадь, м<sup>2</sup></span>
+
+        <label class="baseDoubleRangeInput__minValue">
+          <input class="baseDoubleRangeInput__input baseDoubleRangeInput__input--min" value="0">
+        </label>
+        <label class="baseDoubleRangeInput__maxValue">
+          <input class="baseDoubleRangeInput__input baseDoubleRangeInput__input--max" value="0">
+        </label>
+
+        <div class="baseDoubleRangeInput__slider">
+          <div id="filters-mobile-change-area"></div>
+        </div>
+      </div>
+
+      <!-- селект класса жилья /-->
+      <div class="baseMultiSelect jkFiltersForm__houseClass" id="filters-mobile-house-сlass">
+        <span class="baseMultiSelect__title">Класс жилья</span>
+        <button class="baseMultiSelect__btn">
+          <span class="baseMultiSelect__btnText">Не важно</span>
+          <svg class="baseMultiSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <div class="baseMultiSelect__dropdown">
+          <ul class="baseMultiSelect__options">
+            <li class="baseMultiSelect__option baseMultiSelect__option--selected">
+              <span class="baseMultiSelect__optionText">Не важно</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Бизнес</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Комфорт</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- селект типа дома /-->
+      <div class="baseMultiSelect jkFiltersForm__houseType" id="filters-mobile-house-type">
+        <span class="baseMultiSelect__title">Тип дома</span>
+        <button class="baseMultiSelect__btn">
+          <span class="baseMultiSelect__btnText">Не важно</span>
+          <svg class="baseMultiSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <div class="baseMultiSelect__dropdown">
+          <ul class="baseMultiSelect__options">
+            <li class="baseMultiSelect__option baseMultiSelect__option--selected">
+              <span class="baseMultiSelect__optionText">Не важно</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Монолитный</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Кирпичный</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Панельный</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- селект типа квартиры /-->
+      <div class="baseMultiSelect jkFiltersForm__flatsType" id="filters-mobile-flats-type">
+        <span class="baseMultiSelect__title">Тип квартир</span>
+        <button class="baseMultiSelect__btn">
+          <span class="baseMultiSelect__btnText">Не важно</span>
+          <svg class="baseMultiSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <div class="baseMultiSelect__dropdown">
+          <ul class="baseMultiSelect__options">
+            <li class="baseMultiSelect__option baseMultiSelect__option--selected">
+              <span class="baseMultiSelect__optionText">Не важно</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Двухярусные</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Апартаменты</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">С двумя ванными</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">Без балкона</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+            <li class="baseMultiSelect__option">
+              <span class="baseMultiSelect__optionText">С балконом</span>
+              <svg class="baseMultiSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Баблы(чекбоксы) дополнительных фильтров> /-->
+    <ul class="jkFiltersForm__bubbleList jkFiltersForm__hidden">
+      <li class="baseBubbleItem jkFiltersForm__bubbleItem">
+        <input
+          class="baseBubbleItem__input"
+          name="bubble"
+          type="checkbox"
+          id="filters-mobile-bubble-hypothec"
+        >
+        <label class="baseBubbleItem__label" for="filters-mobile-bubble-hypothec">Ипотека</label>
+      </li>
+      <li class="baseBubbleItem jkFiltersForm__bubbleItem">
+        <input
+          class="baseBubbleItem__input"
+          name="bubble"
+          type="checkbox"
+          id="filters-mobile-bubble-installment"
+        >
+        <label class="baseBubbleItem__label" for="filters-mobile-bubble-installment">Рассрочка</label>
+      </li>
+      <li class="baseBubbleItem jkFiltersForm__bubbleItem">
+        <input
+          class="baseBubbleItem__input"
+          name="bubble"
+          type="checkbox"
+          id="filters-mobile-bubble-low-rise"
+        >
+        <label class="baseBubbleItem__label" for="filters-mobile-bubble-low-rise">Малоэтажные комплексы</label>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jkFiltersForm__options">
+  <button class="jkFiltersForm__optionsReset">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11 11L2.81818 2.81818L1 1" stroke="#E52628" stroke-width="1.5"/>
+      <path d="M1.00049 11L9.18231 2.81818L11.0005 1" stroke="#E52628" stroke-width="1.5"/>
+    </svg>
+    <span>Очистить фильтр</span>
+  </button>
+
+  <div class="jkFiltersForm__optionsButtonsWrapper">
+    <button class="jkFiltersForm__optionsButtonMap">Показать на карте</button>
+    <a class="jkFiltersForm__optionsLink" href="">
+      Показать <span class="jkFiltersForm__optionsLinkCount">308</span> новостроек
+    </a>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+
+
+  <!-- Модальное окно с выбором метро/районов -->
+  <div class="jkFiltersLocationModal">
+  <div class="jkFiltersLocationModal__scrollWrapper">
+    <header class="jkFiltersLocationModal__header">
+      <button class="jkFiltersLocationModal__close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.000244141" y="14.4762" width="20.4724" height="2.15499" transform="rotate(-45 0.000244141 14.4762)"
+                fill="#121212"/>
+          <rect x="1.52393" width="20.4724" height="2.15499" transform="rotate(45 1.52393 0)" fill="#121212"/>
+        </svg>
+      </button>
+    </header>
+    <div class="container">
+      <div class="jkFiltersLocationModal__body">
+        <div class="jkFiltersLocationModal__tabsWrapper">
+          <!-- Для прототипа переключение вкладок реализовано по индексу (какой номер таба, такой и номер контента) -->
+          <ul class="jkFiltersLocationModal__tabs">
+            <li class="jkFiltersLocationModal__tab jkFiltersLocationModal__tab--active">Метро</li>
+            <li class="jkFiltersLocationModal__tab">Москва</li>
+            <li class="jkFiltersLocationModal__tab">Московская область</li>
+          </ul>
+        </div>
+        <div class="jkFiltersLocationModal__tabsContentWrapper">
+          <div
+            class="jkFiltersLocationModal__tabsContent jkFiltersLocationModal__tabsContent--active"
+          >
+            <div class="locationMetro">
+  <ul class="locationMetro__smallList">
+    <li class="locationMetro__smallItem locationMetro__smallItem--sokolnicheskaya">
+      <input
+        class="locationMetro__smallItemInput"
+        name="sokolnicheskaya"
+        type="checkbox"
+        id="sokolnicheskaya"
+      >
+      <label class="locationMetro__smallItemLabel" for="sokolnicheskaya">Сокольническая</label>
+    </li>
+    <li class="locationMetro__smallItem locationMetro__smallItem--zamoskvoretskaya">
+      <input
+        class="locationMetro__smallItemInput"
+        name="sokolnicheskaya"
+        type="checkbox"
+        id="zamoskvoretskaya"
+      >
+      <label class="locationMetro__smallItemLabel" for="zamoskvoretskaya">Замоскворецкая</label>
+    </li>
+    <li class="locationMetro__smallItem locationMetro__smallItem--arbat">
+      <input
+        class="locationMetro__smallItemInput"
+        name="sokolnicheskaya"
+        type="checkbox"
+        id="arbat"
+      >
+      <label class="locationMetro__smallItemLabel" for="arbat">Арбатско-Покровская</label>
+    </li>
+    <li class="locationMetro__smallItem locationMetro__smallItem--filyovskaya">
+      <input
+        class="locationMetro__smallItemInput"
+        name="sokolnicheskaya"
+        type="checkbox"
+        id="filyovskaya"
+      >
+      <label class="locationMetro__smallItemLabel" for="filyovskaya">Филевская</label>
+    </li>
+    <li class="locationMetro__smallItem locationMetro__smallItem--koltsevaya">
+      <input
+        class="locationMetro__smallItemInput"
+        name="sokolnicheskaya"
+        type="checkbox"
+        id="koltsevaya"
+      >
+      <label class="locationMetro__smallItemLabel" for="koltsevaya">Кольцевая</label>
+    </li>
+    <li class="locationMetro__smallItem locationMetro__smallItem--kaluzhskaya">
+      <input
+        class="locationMetro__smallItemInput"
+        name="sokolnicheskaya"
+        type="checkbox"
+        id="kaluzhskaya"
+      >
+      <label class="locationMetro__smallItemLabel" for="kaluzhskaya">Калужско-Рижская</label>
+    </li>
+    <li class="locationMetro__smallItem locationMetro__smallItem--taganskaya">
+      <input
+        class="locationMetro__smallItemInput"
+        name="sokolnicheskaya"
+        type="checkbox"
+        id="taganskaya"
+      >
+      <label class="locationMetro__smallItemLabel" for="taganskaya">Таганско-Краснопресненская</label>
+    </li>
+    <li class="locationMetro__smallItem locationMetro__smallItem--kalininskaya">
+      <input
+        class="locationMetro__smallItemInput"
+        name="sokolnicheskaya"
+        type="checkbox"
+        id="kalininskaya"
+      >
+      <label class="locationMetro__smallItemLabel" for="kalininskaya">Калининская</label>
+    </li>
+    <li class="locationMetro__smallItem locationMetro__smallItem--serpukhovskaya">
+      <input
+        class="locationMetro__smallItemInput"
+        name="sokolnicheskaya"
+        type="checkbox"
+        id="serpukhovskaya"
+      >
+      <label class="locationMetro__smallItemLabel" for="serpukhovskaya">Серпуховско-тимирязевская</label>
+    </li>
+    <li class="locationMetro__smallItem locationMetro__smallItem--lublinovskaya">
+      <input
+        class="locationMetro__smallItemInput"
+        name="sokolnicheskaya"
+        type="checkbox"
+        id="lublinovskaya"
+      >
+      <label class="locationMetro__smallItemLabel" for="lublinovskaya">Люблинская</label>
+    </li>
+    <li class="locationMetro__smallItem locationMetro__smallItem--kahovskaya">
+      <input
+        class="locationMetro__smallItemInput"
+        name="sokolnicheskaya"
+        type="checkbox"
+        id="kahovskaya"
+      >
+      <label class="locationMetro__smallItemLabel" for="kahovskaya">Каховская</label>
+    </li>
+    <li class="locationMetro__smallItem locationMetro__smallItem--buninskaya">
+      <input
+        class="locationMetro__smallItemInput"
+        name="sokolnicheskaya"
+        type="checkbox"
+        id="buninskaya"
+      >
+      <label class="locationMetro__smallItemLabel" for="buninskaya">Бунинская</label>
+    </li>
+    <li class="locationMetro__smallItem locationMetro__smallItem--MCC">
+      <input
+        class="locationMetro__smallItemInput"
+        name="sokolnicheskaya"
+        type="checkbox"
+        id="MCC"
+      >
+      <label class="locationMetro__smallItemLabel" for="MCC">Московское центральное кольцо</label>
+    </li>
+  </ul>
+
+  <ul class="locationMetro__fullList">
+    <li class="locationMetro__fullListLine">
+      <h4 class="locationMetro__fullListLineTitle">Сокольническая</h4>
+      <ul class="locationMetro__fullListLineItems">
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="bulvar-rokossovskogo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="bulvar-rokossovskogo">Бульвар Рокоссовского</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="cherkizovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="cherkizovskaya">Черкизовская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="preobrazhenskaya-ploshad"
+          >
+          <label class="locationMetro__fullListLineLabel" for="preobrazhenskaya-ploshad">Преображенская площадь</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="sokolniki"
+          >
+          <label class="locationMetro__fullListLineLabel" for="sokolniki">Сокольники</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="krasnoselskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="krasnoselskaya">Красносельская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="komsomolskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="komsomolskaya">Комсомольская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="krasnie-vorota"
+          >
+          <label class="locationMetro__fullListLineLabel" for="krasnie-vorota">Красные ворота</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="chistie-prudi"
+          >
+          <label class="locationMetro__fullListLineLabel" for="chistie-prudi">Чистые пруды</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="lubyanka"
+          >
+          <label class="locationMetro__fullListLineLabel" for="lubyanka">Лубянка</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="ohotniy-ryad"
+          >
+          <label class="locationMetro__fullListLineLabel" for="ohotniy-ryad">Охотный ряд</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="biblioteka-imeni-lenina"
+          >
+          <label class="locationMetro__fullListLineLabel" for="biblioteka-imeni-lenina">Библиотека имени Ленина</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kropotkinskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kropotkinskaya">Кропоткинская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="park-kulturi"
+          >
+          <label class="locationMetro__fullListLineLabel" for="park-kulturi">Парк Культуры</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="frunzenskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="frunzenskaya">Фрунзенская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="sportivnaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="sportivnaya">Спортивная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="vorobievi-gori"
+          >
+          <label class="locationMetro__fullListLineLabel" for="vorobievi-gori">Воробьевы горы</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="universitet"
+          >
+          <label class="locationMetro__fullListLineLabel" for="universitet">Университет</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="prospect-vernadskogo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="prospect-vernadskogo">Проспект Вернадского</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="ugo-zapadnaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="ugo-zapadnaya">Юго-Западная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="troparevo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="troparevo">Тропарево</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="rumyancevo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="rumyancevo">Румянцево</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="salarievo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="salarievo">Саларьево</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="filatov-lug"
+          >
+          <label class="locationMetro__fullListLineLabel" for="filatov-lug">Филатов Луг</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="prokshino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="prokshino">Прокшино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="olhovaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="olhovaya">Ольховая</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kommunarka"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kommunarka">Коммунарка</label>
+        </li>
+      </ul>
+    </li>
+    <li class="locationMetro__fullListLine">
+      <h4 class="locationMetro__fullListLineTitle">Замоскворецкая</h4>
+      <ul class="locationMetro__fullListLineItems">
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="hovrino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="hovrino">Ховрино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="belomorskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="belomorskaya">Беломорская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="rechnoy-vokzal"
+          >
+          <label class="locationMetro__fullListLineLabel" for="rechnoy-vokzal">Речной вокзал</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="vodniy-stadion"
+          >
+          <label class="locationMetro__fullListLineLabel" for="vodniy-stadion">Водный стадион</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="voykovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="voykovskaya">Войковская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="sokol"
+          >
+          <label class="locationMetro__fullListLineLabel" for="sokol">Сокол</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="aeroport"
+          >
+          <label class="locationMetro__fullListLineLabel" for="aeroport">Аэропорт</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="dinamo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="dinamo">Динамо</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="belorusskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="belorusskaya">Белорусская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="mayakovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="mayakovskaya">Маяковская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="tverskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="tverskaya">Тверская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="teatralnaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="teatralnaya">Театральная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="novokuzneckaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="novokuzneckaya">Новокузнецкая</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="paveleckaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="paveleckaya">Павелецкая</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="autozavodskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="autozavodskaya">Автозаводская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="tehnopark"
+          >
+          <label class="locationMetro__fullListLineLabel" for="tehnopark">Технопарк</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kolomenskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kolomenskaya">Коломенская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kashirskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kashirskaya">Каширская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kantemirovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kantemirovskaya">Кантемировская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="caricino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="caricino">Царицино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="orehovo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="orehovo">Орехово</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="domodedovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="domodedovskaya">Домодедовская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="krasnogvardeyskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="krasnogvardeyskaya">Красногвардейская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="alma-atinskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="alma-atinskaya">Алма-Атинская</label>
+        </li>
+      </ul>
+    </li>
+    <li class="locationMetro__fullListLine">
+      <h4 class="locationMetro__fullListLineTitle">Арбатско-Покровская</h4>
+      <ul class="locationMetro__fullListLineItems">
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="pyatnickoe-shosse"
+          >
+          <label class="locationMetro__fullListLineLabel" for="pyatnickoe-shosse">Пятницкое шоссе</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="mitino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="mitino">Митино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="volokolamskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="volokolamskaya">Волоколамская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="myakinino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="myakinino">Мякинино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="strogino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="strogino">Строгино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="krilatskoe"
+          >
+          <label class="locationMetro__fullListLineLabel" for="krilatskoe">Крылатское</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="molodezhnaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="molodezhnaya">Молодежная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kuncevskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kuncevskaya">Кунцевская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="slavyanskiy-bulvar"
+          >
+          <label class="locationMetro__fullListLineLabel" for="slavyanskiy-bulvar">Славянский бульвар</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="park-pobedi"
+          >
+          <label class="locationMetro__fullListLineLabel" for="park-pobedi">Парк Победы</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kievskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kievskaya">Киевская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="smolenskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="smolenskaya">Смоленская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="arbatskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="arbatskaya">Арбатская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="ploshad-revolucii"
+          >
+          <label class="locationMetro__fullListLineLabel" for="ploshad-revolucii">Площадь Революции</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kurskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kurskaya">Курская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="baumanskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="baumanskaya">Бауманская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="electrozavodskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="electrozavodskaya">Электрозаводская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="semenovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="semenovskaya">Семеновская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="partizanskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="partizanskaya">Партизанская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="izmaylovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="izmaylovskaya">Измайловская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="pervomayskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="pervomayskaya">Первомайская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="shelkovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="shelkovskaya">Щелковская</label>
+        </li>
+      </ul>
+    </li>
+    <li class="locationMetro__fullListLine">
+      <h4 class="locationMetro__fullListLineTitle">Филевская</h4>
+      <ul class="locationMetro__fullListLineItems">
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="f-kuncevskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="f-kuncevskaya">Кунцевская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="pionerskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="pionerskaya">Пионерская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="filevskiy-park"
+          >
+          <label class="locationMetro__fullListLineLabel" for="filevskiy-park">Филевский парк</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="bagrationovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="bagrationovskaya">Багратионовская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="fili"
+          >
+          <label class="locationMetro__fullListLineLabel" for="fili">Фили</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kutuzovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kutuzovskaya">Кутузовская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="studencheskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="studencheskaya">Студенческая</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="mezhdunarodnaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="mezhdunarodnaya">Международная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="vistavochnaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="vistavochnaya">Выставочная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="f-kievskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="f-kievskaya">Киевская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="f-smolenskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="f-smolenskaya">Смоленская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="f-arbatskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="f-arbatskaya">Арбатская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="aleksandrovskiy-sad"
+          >
+          <label class="locationMetro__fullListLineLabel" for="aleksandrovskiy-sad">Александровский сад</label>
+        </li>
+      </ul>
+    </li>
+    <li class="locationMetro__fullListLine">
+      <h4 class="locationMetro__fullListLineTitle">Кольцевая</h4>
+      <ul class="locationMetro__fullListLineItems">
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-kievskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-kievskaya">Киевская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-park-kulturi"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-park-kulturi">Парк Культуры</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="oktyabrskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="oktyabrskaya">Октябрьская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="dobrininskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="dobrininskaya">Добрынинская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-paveleckaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-paveleckaya">Павелецкая</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-taganskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-taganskaya">Таганская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-kurskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-kurskaya">Курская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-komsomolskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-komsomolskaya">Комсомольская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="prospect-mira"
+          >
+          <label class="locationMetro__fullListLineLabel" for="prospect-mira">Проспект Мира</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="novoslobodskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="novoslobodskaya">Новослободская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-belorusskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-belorusskaya">Белорусская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="krasnopresnenskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="krasnopresnenskaya">Краснопресненская</label>
+        </li>
+      </ul>
+    </li>
+    <li class="locationMetro__fullListLine">
+      <h4 class="locationMetro__fullListLineTitle">Калужско-Рижская</h4>
+      <ul class="locationMetro__fullListLineItems">
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="medvedkovo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="medvedkovo">Медведково</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="babushkinskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="babushkinskaya">Бабушкинская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="sviblovo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="sviblovo">Свиблово</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="botanicheskiy-sad"
+          >
+          <label class="locationMetro__fullListLineLabel" for="botanicheskiy-sad">Ботанический сад</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="vdnh"
+          >
+          <label class="locationMetro__fullListLineLabel" for="vdnh">ВДНХ</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="alekseevskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="alekseevskaya">Алексеевская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="rizhskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="rizhskaya">Рижская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-prospect-mira"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-prospect-mira">Проспект Мира</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="suharevskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="suharevskaya">Сухаревская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="turgenevskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="turgenevskaya">Тургеневская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kitay-gorod"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kitay-gorod">Китай-город</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="tretiyakovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="tretiyakovskaya">Третьяковская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-oktyabrskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-oktyabrskaya">Октябрьская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="shabolovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="shabolovskaya">Шаболовская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="leninskiy-prospekt"
+          >
+          <label class="locationMetro__fullListLineLabel" for="leninskiy-prospekt">Ленинский проспект</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="academicheskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="academicheskaya">Академическая</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="profsouznaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="profsouznaya">Профсоюзная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="novie-cheremushki"
+          >
+          <label class="locationMetro__fullListLineLabel" for="novie-cheremushki">Новые Черемушки</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-kaluzhskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-kaluzhskaya">Калужская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="belyaevo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="belyaevo">Беляево</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="konkovo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="konkovo">Коньково</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="tepliy-stan"
+          >
+          <label class="locationMetro__fullListLineLabel" for="tepliy-stan">Теплый стан</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="yasnevo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="yasnevo">Яснево</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="novoyasnevskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="novoyasnevskaya">Новоясневская</label>
+        </li>
+      </ul>
+    </li>
+    <li class="locationMetro__fullListLine">
+      <h4 class="locationMetro__fullListLineTitle">Таганско-Краснопресненская</h4>
+      <ul class="locationMetro__fullListLineItems">
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="planernaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="planernaya">Планерная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="shodnenskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="shodnenskaya">Сходненская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="tushinskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="tushinskaya">Тушинская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="spartak"
+          >
+          <label class="locationMetro__fullListLineLabel" for="spartak">Спартак</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="shukinskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="shukinskaya">Щукинская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="oktyabrskoe-pole"
+          >
+          <label class="locationMetro__fullListLineLabel" for="oktyabrskoe-pole">Октябрьское поле</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="polezhaevskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="polezhaevskaya">Полежаевская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="begovaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="begovaya">Беговая</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="ulica-1905-goda"
+          >
+          <label class="locationMetro__fullListLineLabel" for="ulica-1905-goda">Улица 1905 года</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="barrikadnaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="barrikadnaya">Баррикадная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="pushkinskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="pushkinskaya">Пушкинская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kuzneckiy-most"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kuzneckiy-most">Кузнецкий мост</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="t-kitay-gorod"
+          >
+          <label class="locationMetro__fullListLineLabel" for="t-kitay-gorod">Китай-город</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="t-taganskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="t-taganskaya">Таганская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="proletarskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="proletarskaya">Пролетарская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="volgogradskiy-prospect"
+          >
+          <label class="locationMetro__fullListLineLabel" for="volgogradskiy-prospect">Волгоградский проспект</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="tekstilshiki"
+          >
+          <label class="locationMetro__fullListLineLabel" for="tekstilshiki">Текстильщики</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kuzminki"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kuzminki">Кузьминки</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="ryazanskiy-prospekt"
+          >
+          <label class="locationMetro__fullListLineLabel" for="ryazanskiy-prospekt">Рязанский проспект</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="vihino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="vihino">Выхино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="lermontovskiy-prospekt"
+          >
+          <label class="locationMetro__fullListLineLabel" for="lermontovskiy-prospekt">Лермонтовский проспект</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="zhulebino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="zhulebino">Жулебино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kotelniki"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kotelniki">Котельники</label>
+        </li>
+      </ul>
+    </li>
+    <li class="locationMetro__fullListLine">
+      <h4 class="locationMetro__fullListLineTitle">Калининская</h4>
+      <ul class="locationMetro__fullListLineItems">
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="novokosino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="novokosino">Новокосино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="novogireevo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="novogireevo">Новогиреево</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="perovo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="perovo">Перово</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="shosse-entuziastov"
+          >
+          <label class="locationMetro__fullListLineLabel" for="shosse-entuziastov">Шоссе Энтузиастов</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="aviamotornaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="aviamotornaya">Авиамоторная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="ploshad-ilyicha"
+          >
+          <label class="locationMetro__fullListLineLabel" for="ploshad-ilyicha">Площадь Ильича</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="marksistskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="marksistskaya">Марксистская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-tretiyakovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-tretiyakovskaya">Третьяковская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="savelovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="savelovskaya">Савеловская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="petrovskiy-park"
+          >
+          <label class="locationMetro__fullListLineLabel" for="petrovskiy-park">Петровский парк</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="cska"
+          >
+          <label class="locationMetro__fullListLineLabel" for="cska">ЦСКА</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="horoshevskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="horoshevskaya">Хорошевская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="shelepiha"
+          >
+          <label class="locationMetro__fullListLineLabel" for="shelepiha">Шелепиха</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-park-pobedi"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-park-pobedi">Парк Победы</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="minskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="minskaya">Минская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="lomonosovskiy-prospekt"
+          >
+          <label class="locationMetro__fullListLineLabel" for="lomonosovskiy-prospekt">Ломоносовский проспект</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="ramenki"
+          >
+          <label class="locationMetro__fullListLineLabel" for="ramenki">Раменки</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="michurinskiy-prospekt"
+          >
+          <label class="locationMetro__fullListLineLabel" for="michurinskiy-prospekt">Мичуринский проспект</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="ozernaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="ozernaya">Озерная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="govorovo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="govorovo">Говорово</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="solncevo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="solncevo">Солнцево</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="borovskoe-shosse"
+          >
+          <label class="locationMetro__fullListLineLabel" for="borovskoe-shosse">Боровское шоссе</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="novoperedelkino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="novoperedelkino">Новопеределкино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="rasskazovka"
+          >
+          <label class="locationMetro__fullListLineLabel" for="rasskazovka">Рассказовка</label>
+        </li>
+      </ul>
+    </li>
+    <li class="locationMetro__fullListLine">
+      <h4 class="locationMetro__fullListLineTitle">Люблинская</h4>
+      <ul class="locationMetro__fullListLineItems">
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="zyablikovo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="zyablikovo">Зябликово</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="borisovo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="borisovo">Борисово</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="maryino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="maryino">Марьино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="bratislavskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="bratislavskaya">Братиславская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="lublino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="lublino">Люблино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="volzhskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="volzhskaya">Волжская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="pechatniki"
+          >
+          <label class="locationMetro__fullListLineLabel" for="pechatniki">Печатники</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="kozhuhovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="kozhuhovskaya">Кожуховская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="dubrovka"
+          >
+          <label class="locationMetro__fullListLineLabel" for="dubrovka">Дубровка</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="krestyanskaya-zastava"
+          >
+          <label class="locationMetro__fullListLineLabel" for="krestyanskaya-zastava">Крестьянская застава</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="rimskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="rimskaya">Римская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="chkalovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="chkalovskaya">Чкаловская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="sretenskiy-bulvar"
+          >
+          <label class="locationMetro__fullListLineLabel" for="sretenskiy-bulvar">Сретенский бульвар</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="trubnaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="trubnaya">Трубная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="dostoevskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="dostoevskaya">Достаевская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="maryina-roscha"
+          >
+          <label class="locationMetro__fullListLineLabel" for="maryina-roscha">Марьина роща</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="butirskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="butirskaya">Бутырская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="fonvizinskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="fonvizinskaya">Фонвизинская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="petrovsko-razumovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="petrovsko-razumovskaya">Петровско-Разумовская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="okruzhnaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="okruzhnaya">Окружная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="verhnie-lihobori"
+          >
+          <label class="locationMetro__fullListLineLabel" for="verhnie-lihobori">Верхние Лихоборы</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="seligerskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="seligerskaya">Селигерская</label>
+        </li>
+      </ul>
+    </li>
+    <li class="locationMetro__fullListLine">
+      <h4 class="locationMetro__fullListLineTitle">Каховская</h4>
+      <ul class="locationMetro__fullListLineItems">
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-kahovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-kahovskaya">Каховская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="varshavskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="varshavskaya">Варшавская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="k-kashirskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="k-kashirskaya">Каширская</label>
+        </li>
+      </ul>
+    </li>
+    <li class="locationMetro__fullListLine">
+      <h4 class="locationMetro__fullListLineTitle">Бунинская</h4>
+      <ul class="locationMetro__fullListLineItems">
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="ulica-starokachalovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="ulica-starokachalovskaya">Улица Старокачаловская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="bulvar-admirala-ushakova"
+          >
+          <label class="locationMetro__fullListLineLabel" for="bulvar-admirala-ushakova">Бульвар адмирала Ушакова</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="ulica-gorchakova"
+          >
+          <label class="locationMetro__fullListLineLabel" for="ulica-gorchakova">Улица Горчакова</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="buninskaya-alleya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="buninskaya-alleya">Бунинская Аллея</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="bitcevskiy-park"
+          >
+          <label class="locationMetro__fullListLineLabel" for="bitcevskiy-park">Битцевский парк</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="lesoparkovaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="lesoparkovaya">Лесопарковая</label>
+        </li>
+      </ul>
+    </li>
+    <li class="locationMetro__fullListLine">
+      <h4 class="locationMetro__fullListLineTitle">Серпуховско-тимирязевская</h4>
+      <ul class="locationMetro__fullListLineItems">
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="bulvar-dmitriya-donskogo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="bulvar-dmitriya-donskogo">Бульвар Дмитрия Донского</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="anino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="anino">Аннино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="ulica-academika-yangelya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="ulica-academika-yangelya">Улица академика Янгеля</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="prazhskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="prazhskaya">Пражская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="uzhnaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="uzhnaya">Южная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="chertanovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="chertanovskaya">Чертановская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="sevastopolskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="sevastopolskaya">Севастопольская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="nahimovskiy-prospect"
+          >
+          <label class="locationMetro__fullListLineLabel" for="nahimovskiy-prospect">Нахимовский проспект</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="nagornaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="nagornaya">Нагорная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="nagatinskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="nagatinskaya">Нагатинская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="tulskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="tulskaya">Тульская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="s-serpukhovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="s-serpukhovskaya">Серпуховская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="polyanka"
+          >
+          <label class="locationMetro__fullListLineLabel" for="polyanka">Полянка</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="borovickaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="borovickaya">Боровицкая</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="chehovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="chehovskaya">Чеховская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="cvetnoy-bulvar"
+          >
+          <label class="locationMetro__fullListLineLabel" for="cvetnoy-bulvar">Цветной бульвар</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="mendeleevskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="mendeleevskaya">Менделеевская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="s-savelovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="s-savelovskaya">Савеловская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="dmitrovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="dmitrovskaya">Дмитровская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="timiryazevskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="timiryazevskaya">Тимирязевская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="s-petrovsko-razumovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="s-petrovsko-razumovskaya">Петровско-Разумовская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="vladikino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="vladikino">Владыкино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="otradnoe"
+          >
+          <label class="locationMetro__fullListLineLabel" for="otradnoe">Отрадное</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="bibirevo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="bibirevo">Бибирево</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="altufievo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="altufievo">Алтуфьево</label>
+        </li>
+      </ul>
+    </li>
+    <li class="locationMetro__fullListLine">
+      <h4 class="locationMetro__fullListLineTitle">Московское центральное кольцо</h4>
+      <ul class="locationMetro__fullListLineItems">
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="m-okruzhnaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="m-okruzhnaya">Окружная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="m-vladikino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="m-vladikino">Владыкино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="m-botanicheskiy-sad"
+          >
+          <label class="locationMetro__fullListLineLabel" for="m-botanicheskiy-sad">Ботанический сад</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="rostokino"
+          >
+          <label class="locationMetro__fullListLineLabel" for="rostokino">Ростокино</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="belokamennaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="belokamennaya">Белокаменная</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="m-bulvar-rokossovskogo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="m-bulvar-rokossovskogo">Бульвар Рокоссовского</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="lokomotiv"
+          >
+          <label class="locationMetro__fullListLineLabel" for="lokomotiv">Локомотив</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="izmaylovo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="izmaylovo">Измайлово</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="sokolinaya-gora"
+          >
+          <label class="locationMetro__fullListLineLabel" for="sokolinaya-gora">Соколиная Гора</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="m-shosse-entuziastov"
+          >
+          <label class="locationMetro__fullListLineLabel" for="m-shosse-entuziastov">Шоссе Энтузиастов</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="andronovka"
+          >
+          <label class="locationMetro__fullListLineLabel" for="andronovka">Андроновка</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="nizhegorodskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="nizhegorodskaya">Нижегородская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="novohohlovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="novohohlovskaya">Новохохловская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="ugreshskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="ugreshskaya">Угрешская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="dubrovka"
+          >
+          <label class="locationMetro__fullListLineLabel" for="dubrovka">Дубровка</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="m-autozavodskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="m-autozavodskaya">Автозаводская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="zil"
+          >
+          <label class="locationMetro__fullListLineLabel" for="zil">ЗИЛ</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="verhnie-kotli"
+          >
+          <label class="locationMetro__fullListLineLabel" for="verhnie-kotli">Верхние Котлы</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="krimskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="krimskaya">Крымская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="ploshad-gagarina"
+          >
+          <label class="locationMetro__fullListLineLabel" for="ploshad-gagarina">Площадь Гагарина</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="luzhniki"
+          >
+          <label class="locationMetro__fullListLineLabel" for="luzhniki">Лужники</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="m-kutuzovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="m-kutuzovskaya">Кутузовская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="delovoy-centr"
+          >
+          <label class="locationMetro__fullListLineLabel" for="delovoy-centr">Деловой центр</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="m-shelepiha"
+          >
+          <label class="locationMetro__fullListLineLabel" for="m-shelepiha">Шелепиха</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="horoshevo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="horoshevo">Хорошево</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="zorge"
+          >
+          <label class="locationMetro__fullListLineLabel" for="zorge">Зорге</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="panfilovskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="panfilovskaya">Панфиловская</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="streshnevo"
+          >
+          <label class="locationMetro__fullListLineLabel" for="streshnevo">Стрешнево</label>
+        </li>
+        <li class="locationMetro__fullListLineItem">
+          <input
+            class="locationMetro__fullListLineInput"
+            name="sokolnicheskaya"
+            type="checkbox"
+            id="baltiyskaya"
+          >
+          <label class="locationMetro__fullListLineLabel" for="baltiyskaya">Балтийская</label>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+          </div>
+          <div class="jkFiltersLocationModal__tabsContent" style="display: none;">
+            <div class="locationMoscow">
+  Москва
+</div>
+
+          </div>
+          <div class="jkFiltersLocationModal__tabsContent" style="display: none;">
+            <div class="locationRegion">
+  Московская область
+</div>
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+    <footer class="jkFiltersLocationModal__footer">
+      <div class="jkFiltersLocationModal__footerOptions">
+        <button class="jkFiltersLocationModal__footerOptionsReset">Очистить</button>
+        <button class="jkFiltersLocationModal__footerOptionsSave">
+          Сохранить <span class="jkFiltersLocationModal__footerOptionsSaveCount">2</span>
+        </button>
+      </div>
+    </footer>
+  </div>
+</div>
+
+</section>
+
+    <section class="homeDiscountedJk">
+  <div class="container">
+    <div class="homeDiscountedJk__head">
+      <h2 class="homeDiscountedJk__heading">
+        Акции и скидки на квартиры
+        в Новостройках
+      </h2>
+      <a class="homeDiscountedJk__link" href="">
+        <span class="homeDiscountedJk__linkText">Все новостройки</span>
+        <svg class="homeDiscountedJk__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
+        </svg>
+      </a>
+    </div>
+    <ul class="homeDiscountedJk__list">
+      <li class="JkPreviewCard homeDiscountedJk__item">
+        <a class="JkPreviewCard__link" href="jk-template.html">
+          <div class="JkPreviewCard__imageWrapper">
+            <img
+              class="JkPreviewCard__image"
+              src="img/contentJk/aventin/preview.jpg"
+              alt="ЖК «Авентин»"
+            >
+          </div>
+          <div class="JkPreviewCard__info">
+            <h3 class="JkPreviewCard__title">ЖК «Авентин»</h3>
+            <div class="JkPreviewCard__location">
+              <span class="JkPreviewCard__metro metro">Бульвар Дмитрия Донского</span>
+
+              <!-- если пешком '--onFoot' -->
+              <!-- если на машине '--byCar' -->
+              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">40&nbsp;мин</span>
+            </div>
+            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
+          </div>
+        </a>
+        <ul class="homeDiscountedJk__infoIcons">
+          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--discount baseTooltip">
+            <span class="baseTooltip__text">
+              Скидка <br>
+              10%
+            </span>
+          </li>
+          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--hypothec baseTooltip">
+            <span class="baseTooltip__text">
+              Ипотека <br>
+              от 4.2%
+            </span>
+          </li>
+          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--deadline baseTooltip">
+            <span class="baseTooltip__text">
+              Ключи <br>
+              выданы
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li class="JkPreviewCard homeDiscountedJk__item">
+        <a class="JkPreviewCard__link" href="jk-template.html">
+          <div class="JkPreviewCard__imageWrapper">
+            <img
+              class="JkPreviewCard__image"
+              src="img/contentJk/rasskazovo/preview.jpg"
+              alt="ЖК «Авентин»"
+            >
+          </div>
+          <div class="JkPreviewCard__info">
+            <h3 class="JkPreviewCard__title">ЖК «Люберецкий»</h3>
+            <div class="JkPreviewCard__location">
+              <span class="JkPreviewCard__metro metro">Домодедовская</span>
+
+              <!-- если пешком '--onFoot' -->
+              <!-- если на машине '--byCar' -->
+              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">8 мин</span>
+            </div>
+            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
+          </div>
+        </a>
+        <ul class="homeDiscountedJk__infoIcons">
+          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--discount baseTooltip">
+            <span class="baseTooltip__text">
+              Скидка <br>
+              5%
+            </span>
+          </li>
+          <!--          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon&#45;&#45;hypothec baseTooltip">-->
+          <!--            <span class="baseTooltip__text">-->
+          <!--              Ипотека <br>-->
+          <!--              от 4.2%-->
+          <!--            </span>-->
+          <!--          </li>-->
+          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--deadline baseTooltip">
+            <span class="baseTooltip__text">
+              Ключи <br>
+              выданы
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li class="JkPreviewCard homeDiscountedJk__item">
+        <a class="JkPreviewCard__link" href="jk-template.html">
+          <div class="JkPreviewCard__imageWrapper">
+            <img
+              class="JkPreviewCard__image"
+              src="img/contentJk/someJk/preview.jpg"
+              alt="ЖК «Авентин»"
+            >
+          </div>
+          <div class="JkPreviewCard__info">
+            <h3 class="JkPreviewCard__title">ЖК «Домодедовский»</h3>
+            <div class="JkPreviewCard__location">
+              <span class="JkPreviewCard__metro metro">Сокол</span>
+
+              <!-- если пешком '--onFoot' -->
+              <!-- если на машине '--byCar' -->
+              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">14 мин</span>
+            </div>
+            <span class="JkPreviewCard__price">От 12.9 млн ₽</span>
+          </div>
+        </a>
+        <ul class="homeDiscountedJk__infoIcons">
+          <!--          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon&#45;&#45;discount baseTooltip">-->
+          <!--            <span class="baseTooltip__text">-->
+          <!--              Скидка <br>-->
+          <!--              10%-->
+          <!--            </span>-->
+          <!--          </li>-->
+          <!--          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon&#45;&#45;hypothec baseTooltip">-->
+          <!--            <span class="baseTooltip__text">-->
+          <!--              Ипотека <br>-->
+          <!--              от 4.2%-->
+          <!--            </span>-->
+          <!--          </li>-->
+          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--deadline baseTooltip">
+            <span class="baseTooltip__text">
+              Ключи <br>
+              выданы
+            </span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <section class="homePopularPlaces">
+  <div class="container">
+    <h2 class="homePopularPlaces__heading">
+      Популярные направления
+    </h2>
+    <div class="homePopularPlaces__scrollWrapper">
+      <ul class="homePopularPlaces__list">
+        <li class="homePopularPlaces__item">
+          <a class="homePopularPlaces__itemLink" href="">
+            <div class="homePopularPlaces__itemTextWrapper">
+              <h4 class="homePopularPlaces__itemTitle">Новостройки Москвы</h4>
+              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
+            </div>
+            <div class="homePopularPlaces__itemImageWrapper">
+              <img
+                class="homePopularPlaces__itemImage"
+                src="img/contentJk/aventin/preview.jpg"
+                alt="ЖК «Авентин»"
+              >
+            </div>
+          </a>
+        </li>
+        <li class="homePopularPlaces__item">
+          <a class="homePopularPlaces__itemLink" href="">
+            <div class="homePopularPlaces__itemTextWrapper">
+              <h4 class="homePopularPlaces__itemTitle">Новостройки Новой Москвы</h4>
+              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
+            </div>
+            <div class="homePopularPlaces__itemImageWrapper">
+              <img
+                class="homePopularPlaces__itemImage"
+                src="img/contentJk/rasskazovo/preview.jpg"
+                alt="ЖК «Авентин»"
+              >
+            </div>
+          </a>
+        </li>
+        <li class="homePopularPlaces__item">
+          <a class="homePopularPlaces__itemLink" href="">
+            <div class="homePopularPlaces__itemTextWrapper">
+              <h4 class="homePopularPlaces__itemTitle">Новостройки Подмосковья</h4>
+              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
+            </div>
+            <div class="homePopularPlaces__itemImageWrapper">
+              <img
+                class="homePopularPlaces__itemImage"
+                src="img/contentJk/someJk/preview.jpg"
+                alt="ЖК «Авентин»"
+              >
+            </div>
+          </a>
+        </li>
+        <li class="homePopularPlaces__item">
+          <a class="homePopularPlaces__itemLink" href="">
+            <div class="homePopularPlaces__itemTextWrapper">
+              <h4 class="homePopularPlaces__itemTitle">Новостройки Химок</h4>
+              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
+            </div>
+            <div class="homePopularPlaces__itemImageWrapper">
+              <img
+                class="homePopularPlaces__itemImage"
+                src="img/contentJk/aventin/preview.jpg"
+                alt="ЖК «Авентин»"
+              >
+            </div>
+          </a>
+        </li>
+        <li class="homePopularPlaces__item">
+          <a class="homePopularPlaces__itemLink" href="">
+            <div class="homePopularPlaces__itemTextWrapper">
+              <h4 class="homePopularPlaces__itemTitle">Новостройки Балашихи</h4>
+              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
+            </div>
+            <div class="homePopularPlaces__itemImageWrapper">
+              <img
+                class="homePopularPlaces__itemImage"
+                src="img/contentJk/rasskazovo/preview.jpg"
+                alt="ЖК «Авентин»"
+              >
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="homePopularJk">
+  <div class="container">
+    <div class="homePopularJk__head">
+      <h2 class="homePopularJk__heading">
+        Популярные новостройки
+      </h2>
+      <a class="homePopularJk__link" href="">
+        <span class="homePopularJk__linkText">Все популярные новостройки</span>
+        <svg class="homePopularJk__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
+        </svg>
+      </a>
+    </div>
+    <ul class="homePopularJk__list">
+      <li class="JkPreviewCard homePopularJk__item">
+        <a class="JkPreviewCard__link" href="jk-template.html">
+          <div class="JkPreviewCard__imageWrapper">
+            <img
+              class="JkPreviewCard__image"
+              src="img/contentJk/aventin/preview.jpg"
+              alt="ЖК «Авентин»"
+            >
+          </div>
+          <div class="JkPreviewCard__info">
+            <h3 class="JkPreviewCard__title">ЖК «Авентин»</h3>
+            <div class="JkPreviewCard__location">
+              <span class="JkPreviewCard__metro metro">Бульвар Дмитрия Донского</span>
+
+              <!-- если пешком '--onFoot' -->
+              <!-- если на машине '--byCar' -->
+              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">40&nbsp;мин</span>
+            </div>
+            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
+          </div>
+        </a>
+      </li>
+      <li class="JkPreviewCard homePopularJk__item">
+        <a class="JkPreviewCard__link" href="jk-template.html">
+          <div class="JkPreviewCard__imageWrapper">
+            <img
+              class="JkPreviewCard__image"
+              src="img/contentJk/rasskazovo/preview.jpg"
+              alt="ЖК «Авентин»"
+            >
+          </div>
+          <div class="JkPreviewCard__info">
+            <h3 class="JkPreviewCard__title">ЖК «Люберецкий»</h3>
+            <div class="JkPreviewCard__location">
+              <span class="JkPreviewCard__metro metro">Домодедовская</span>
+
+              <!-- если пешком '--onFoot' -->
+              <!-- если на машине '--byCar' -->
+              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">8 мин</span>
+            </div>
+            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
+          </div>
+        </a>
+      </li>
+      <li class="JkPreviewCard homePopularJk__item">
+        <a class="JkPreviewCard__link" href="jk-template.html">
+          <div class="JkPreviewCard__imageWrapper">
+            <img
+              class="JkPreviewCard__image"
+              src="img/contentJk/someJk/preview.jpg"
+              alt="ЖК «Авентин»"
+            >
+          </div>
+          <div class="JkPreviewCard__info">
+            <h3 class="JkPreviewCard__title">ЖК «Домодедовский»</h3>
+            <div class="JkPreviewCard__location">
+              <span class="JkPreviewCard__metro metro">Сокол</span>
+
+              <!-- если пешком '--onFoot' -->
+              <!-- если на машине '--byCar' -->
+              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">14 мин</span>
+            </div>
+            <span class="JkPreviewCard__price">От 12.9 млн ₽</span>
+          </div>
+        </a>
+      </li>
+      <li class="JkPreviewCard homePopularJk__item">
+        <a class="JkPreviewCard__link" href="jk-template.html">
+          <div class="JkPreviewCard__imageWrapper">
+            <img
+              class="JkPreviewCard__image"
+              src="img/contentJk/aventin/preview.jpg"
+              alt="ЖК «Авентин»"
+            >
+          </div>
+          <div class="JkPreviewCard__info">
+            <h3 class="JkPreviewCard__title">ЖК «Авентин»</h3>
+            <div class="JkPreviewCard__location">
+              <span class="JkPreviewCard__metro metro">Бульвар Дмитрия Донского</span>
+
+              <!-- если пешком '--onFoot' -->
+              <!-- если на машине '--byCar' -->
+              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">40&nbsp;мин</span>
+            </div>
+            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
+          </div>
+        </a>
+      </li>
+      <li class="JkPreviewCard homePopularJk__item">
+        <a class="JkPreviewCard__link" href="jk-template.html">
+          <div class="JkPreviewCard__imageWrapper">
+            <img
+              class="JkPreviewCard__image"
+              src="img/contentJk/rasskazovo/preview.jpg"
+              alt="ЖК «Авентин»"
+            >
+          </div>
+          <div class="JkPreviewCard__info">
+            <h3 class="JkPreviewCard__title">ЖК «Люберецкий»</h3>
+            <div class="JkPreviewCard__location">
+              <span class="JkPreviewCard__metro metro">Домодедовская</span>
+
+              <!-- если пешком '--onFoot' -->
+              <!-- если на машине '--byCar' -->
+              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">8 мин</span>
+            </div>
+            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <section class="homeNewsBlog">
+  <div class="container">
+    <h2 class="homeNewsBlog__heading">Новости и материалы</h2>
+    <div class="homeNewsBlog__head">
+      <ul class="homeNewsBlog__tabs">
+        <li class="homeNewsBlog__tab homeNewsBlog__tab--active">Новости</li>
+        <li class="homeNewsBlog__tab">Статьи</li>
+        <li class="homeNewsBlog__tab">Советы</li>
+        <li class="homeNewsBlog__tab">Аналитика</li>
+      </ul>
+      <a class="homeNewsBlog__link" href="">
+        <span class="homeNewsBlog__linkText">Все новости и материалы</span>
+        <svg class="homeNewsBlog__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
+        </svg>
+      </a>
+    </div>
+    <ul class="homeNewsBlog__list">
+      <li class="homeNewsBlog__item">
+        <a class="homeNewsBlog__itemLink" href="">
+          <div class="homeNewsBlog__itemImageWrapper">
+            <img class="homeNewsBlog__itemImage" src="img/newsBlog/news-1.jpg" alt="Изображение">
+          </div>
+          <div class="homeNewsBlog__itemTextWrapper">
+            <h4 class="homeNewsBlog__itemTitle">
+              Закрытие офиса продаж «ЖК Останкино»
+            </h4>
+            <span class="homeNewsBlog__itemDate">24 марта 2021 года</span>
+          </div>
+        </a>
+      </li>
+      <li class="homeNewsBlog__item">
+        <a class="homeNewsBlog__itemLink" href="">
+          <div class="homeNewsBlog__itemImageWrapper">
+            <img class="homeNewsBlog__itemImage" src="img/newsBlog/news-2.jpg" alt="Изображение">
+          </div>
+          <div class="homeNewsBlog__itemTextWrapper">
+            <h4 class="homeNewsBlog__itemTitle">
+              Стартовали продажи квартир II очереди в проекте «Павелецкая Сити»
+            </h4>
+            <span class="homeNewsBlog__itemDate">24 марта 2021 года</span>
+          </div>
+        </a>
+      </li>
+      <li class="homeNewsBlog__item">
+        <a class="homeNewsBlog__itemLink" href="">
+          <div class="homeNewsBlog__itemImageWrapper">
+            <img class="homeNewsBlog__itemImage" src="img/newsBlog/news-3.jpg" alt="Изображение">
+          </div>
+          <div class="homeNewsBlog__itemTextWrapper">
+            <h4 class="homeNewsBlog__itemTitle">
+              Консолидированные финансовые результаты новостроек Московской области по МСФО за 2020 год
+            </h4>
+            <span class="homeNewsBlog__itemDate">24 марта 2021 года</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <section class="homeFooter">
+  <div class="container">
+    <h2 class="homeFooter__heading">
+      Новостройки Москвы
+    </h2>
+    <div class="homeFooter__textWrapper">
+      <p class="homeFooter__descr">
+        Проект Метры.ру станет надежным источником информации для тех, кто ищет жилье в новостройке московского региона
+        или хотел бы составить представление о ситуации на рынке первичной недвижимости Москвы и Московской области.
+        Сайт представляет собой каталог московских новостроек, в котором собраны самые актуальные подробные данные о
+        жилых комплексах и квартирах.
+      </p>
+      <p class="homeFooter__descr">
+        Сайт представляет собой каталог московских новостроек, в котором собраны самые актуальные подробные данные о
+        жилых комплексах и квартирах.
+      </p>
+      <p class="homeFooter__descr">
+        Для того чтобы пользователь смог быстро получить нужную ему информацию, на сайте разработаны удобные фильтры и
+        вывод объектов. Информация на сайте обновляется ежедневно и добавляются свежие предложения. Для поиска нужного
+        объекта вам достаточно сделать лишь пару кликов.
+      </p>
+      <p class="homeFooter__descr">
+        Главные преимущества, которые вы получите на сайте Метры.ру: простота поиска, возможность отбирать и сравнивать
+        предложения в разных новостройках, только актуальная информация о московских новостройках.
+      </p>
+      <p class="homeFooter__descr">
+        Проект Метры.ру независимый и отражает реальную картину на рынке недвижимости. Вы сможете отследить основные
+        тренды рынка новостроек и получить полную информацию о предложениях московских застройщиков.
+      </p>
+      <p class="homeFooter__descr">
+        Метры.ру предлагает компаниям размещение рекламы в нескольких медийных форматах, ознакомьтесь с предложениями
+        сервиса в разделе «Реклама».
+      </p>
+    </div>
+    <ul class="homeFooter__linksList">
+      <li class="homeFooter__linksItem">
+        <a class="homeFooter__link" href="">Новостройки с отделкой в Новой Москве</a>
+      </li>
+      <li class="homeFooter__linksItem">
+        <a class="homeFooter__link" href="">Новостройки без отделки в Москве</a>
+      </li>
+      <li class="homeFooter__linksItem">
+        <a class="homeFooter__link" href="">Самые дешевые новостройки в Подмосковье </a>
+      </li>
+      <li class="homeFooter__linksItem">
+        <a class="homeFooter__link" href="">Новостройки комфорт-класса</a>
+      </li>
+      <li class="homeFooter__linksItem">
+        <a class="homeFooter__link" href="">Сданные новостройки в Москве</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+    <nav class="mainMobileMenu">
+  <div class="container mainMobileMenu__container">
+    <div class="mainMobileMenu__wrapper">
+      <span class="mainMobileMenu__title">
+        <a href="">Новостройки</a>
+      </span>
+      <ul class="mainMobileMenu__list">
+        <li class="mainMobileMenu__item">
+          <a class="mainMobileMenu__itemLink" href="">Новостройки Москвы</a>
+        </li>
+        <li class="mainMobileMenu__item">
+          <a class="mainMobileMenu__itemLink" href="">Новостройки Подмосковья</a>
+        </li>
+        <li class="mainMobileMenu__item">
+          <a class="mainMobileMenu__itemLink" href="">Новостройки Новой Москвы</a>
+        </li>
+        <li class="mainMobileMenu__item">
+          <a class="mainMobileMenu__itemLink" href="">На карте</a>
+        </li>
+      </ul>
+      <span class="mainMobileMenu__title">
+        <a href="">Скидки до 30%</a>
+      </span>
+    </div>
+    <div class="mainMobileMenu__wrapper">
+      <button class="mainMobileMenu__consultation">Консультация</button>
+      <span class="mainMobileMenu__title">
+        <a href="tel:88006488218">8 (800) 648-82-18</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
   </main>
   <footer class="footer">
   <div class="container footer__container">
@@ -145,6 +4118,9 @@
       </div>
 
       <div class="footer__extraListWrapper">
+        <span class="footer__listTitle footer__listTitle--phone">
+          <a href="+78006488218">8 (800) 648-82-18</a>
+        </span>
         <ul class="footer__list">
           <li class="footer__listItem">
             <a class="footer__listLink" href="">Пользовательское соглашение</a>
@@ -156,20 +4132,44 @@
             <a class="footer__listLink" href="">Карта сайта</a>
           </li>
           <li class="footer__listItem">
+            <a class="footer__listLink" href="">Застройщики</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">Новости</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="">О компании</a>
+          </li>
+          <li class="footer__listItem">
             <a class="footer__listLink" href="">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__socialListWrapper">
+        <span class="footer__listTitle">Мы в соцсетях:</span>
+        <ul class="footer__list">
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="" target="_blank">Вконтакте</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="" target="_blank">Facebook</a>
+          </li>
+          <li class="footer__listItem">
+            <a class="footer__listLink" href="" target="_blank">Instagram</a>
           </li>
         </ul>
       </div>
     </div>
 
-    <a class="footer__phone" href="+78006488218">8 (800) 648-82-18</a>
+<!--    <a class="footer__phone" href="+78006488218">8 (800) 648-82-18</a>-->
 
     <span class="footer__copy">&copy;&nbsp;2021, Метры.ру</span>
   </div>
 </footer>
 
-  <script src="js/owirhfgeiugh8494rgio.min.js"></script>
+  <script src="js/main.min.js"></script>
   <script src="js/homepage.min.js"></script>
-  <script src="js/uh4875gh498g4.min.js"></script>
+  <script src="js/vendor.min.js"></script>
 </body>
 </html>
