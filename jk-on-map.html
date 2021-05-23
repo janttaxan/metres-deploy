@@ -25,9 +25,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
   <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
   <link rel="stylesheet" href="styles/main.min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=83cb6c6f-2894-4f2d-90f7-55ef0343b4b5&lang=ru_RU" type="text/javascript"></script>
 </head>
-<body>
 
+<body>
   <header class="mainHeader lock-padding">
   <div class="container mainHeader__container">
     <div class="mainHeader__linksContainer">
@@ -100,20 +101,13 @@
   </div>
 </header>
 
-
-  <main>
-    <section class="homeHead">
-  <div class="container">
-    <h1 class="homeHead__heading">Новостройки Москвы и области</h1>
-  </div>
-</section>
-
+  <main class="mapMain">
     <!--
   "id" задается для каждой из страниц,
   где используются фильтры для возможности
   добавлять отдельные стили
 -->
-<section class="jkFilters" id="homeFilters">
+<section class="jkFilters" id="mapFilters">
   <div class="container">
     <div class="jkFilters__desktopContainer">
       <!--
@@ -5758,483 +5752,34 @@
 
 </section>
 
-    <section class="homeDiscountedJk">
-  <div class="container">
-    <div class="homeDiscountedJk__head">
-      <h2 class="homeDiscountedJk__heading">
-        Акции и скидки на квартиры
-        в Новостройках
-      </h2>
-      <a class="homeDiscountedJk__link" href="">
-        <span class="homeDiscountedJk__linkText">Все новостройки</span>
-        <svg class="homeDiscountedJk__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
-        </svg>
-      </a>
-    </div>
-    <ul class="homeDiscountedJk__list">
-      <li class="JkPreviewCard homeDiscountedJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/aventin/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Авентин»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Бульвар Дмитрия Донского</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">40&nbsp;мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
-          </div>
-        </a>
-        <ul class="homeDiscountedJk__infoIcons">
-          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--discount baseTooltip">
-            <span class="baseTooltip__text">
-              Скидка <br>
-              10%
-            </span>
-          </li>
-          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--hypothec baseTooltip">
-            <span class="baseTooltip__text">
-              Ипотека <br>
-              от 4.2%
-            </span>
-          </li>
-          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--deadline baseTooltip">
-            <span class="baseTooltip__text">
-              Ключи <br>
-              выданы
-            </span>
-          </li>
-        </ul>
-      </li>
-      <li class="JkPreviewCard homeDiscountedJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/rasskazovo/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Люберецкий»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Домодедовская</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">8 мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
-          </div>
-        </a>
-        <ul class="homeDiscountedJk__infoIcons">
-          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--discount baseTooltip">
-            <span class="baseTooltip__text">
-              Скидка <br>
-              5%
-            </span>
-          </li>
-          <!--          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon&#45;&#45;hypothec baseTooltip">-->
-          <!--            <span class="baseTooltip__text">-->
-          <!--              Ипотека <br>-->
-          <!--              от 4.2%-->
-          <!--            </span>-->
-          <!--          </li>-->
-          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--deadline baseTooltip">
-            <span class="baseTooltip__text">
-              Ключи <br>
-              выданы
-            </span>
-          </li>
-        </ul>
-      </li>
-      <li class="JkPreviewCard homeDiscountedJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/someJk/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Домодедовский»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Сокол</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">14 мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 12.9 млн ₽</span>
-          </div>
-        </a>
-        <ul class="homeDiscountedJk__infoIcons">
-          <!--          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon&#45;&#45;discount baseTooltip">-->
-          <!--            <span class="baseTooltip__text">-->
-          <!--              Скидка <br>-->
-          <!--              10%-->
-          <!--            </span>-->
-          <!--          </li>-->
-          <!--          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon&#45;&#45;hypothec baseTooltip">-->
-          <!--            <span class="baseTooltip__text">-->
-          <!--              Ипотека <br>-->
-          <!--              от 4.2%-->
-          <!--            </span>-->
-          <!--          </li>-->
-          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--deadline baseTooltip">
-            <span class="baseTooltip__text">
-              Ключи <br>
-              выданы
-            </span>
-          </li>
-        </ul>
-      </li>
+    <div class="jkMap">
+  <div class="jkMap__listWrapper">
+    <ul class="jkMap__list">
+      <!--
+        Верстка элемента. Все элементы рендерятся в файле jkItemList.min.js
+      -->
+      <!--      <li class="jkMap__item">-->
+      <!--        <a class="jkMap__itemLink" href="./jk-template.html">-->
+      <!--          <div class="jkMap__itemImageWrapper">-->
+      <!--            <img class="jkMap__itemImage" src="./img/contentJk/rasskazovo/sm-preview.jpg" alt="Изображение ЖК">-->
+      <!--          </div>-->
+      <!--          <div class="jkMap__itemTextWrapper">-->
+      <!--            <h4 class="jkMap__itemTitle">ЖК «Домодедовский»</h4>-->
+      <!--            <span class="jkMap__itemPrice">от 5.7 млн ₽</span>-->
+      <!--            <span class="jkMap__itemDate">Сдача в III кв. 2021 — 1 кв. 2023;</span>-->
+      <!--            <span class="jkMap__itemStatus">некоторые корпуса сданы</span>-->
+      <!--          </div>-->
+      <!--        </a>-->
+      <!--      </li>-->
     </ul>
   </div>
-</section>
-
-    <section class="homePopularPlaces">
-  <div class="container">
-    <h2 class="homePopularPlaces__heading">
-      Популярные направления
-    </h2>
-    <div class="homePopularPlaces__scrollWrapper">
-      <ul class="homePopularPlaces__list">
-        <li class="homePopularPlaces__item">
-          <a class="homePopularPlaces__itemLink" href="">
-            <div class="homePopularPlaces__itemTextWrapper">
-              <h4 class="homePopularPlaces__itemTitle">Новостройки Москвы</h4>
-              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
-            </div>
-            <div class="homePopularPlaces__itemImageWrapper">
-              <img
-                class="homePopularPlaces__itemImage"
-                src="img/contentJk/aventin/preview.jpg"
-                alt="ЖК «Авентин»"
-              >
-            </div>
-          </a>
-        </li>
-        <li class="homePopularPlaces__item">
-          <a class="homePopularPlaces__itemLink" href="">
-            <div class="homePopularPlaces__itemTextWrapper">
-              <h4 class="homePopularPlaces__itemTitle">Новостройки Новой Москвы</h4>
-              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
-            </div>
-            <div class="homePopularPlaces__itemImageWrapper">
-              <img
-                class="homePopularPlaces__itemImage"
-                src="img/contentJk/rasskazovo/preview.jpg"
-                alt="ЖК «Авентин»"
-              >
-            </div>
-          </a>
-        </li>
-        <li class="homePopularPlaces__item">
-          <a class="homePopularPlaces__itemLink" href="">
-            <div class="homePopularPlaces__itemTextWrapper">
-              <h4 class="homePopularPlaces__itemTitle">Новостройки Подмосковья</h4>
-              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
-            </div>
-            <div class="homePopularPlaces__itemImageWrapper">
-              <img
-                class="homePopularPlaces__itemImage"
-                src="img/contentJk/someJk/preview.jpg"
-                alt="ЖК «Авентин»"
-              >
-            </div>
-          </a>
-        </li>
-        <li class="homePopularPlaces__item">
-          <a class="homePopularPlaces__itemLink" href="">
-            <div class="homePopularPlaces__itemTextWrapper">
-              <h4 class="homePopularPlaces__itemTitle">Новостройки Химок</h4>
-              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
-            </div>
-            <div class="homePopularPlaces__itemImageWrapper">
-              <img
-                class="homePopularPlaces__itemImage"
-                src="img/contentJk/aventin/preview.jpg"
-                alt="ЖК «Авентин»"
-              >
-            </div>
-          </a>
-        </li>
-        <li class="homePopularPlaces__item">
-          <a class="homePopularPlaces__itemLink" href="">
-            <div class="homePopularPlaces__itemTextWrapper">
-              <h4 class="homePopularPlaces__itemTitle">Новостройки Балашихи</h4>
-              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
-            </div>
-            <div class="homePopularPlaces__itemImageWrapper">
-              <img
-                class="homePopularPlaces__itemImage"
-                src="img/contentJk/rasskazovo/preview.jpg"
-                alt="ЖК «Авентин»"
-              >
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
+  <div class="jkMap__mapWrapper">
+    <div class="jkMap__map" id="ymap"></div>
   </div>
-</section>
-
-    <section class="homePopularJk">
-  <div class="container">
-    <div class="homePopularJk__head">
-      <h2 class="homePopularJk__heading">
-        Популярные новостройки
-      </h2>
-      <a class="homePopularJk__link" href="">
-        <span class="homePopularJk__linkText">Все популярные новостройки</span>
-        <svg class="homePopularJk__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
-        </svg>
-      </a>
-    </div>
-    <ul class="homePopularJk__list">
-      <li class="JkPreviewCard homePopularJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/aventin/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Авентин»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Бульвар Дмитрия Донского</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">40&nbsp;мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
-          </div>
-        </a>
-      </li>
-      <li class="JkPreviewCard homePopularJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/rasskazovo/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Люберецкий»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Домодедовская</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">8 мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
-          </div>
-        </a>
-      </li>
-      <li class="JkPreviewCard homePopularJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/someJk/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Домодедовский»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Сокол</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">14 мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 12.9 млн ₽</span>
-          </div>
-        </a>
-      </li>
-      <li class="JkPreviewCard homePopularJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/aventin/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Авентин»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Бульвар Дмитрия Донского</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">40&nbsp;мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
-          </div>
-        </a>
-      </li>
-      <li class="JkPreviewCard homePopularJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/rasskazovo/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Люберецкий»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Домодедовская</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">8 мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-</section>
-
-    <section class="homeNewsBlog">
-  <div class="container">
-    <h2 class="homeNewsBlog__heading">Новости и материалы</h2>
-    <div class="homeNewsBlog__head">
-      <ul class="homeNewsBlog__tabs">
-        <li class="homeNewsBlog__tab homeNewsBlog__tab--active">Новости</li>
-        <li class="homeNewsBlog__tab">Статьи</li>
-        <li class="homeNewsBlog__tab">Советы</li>
-        <li class="homeNewsBlog__tab">Аналитика</li>
-      </ul>
-      <a class="homeNewsBlog__link" href="">
-        <span class="homeNewsBlog__linkText">Все новости и материалы</span>
-        <svg class="homeNewsBlog__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
-        </svg>
-      </a>
-    </div>
-    <ul class="homeNewsBlog__list">
-      <li class="homeNewsBlog__item">
-        <a class="homeNewsBlog__itemLink" href="">
-          <div class="homeNewsBlog__itemImageWrapper">
-            <img class="homeNewsBlog__itemImage" src="img/newsBlog/news-1.jpg" alt="Изображение">
-          </div>
-          <div class="homeNewsBlog__itemTextWrapper">
-            <h4 class="homeNewsBlog__itemTitle">
-              Закрытие офиса продаж «ЖК Останкино»
-            </h4>
-            <span class="homeNewsBlog__itemDate">24 марта 2021 года</span>
-          </div>
-        </a>
-      </li>
-      <li class="homeNewsBlog__item">
-        <a class="homeNewsBlog__itemLink" href="">
-          <div class="homeNewsBlog__itemImageWrapper">
-            <img class="homeNewsBlog__itemImage" src="img/newsBlog/news-2.jpg" alt="Изображение">
-          </div>
-          <div class="homeNewsBlog__itemTextWrapper">
-            <h4 class="homeNewsBlog__itemTitle">
-              Стартовали продажи квартир II очереди в проекте «Павелецкая Сити»
-            </h4>
-            <span class="homeNewsBlog__itemDate">24 марта 2021 года</span>
-          </div>
-        </a>
-      </li>
-      <li class="homeNewsBlog__item">
-        <a class="homeNewsBlog__itemLink" href="">
-          <div class="homeNewsBlog__itemImageWrapper">
-            <img class="homeNewsBlog__itemImage" src="img/newsBlog/news-3.jpg" alt="Изображение">
-          </div>
-          <div class="homeNewsBlog__itemTextWrapper">
-            <h4 class="homeNewsBlog__itemTitle">
-              Консолидированные финансовые результаты новостроек Московской области по МСФО за 2020 год
-            </h4>
-            <span class="homeNewsBlog__itemDate">24 марта 2021 года</span>
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-</section>
-
-    <section class="homeFooter">
-  <div class="container">
-    <h2 class="homeFooter__heading">
-      Новостройки Москвы
-    </h2>
-    <div class="homeFooter__textWrapper">
-      <p class="homeFooter__descr">
-        Проект Метры.ру станет надежным источником информации для тех, кто ищет жилье в новостройке московского региона
-        или хотел бы составить представление о ситуации на рынке первичной недвижимости Москвы и Московской области.
-        Сайт представляет собой каталог московских новостроек, в котором собраны самые актуальные подробные данные о
-        жилых комплексах и квартирах.
-      </p>
-      <p class="homeFooter__descr">
-        Сайт представляет собой каталог московских новостроек, в котором собраны самые актуальные подробные данные о
-        жилых комплексах и квартирах.
-      </p>
-      <p class="homeFooter__descr">
-        Для того чтобы пользователь смог быстро получить нужную ему информацию, на сайте разработаны удобные фильтры и
-        вывод объектов. Информация на сайте обновляется ежедневно и добавляются свежие предложения. Для поиска нужного
-        объекта вам достаточно сделать лишь пару кликов.
-      </p>
-      <p class="homeFooter__descr">
-        Главные преимущества, которые вы получите на сайте Метры.ру: простота поиска, возможность отбирать и сравнивать
-        предложения в разных новостройках, только актуальная информация о московских новостройках.
-      </p>
-      <p class="homeFooter__descr">
-        Проект Метры.ру независимый и отражает реальную картину на рынке недвижимости. Вы сможете отследить основные
-        тренды рынка новостроек и получить полную информацию о предложениях московских застройщиков.
-      </p>
-      <p class="homeFooter__descr">
-        Метры.ру предлагает компаниям размещение рекламы в нескольких медийных форматах, ознакомьтесь с предложениями
-        сервиса в разделе «Реклама».
-      </p>
-    </div>
-    <ul class="homeFooter__linksList">
-      <li class="homeFooter__linksItem">
-        <a class="homeFooter__link" href="">Новостройки с отделкой в Новой Москве</a>
-      </li>
-      <li class="homeFooter__linksItem">
-        <a class="homeFooter__link" href="">Новостройки без отделки в Москве</a>
-      </li>
-      <li class="homeFooter__linksItem">
-        <a class="homeFooter__link" href="">Самые дешевые новостройки в Подмосковье </a>
-      </li>
-      <li class="homeFooter__linksItem">
-        <a class="homeFooter__link" href="">Новостройки комфорт-класса</a>
-      </li>
-      <li class="homeFooter__linksItem">
-        <a class="homeFooter__link" href="">Сданные новостройки в Москве</a>
-      </li>
-    </ul>
-  </div>
-</section>
+  <a class="jkMap__backLink" href="./">
+    Вернуться к карточкам
+  </a>
+</div>
 
 
     <nav class="mainMobileMenu">
@@ -6271,87 +5816,10 @@
 </nav>
 
   </main>
-  <footer class="footer">
-  <div class="container footer__container">
-
-    <div class="footer__listsWrapper">
-      <div class="footer__coreListWrapper">
-        <span class="footer__listTitle">Новостройки</span>
-        <ul class="footer__list">
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="">Новостройки Москвы</a>
-          </li>
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="">Новостройки Новой Москвы</a>
-          </li>
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="">Новостройки Подмосковья</a>
-          </li>
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="">По районам Москвы</a>
-          </li>
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="">По метро</a>
-          </li>
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="">По городам Московской области</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer__extraListWrapper">
-        <span class="footer__listTitle footer__listTitle--phone">
-          <a href="+78006488218">8 (800) 648-82-18</a>
-        </span>
-        <ul class="footer__list">
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="">Пользовательское соглашение</a>
-          </li>
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="">Скидки и акции</a>
-          </li>
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="">Карта сайта</a>
-          </li>
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="">Застройщики</a>
-          </li>
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="">Новости</a>
-          </li>
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="">О компании</a>
-          </li>
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="">Контакты</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer__socialListWrapper">
-        <span class="footer__listTitle">Мы в соцсетях:</span>
-        <ul class="footer__list">
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="" target="_blank">Вконтакте</a>
-          </li>
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="" target="_blank">Facebook</a>
-          </li>
-          <li class="footer__listItem">
-            <a class="footer__listLink" href="" target="_blank">Instagram</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-<!--    <a class="footer__phone" href="+78006488218">8 (800) 648-82-18</a>-->
-
-    <span class="footer__copy">&copy;&nbsp;2021, Метры.ру</span>
-  </div>
-</footer>
 
   <script src="js/main.min.js"></script>
-  <script src="js/homepage.min.js"></script>
+  <script src="js/jkOnMap.min.js"></script>
   <script src="js/vendor.min.js"></script>
 </body>
+
 </html>
