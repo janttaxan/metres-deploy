@@ -25,7 +25,9 @@
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
   <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
   <link rel="stylesheet" href="styles/main.min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=83cb6c6f-2894-4f2d-90f7-55ef0343b4b5&lang=ru_RU" type="text/javascript"></script>
 </head>
+
 <body>
   <header class="mainHeader lock-padding">
   <div class="container mainHeader__container">
@@ -99,20 +101,13 @@
   </div>
 </header>
 
-
-  <main>
-    <section class="homeHead">
-  <div class="container">
-    <h1 class="homeHead__heading">Новостройки Москвы и области</h1>
-  </div>
-</section>
-
+  <main class="mapMain">
     <!--
   "id" задается для каждой из страниц,
   где используются фильтры для возможности
   добавлять отдельные стили
 -->
-<section class="jkFilters" id="homeFilters">
+<section class="jkFilters" id="jkListFilters">
   <div class="container">
     <div class="jkFilters__desktopContainer">
       <!--
@@ -5757,429 +5752,1012 @@
 
 </section>
 
-    <section class="homeDiscountedJk">
+    <section class="jkListHead">
   <div class="container">
-    <div class="homeDiscountedJk__head">
-      <h2 class="homeDiscountedJk__heading">
-        Акции и скидки на квартиры
-        в Новостройках
-      </h2>
-      <a class="homeDiscountedJk__link" href="./jk-list.html">
-        <span class="homeDiscountedJk__linkText">Все новостройки</span>
-        <svg class="homeDiscountedJk__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
-        </svg>
-      </a>
-    </div>
-    <ul class="homeDiscountedJk__list">
-      <li class="JkPreviewCard homeDiscountedJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/aventin/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Авентин»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Бульвар Дмитрия Донского</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">40&nbsp;мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
-          </div>
-        </a>
-        <ul class="homeDiscountedJk__infoIcons">
-          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--discount baseTooltip">
-            <span class="baseTooltip__text">
-              Скидка <br>
-              10%
-            </span>
-          </li>
-          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--hypothec baseTooltip">
-            <span class="baseTooltip__text">
-              Ипотека <br>
-              от 4.2%
-            </span>
-          </li>
-          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--deadline baseTooltip">
-            <span class="baseTooltip__text">
-              Ключи <br>
-              выданы
-            </span>
-          </li>
-        </ul>
+    <ul class="baseBreadcrumbs jkListHead__breadcrumbs">
+      <li class="baseBreadcrumbs__item">
+        <a class="baseBreadcrumbs__link" href="./">Главная</a>
       </li>
-      <li class="JkPreviewCard homeDiscountedJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/rasskazovo/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Люберецкий»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Домодедовская</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">8 мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
-          </div>
-        </a>
-        <ul class="homeDiscountedJk__infoIcons">
-          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--discount baseTooltip">
-            <span class="baseTooltip__text">
-              Скидка <br>
-              5%
-            </span>
-          </li>
-          <!--          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon&#45;&#45;hypothec baseTooltip">-->
-          <!--            <span class="baseTooltip__text">-->
-          <!--              Ипотека <br>-->
-          <!--              от 4.2%-->
-          <!--            </span>-->
-          <!--          </li>-->
-          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--deadline baseTooltip">
-            <span class="baseTooltip__text">
-              Ключи <br>
-              выданы
-            </span>
-          </li>
-        </ul>
-      </li>
-      <li class="JkPreviewCard homeDiscountedJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/someJk/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Домодедовский»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Сокол</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">14 мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 12.9 млн ₽</span>
-          </div>
-        </a>
-        <ul class="homeDiscountedJk__infoIcons">
-          <!--          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon&#45;&#45;discount baseTooltip">-->
-          <!--            <span class="baseTooltip__text">-->
-          <!--              Скидка <br>-->
-          <!--              10%-->
-          <!--            </span>-->
-          <!--          </li>-->
-          <!--          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon&#45;&#45;hypothec baseTooltip">-->
-          <!--            <span class="baseTooltip__text">-->
-          <!--              Ипотека <br>-->
-          <!--              от 4.2%-->
-          <!--            </span>-->
-          <!--          </li>-->
-          <li class="homeDiscountedJk__infoIcon homeDiscountedJk__infoIcon--deadline baseTooltip">
-            <span class="baseTooltip__text">
-              Ключи <br>
-              выданы
-            </span>
-          </li>
-        </ul>
+      <li class="baseBreadcrumbs__item baseBreadcrumbs__item--disable">
+        <a class="baseBreadcrumbs__link">Новостройки Москвы и области</a>
       </li>
     </ul>
-  </div>
-</section>
 
-    <section class="homePopularPlaces">
-  <div class="container">
-    <h2 class="homePopularPlaces__heading">
-      Популярные направления
-    </h2>
-    <div class="homePopularPlaces__scrollWrapper">
-      <ul class="homePopularPlaces__list">
-        <li class="homePopularPlaces__item">
-          <a class="homePopularPlaces__itemLink" href="./jk-list.html">
-            <div class="homePopularPlaces__itemTextWrapper">
-              <h4 class="homePopularPlaces__itemTitle">Новостройки Москвы</h4>
-              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
-            </div>
-            <div class="homePopularPlaces__itemImageWrapper">
-              <img
-                class="homePopularPlaces__itemImage"
-                src="img/contentJk/aventin/preview.jpg"
-                alt="ЖК «Авентин»"
-              >
-            </div>
-          </a>
+    <h1 class="jkListHead__heading">
+      Новостройки Москвы и области
+    </h1>
+
+    <div class="jkListHead__scrollWrapper">
+      <ul class="jkListHead__tagList">
+        <li class="jkListHead__tagItem">
+          <a class="jkListHead__tagLink" href="">Комфорт-класс</a>
         </li>
-        <li class="homePopularPlaces__item">
-          <a class="homePopularPlaces__itemLink" href="./jk-list.html">
-            <div class="homePopularPlaces__itemTextWrapper">
-              <h4 class="homePopularPlaces__itemTitle">Новостройки Новой Москвы</h4>
-              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
-            </div>
-            <div class="homePopularPlaces__itemImageWrapper">
-              <img
-                class="homePopularPlaces__itemImage"
-                src="img/contentJk/rasskazovo/preview.jpg"
-                alt="ЖК «Авентин»"
-              >
-            </div>
-          </a>
+        <li class="jkListHead__tagItem">
+          <a class="jkListHead__tagLink" href="">В рассрочку</a>
         </li>
-        <li class="homePopularPlaces__item">
-          <a class="homePopularPlaces__itemLink" href="./jk-list.html">
-            <div class="homePopularPlaces__itemTextWrapper">
-              <h4 class="homePopularPlaces__itemTitle">Новостройки Подмосковья</h4>
-              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
-            </div>
-            <div class="homePopularPlaces__itemImageWrapper">
-              <img
-                class="homePopularPlaces__itemImage"
-                src="img/contentJk/someJk/preview.jpg"
-                alt="ЖК «Авентин»"
-              >
-            </div>
-          </a>
+        <li class="jkListHead__tagItem">
+          <a class="jkListHead__tagLink" href="">Сданные</a>
         </li>
-        <li class="homePopularPlaces__item">
-          <a class="homePopularPlaces__itemLink" href="./jk-list.html">
-            <div class="homePopularPlaces__itemTextWrapper">
-              <h4 class="homePopularPlaces__itemTitle">Новостройки Химок</h4>
-              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
-            </div>
-            <div class="homePopularPlaces__itemImageWrapper">
-              <img
-                class="homePopularPlaces__itemImage"
-                src="img/contentJk/aventin/preview.jpg"
-                alt="ЖК «Авентин»"
-              >
-            </div>
-          </a>
+        <li class="jkListHead__tagItem">
+          <a class="jkListHead__tagLink" href="">Сдаются в 2021 году</a>
         </li>
-        <li class="homePopularPlaces__item">
-          <a class="homePopularPlaces__itemLink" href="./jk-list.html">
-            <div class="homePopularPlaces__itemTextWrapper">
-              <h4 class="homePopularPlaces__itemTitle">Новостройки Балашихи</h4>
-              <span class="homePopularPlaces__itemJkCount">75 жилых комплексов</span>
-            </div>
-            <div class="homePopularPlaces__itemImageWrapper">
-              <img
-                class="homePopularPlaces__itemImage"
-                src="img/contentJk/rasskazovo/preview.jpg"
-                alt="ЖК «Авентин»"
-              >
-            </div>
-          </a>
+        <li class="jkListHead__tagItem">
+          <a class="jkListHead__tagLink" href="">Двухкомнатные</a>
         </li>
       </ul>
     </div>
   </div>
 </section>
 
-    <section class="homePopularJk">
+    <section class="jkList">
   <div class="container">
-    <div class="homePopularJk__head">
-      <h2 class="homePopularJk__heading">
-        Популярные новостройки
-      </h2>
-      <a class="homePopularJk__link" href="">
-        <span class="homePopularJk__linkText">Все популярные новостройки</span>
-        <svg class="homePopularJk__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
-        </svg>
-      </a>
+    <div class="jkList__head">
+      <span class="jkList__headCount">
+        Найдено: 23 ЖК
+      </span>
+      <div class="jkList__options">
+        <div class="baseSelect jkList__sortSelect" id="sort">
+          <button class="baseSelect__btn">
+            <div class="baseSelect__sortWrapper">
+              <svg class="baseSelect__sortIcon" width="16" height="12" viewBox="0 0 16 12" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <rect width="8" height="2" fill="#D6D6D6"/>
+                <rect y="5" width="12" height="2" fill="#D6D6D6"/>
+                <rect y="10" width="16" height="2" fill="#D6D6D6"/>
+              </svg>
+              <span class="baseSelect__btnText">По цене (сначала дешевле)</span>
+            </div>
+            <svg class="baseSelect__arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4L9 9L14 4" stroke="var(--jk-color)" stroke-width="1.5"/>
+            </svg>
+          </button>
+          <div class="baseSelect__dropdown">
+            <ul class="baseSelect__options">
+              <li class="baseSelect__option baseSelect__option--selected">
+                <span class="baseSelect__optionText">По популярности (сначала популярные)</span>
+                <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+                </svg>
+              </li>
+              <li class="baseSelect__option" data-descending="true">
+                <span class="baseSelect__optionText">По популярности (сначала непопулярные)</span>
+                <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+                </svg>
+              </li>
+              <li class="baseSelect__option">
+                <span class="baseSelect__optionText">По цене (сначала дешевле)</span>
+                <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+                </svg>
+              </li>
+              <li class="baseSelect__option" data-descending="true">
+                <span class="baseSelect__optionText">По цене (сначала дороже)</span>
+                <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+                </svg>
+              </li>
+              <li class="baseSelect__option">
+                <span class="baseSelect__optionText">По площади (сначала меньше)</span>
+                <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+                </svg>
+              </li>
+              <li class="baseSelect__option" data-descending="true">
+                <span class="baseSelect__optionText">По площади (сначала больше)</span>
+                <svg class="baseSelect__optionCheckIcon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.5 6.5L5.25 11L15 1" stroke="var(--jk-color)" stroke-width="1.5"/>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="jkList__optionsViewWrap">
+          <a class="jkList__optionLink" href="./jk-on-map.html">На карте</a>
+          <div class="jkList__viewToggler">
+            <button class="jkList__viewTogglerBtn jkList__viewTogglerBtn--active" id="view-by-cards-btn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4.5" y="4.5" width="5.85714" height="5.85714" stroke="#121212"/>
+                <rect x="4.5" y="13.6429" width="5.85714" height="5.85714" stroke="#121212"/>
+                <rect x="13.6431" y="4.5" width="5.85714" height="5.85714" stroke="#121212"/>
+                <rect x="13.6431" y="13.6429" width="5.85714" height="5.85714" stroke="#121212"/>
+              </svg>
+            </button>
+            <button class="jkList__viewTogglerBtn" id="view-by-list-btn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="7.00183" y="5.48913" width="14.5087" height="0.97826" stroke="#121212"/>
+                <rect x="2.48397" y="5.48397" width="0.967938" height="0.988583" stroke="#121212"/>
+                <rect x="7.00183" y="12.0109" width="14.5087" height="0.97826" stroke="#121212"/>
+                <rect x="2.48397" y="12.0057" width="0.967938" height="0.988583" stroke="#121212"/>
+                <rect x="7.00183" y="18.5326" width="14.5087" height="0.97826" stroke="#121212"/>
+                <rect x="2.48397" y="18.5274" width="0.967938" height="0.988583" stroke="#121212"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <ul class="homePopularJk__list">
-      <li class="JkPreviewCard homePopularJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/aventin/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Авентин»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Бульвар Дмитрия Донского</span>
 
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">40&nbsp;мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
-          </div>
-        </a>
+    <div class="jkList__listWrapper">
+      <div class="jkList__listOnCards currentJkListMode">
+        <ul class="jkListOnCards">
+  <li class="jkListOnCards__item jkListOnCards__item--partner">
+    <div class="jkListOnCards__imageWrapper">
+      <img class="jkListOnCards__image" src="./img/contentJk/aventin/preview.jpg" alt="">
+      <span class="jkListOnCards__partnerBadge">Предложение от партнеров</span>
+    </div>
+    <a class="jkListOnCards__link" href="./jk-template.html">ЖК «Домодедовский»</a>
+    <div class="jkListOnCards__info">
+      <span class="jkListOnCards__address">Москва, НАО, Внуковское</span>
+      <div class="JkPreviewCard__location jkListOnCards__location">
+        <span class="JkPreviewCard__metro metro">Бульвар Дмитрия Донского</span>
+        <!-- если пешком '--onFoot' -->
+        <!-- если на машине '--byCar' -->
+        <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">40&nbsp;мин</span>
+      </div>
+      <span class="jkListOnCards__date">
+        Сдача в III кв. 2021 - 1 кв. 2023;
+      </span>
+      <span class="jkListOnCards__status">
+        некоторые корпуса сданы
+      </span>
+    </div>
+
+    <ul class="jkListOnCards__priceList">
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Квартиры</span>
+        <span class="jkListOnCards__priceArea">Площадь, м<sup>2</sup></span>
+        <span class="jkListOnCards__pricePrice">Цена</span>
       </li>
-      <li class="JkPreviewCard homePopularJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/rasskazovo/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Люберецкий»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Домодедовская</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">8 мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
-          </div>
-        </a>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Студия</span>
+        <span class="jkListOnCards__priceArea">20-28</span>
+        <span class="jkListOnCards__pricePrice">от 5,7 млн ₽</span>
       </li>
-      <li class="JkPreviewCard homePopularJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/someJk/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Домодедовский»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Сокол</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">14 мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 12.9 млн ₽</span>
-          </div>
-        </a>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">1 комн.</span>
+        <span class="jkListOnCards__priceArea">34-46</span>
+        <span class="jkListOnCards__pricePrice">от 7,9 млн ₽</span>
       </li>
-      <li class="JkPreviewCard homePopularJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/aventin/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Авентин»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Бульвар Дмитрия Донского</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">40&nbsp;мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
-          </div>
-        </a>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">2 комн.</span>
+        <span class="jkListOnCards__priceArea">44-92</span>
+        <span class="jkListOnCards__pricePrice">от 9,9 млн ₽</span>
       </li>
-      <li class="JkPreviewCard homePopularJk__item">
-        <a class="JkPreviewCard__link" href="jk-template.html">
-          <div class="JkPreviewCard__imageWrapper">
-            <img
-              class="JkPreviewCard__image"
-              src="img/contentJk/rasskazovo/preview.jpg"
-              alt="ЖК «Авентин»"
-            >
-          </div>
-          <div class="JkPreviewCard__info">
-            <h3 class="JkPreviewCard__title">ЖК «Люберецкий»</h3>
-            <div class="JkPreviewCard__location">
-              <span class="JkPreviewCard__metro metro">Домодедовская</span>
-
-              <!-- если пешком '--onFoot' -->
-              <!-- если на машине '--byCar' -->
-              <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">8 мин</span>
-            </div>
-            <span class="JkPreviewCard__price">От 6.2 млн ₽</span>
-          </div>
-        </a>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">3+ комн.</span>
+        <span class="jkListOnCards__priceArea">67-105</span>
+        <span class="jkListOnCards__pricePrice">от 13,9 млн ₽</span>
       </li>
     </ul>
+
+    <div class="jkListOnCards__actions">
+      <button class="jkListOnCards__actionsRequestCall">Перезвоните мне</button>
+      <a class="jkListOnCards__actionsCall" href="tel:+74950326655">+7 (495) 032-66-55</a>
+    </div>
+
+    <button class="favoriteButton jkListOnCards__favoriteButton">
+      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          class="favoriteButton__path"
+          d="M8.38761 2.54728L8.99973 3.41206L9.61191 2.54732C10.3871 1.45231 11.6286 0.75 13.0227 0.75C15.3373 0.75 17.25 2.6868 17.25 5.12C17.25 6.06447 16.7865 7.17599 15.9738 8.36936C15.1718 9.54704 14.0885 10.7196 12.9835 11.7685C11.8818 12.8143 10.7771 13.7198 9.9462 14.3647C9.55763 14.6663 9.23019 14.9099 8.99258 15.0833C8.75585 14.9159 8.43086 14.6812 8.04566 14.3902C7.21589 13.7633 6.11273 12.8796 5.01266 11.849C3.90938 10.8154 2.8282 9.65156 2.02779 8.46617C1.21909 7.26851 0.75 6.12648 0.75 5.11996C0.75 3.52488 1.24964 2.45967 1.96937 1.78845C2.69877 1.1082 3.74306 0.75 4.97684 0.75C6.37132 0.75 7.61255 1.45231 8.38761 2.54728Z"
+          fill="transparent" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+  </li>
+  <li class="jkListOnCards__item">
+    <div class="jkListOnCards__imageWrapper">
+      <img class="jkListOnCards__image" src="./img/contentJk/rasskazovo/preview.jpg" alt="">
+      <span class="jkListOnCards__partnerBadge">Предложение от партнеров</span>
+    </div>
+    <a class="jkListOnCards__link" href="./jk-template.html">ЖК «Люберецкий»</a>
+    <div class="jkListOnCards__info">
+      <span class="jkListOnCards__address">Москва, НАО, Внуковское</span>
+      <div class="JkPreviewCard__location jkListOnCards__location">
+        <span class="JkPreviewCard__metro metro">Достоевская</span>
+        <!-- если пешком '--onFoot' -->
+        <!-- если на машине '--byCar' -->
+        <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">40&nbsp;мин</span>
+      </div>
+      <span class="jkListOnCards__date">
+        Сдача в III кв. 2021 - 1 кв. 2023;
+      </span>
+      <span class="jkListOnCards__status">
+        некоторые корпуса сданы
+      </span>
+    </div>
+
+    <ul class="jkListOnCards__priceList">
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Квартиры</span>
+        <span class="jkListOnCards__priceArea">Площадь, м<sup>2</sup></span>
+        <span class="jkListOnCards__pricePrice">Цена</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Студия</span>
+        <span class="jkListOnCards__priceArea">20-28</span>
+        <span class="jkListOnCards__pricePrice">от 5,7 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">1 комн.</span>
+        <span class="jkListOnCards__priceArea">34-46</span>
+        <span class="jkListOnCards__pricePrice">от 7,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">2 комн.</span>
+        <span class="jkListOnCards__priceArea">44-92</span>
+        <span class="jkListOnCards__pricePrice">от 9,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">3+ комн.</span>
+        <span class="jkListOnCards__priceArea">67-105</span>
+        <span class="jkListOnCards__pricePrice">от 13,9 млн ₽</span>
+      </li>
+    </ul>
+
+    <div class="jkListOnCards__actions">
+      <button class="jkListOnCards__actionsRequestCall">Перезвоните мне</button>
+      <a class="jkListOnCards__actionsCall" href="tel:+74950326655">+7 (495) 032-66-55</a>
+    </div>
+
+    <button class="favoriteButton jkListOnCards__favoriteButton">
+      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          class="favoriteButton__path"
+          d="M8.38761 2.54728L8.99973 3.41206L9.61191 2.54732C10.3871 1.45231 11.6286 0.75 13.0227 0.75C15.3373 0.75 17.25 2.6868 17.25 5.12C17.25 6.06447 16.7865 7.17599 15.9738 8.36936C15.1718 9.54704 14.0885 10.7196 12.9835 11.7685C11.8818 12.8143 10.7771 13.7198 9.9462 14.3647C9.55763 14.6663 9.23019 14.9099 8.99258 15.0833C8.75585 14.9159 8.43086 14.6812 8.04566 14.3902C7.21589 13.7633 6.11273 12.8796 5.01266 11.849C3.90938 10.8154 2.8282 9.65156 2.02779 8.46617C1.21909 7.26851 0.75 6.12648 0.75 5.11996C0.75 3.52488 1.24964 2.45967 1.96937 1.78845C2.69877 1.1082 3.74306 0.75 4.97684 0.75C6.37132 0.75 7.61255 1.45231 8.38761 2.54728Z"
+          fill="transparent" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+  </li>
+  <li class="jkListOnCards__item">
+    <div class="jkListOnCards__imageWrapper">
+      <img class="jkListOnCards__image" src="./img/contentJk/someJk/preview.jpg" alt="">
+      <span class="jkListOnCards__partnerBadge">Предложение от партнеров</span>
+    </div>
+    <a class="jkListOnCards__link" href="./jk-template.html">ЖК «Зеленый остров»</a>
+    <div class="jkListOnCards__info">
+      <span class="jkListOnCards__address">Москва, НАО, Внуковское</span>
+      <div class="JkPreviewCard__location jkListOnCards__location">
+        <span class="JkPreviewCard__metro metro">Достоевская</span>
+        <!-- если пешком '--onFoot' -->
+        <!-- если на машине '--byCar' -->
+        <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">40&nbsp;мин</span>
+      </div>
+      <span class="jkListOnCards__date">
+        Сдача в III кв. 2021 - 1 кв. 2023;
+      </span>
+      <span class="jkListOnCards__status">
+        некоторые корпуса сданы
+      </span>
+    </div>
+
+    <ul class="jkListOnCards__priceList">
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Квартиры</span>
+        <span class="jkListOnCards__priceArea">Площадь, м<sup>2</sup></span>
+        <span class="jkListOnCards__pricePrice">Цена</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Студия</span>
+        <span class="jkListOnCards__priceArea">20-28</span>
+        <span class="jkListOnCards__pricePrice">от 5,7 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">1 комн.</span>
+        <span class="jkListOnCards__priceArea">34-46</span>
+        <span class="jkListOnCards__pricePrice">от 7,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">2 комн.</span>
+        <span class="jkListOnCards__priceArea">44-92</span>
+        <span class="jkListOnCards__pricePrice">от 9,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">3+ комн.</span>
+        <span class="jkListOnCards__priceArea">67-105</span>
+        <span class="jkListOnCards__pricePrice">от 13,9 млн ₽</span>
+      </li>
+    </ul>
+
+    <div class="jkListOnCards__actions">
+      <button class="jkListOnCards__actionsRequestCall">Перезвоните мне</button>
+      <a class="jkListOnCards__actionsCall" href="tel:+74950326655">+7 (495) 032-66-55</a>
+    </div>
+
+    <button class="favoriteButton jkListOnCards__favoriteButton">
+      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          class="favoriteButton__path"
+          d="M8.38761 2.54728L8.99973 3.41206L9.61191 2.54732C10.3871 1.45231 11.6286 0.75 13.0227 0.75C15.3373 0.75 17.25 2.6868 17.25 5.12C17.25 6.06447 16.7865 7.17599 15.9738 8.36936C15.1718 9.54704 14.0885 10.7196 12.9835 11.7685C11.8818 12.8143 10.7771 13.7198 9.9462 14.3647C9.55763 14.6663 9.23019 14.9099 8.99258 15.0833C8.75585 14.9159 8.43086 14.6812 8.04566 14.3902C7.21589 13.7633 6.11273 12.8796 5.01266 11.849C3.90938 10.8154 2.8282 9.65156 2.02779 8.46617C1.21909 7.26851 0.75 6.12648 0.75 5.11996C0.75 3.52488 1.24964 2.45967 1.96937 1.78845C2.69877 1.1082 3.74306 0.75 4.97684 0.75C6.37132 0.75 7.61255 1.45231 8.38761 2.54728Z"
+          fill="transparent" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+  </li>
+  <li class="jkListOnCards__item">
+    <div class="jkListOnCards__imageWrapper">
+      <img class="jkListOnCards__image" src="./img/contentJk/aventin/preview.jpg" alt="">
+      <span class="jkListOnCards__partnerBadge">Предложение от партнеров</span>
+    </div>
+    <a class="jkListOnCards__link" href="./jk-template.html">ЖК «Домодедовский»</a>
+    <div class="jkListOnCards__info">
+      <span class="jkListOnCards__address">Москва, НАО, Внуковское</span>
+      <div class="JkPreviewCard__location jkListOnCards__location">
+        <span class="JkPreviewCard__metro metro">Бульвар Дмитрия Донского</span>
+        <!-- если пешком '--onFoot' -->
+        <!-- если на машине '--byCar' -->
+        <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">40&nbsp;мин</span>
+      </div>
+      <span class="jkListOnCards__date">
+        Сдача в III кв. 2021 - 1 кв. 2023;
+      </span>
+      <span class="jkListOnCards__status">
+        некоторые корпуса сданы
+      </span>
+    </div>
+
+    <ul class="jkListOnCards__priceList">
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Квартиры</span>
+        <span class="jkListOnCards__priceArea">Площадь, м<sup>2</sup></span>
+        <span class="jkListOnCards__pricePrice">Цена</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Студия</span>
+        <span class="jkListOnCards__priceArea">20-28</span>
+        <span class="jkListOnCards__pricePrice">от 5,7 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">1 комн.</span>
+        <span class="jkListOnCards__priceArea">34-46</span>
+        <span class="jkListOnCards__pricePrice">от 7,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">2 комн.</span>
+        <span class="jkListOnCards__priceArea">44-92</span>
+        <span class="jkListOnCards__pricePrice">от 9,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">3+ комн.</span>
+        <span class="jkListOnCards__priceArea">67-105</span>
+        <span class="jkListOnCards__pricePrice">от 13,9 млн ₽</span>
+      </li>
+    </ul>
+
+    <div class="jkListOnCards__actions">
+      <button class="jkListOnCards__actionsRequestCall">Перезвоните мне</button>
+      <a class="jkListOnCards__actionsCall" href="tel:+74950326655">+7 (495) 032-66-55</a>
+    </div>
+
+    <button class="favoriteButton jkListOnCards__favoriteButton">
+      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          class="favoriteButton__path"
+          d="M8.38761 2.54728L8.99973 3.41206L9.61191 2.54732C10.3871 1.45231 11.6286 0.75 13.0227 0.75C15.3373 0.75 17.25 2.6868 17.25 5.12C17.25 6.06447 16.7865 7.17599 15.9738 8.36936C15.1718 9.54704 14.0885 10.7196 12.9835 11.7685C11.8818 12.8143 10.7771 13.7198 9.9462 14.3647C9.55763 14.6663 9.23019 14.9099 8.99258 15.0833C8.75585 14.9159 8.43086 14.6812 8.04566 14.3902C7.21589 13.7633 6.11273 12.8796 5.01266 11.849C3.90938 10.8154 2.8282 9.65156 2.02779 8.46617C1.21909 7.26851 0.75 6.12648 0.75 5.11996C0.75 3.52488 1.24964 2.45967 1.96937 1.78845C2.69877 1.1082 3.74306 0.75 4.97684 0.75C6.37132 0.75 7.61255 1.45231 8.38761 2.54728Z"
+          fill="transparent" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+  </li>
+  <li class="jkListOnCards__item">
+    <div class="jkListOnCards__imageWrapper">
+      <img class="jkListOnCards__image" src="./img/contentJk/rasskazovo/preview.jpg" alt="">
+      <span class="jkListOnCards__partnerBadge">Предложение от партнеров</span>
+    </div>
+    <a class="jkListOnCards__link" href="./jk-template.html">ЖК «Люберецкий»</a>
+    <div class="jkListOnCards__info">
+      <span class="jkListOnCards__address">Москва, НАО, Внуковское</span>
+      <div class="JkPreviewCard__location jkListOnCards__location">
+        <span class="JkPreviewCard__metro metro">Достоевская</span>
+        <!-- если пешком '--onFoot' -->
+        <!-- если на машине '--byCar' -->
+        <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">40&nbsp;мин</span>
+      </div>
+      <span class="jkListOnCards__date">
+        Сдача в III кв. 2021 - 1 кв. 2023;
+      </span>
+      <span class="jkListOnCards__status">
+        некоторые корпуса сданы
+      </span>
+    </div>
+
+    <ul class="jkListOnCards__priceList">
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Квартиры</span>
+        <span class="jkListOnCards__priceArea">Площадь, м<sup>2</sup></span>
+        <span class="jkListOnCards__pricePrice">Цена</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Студия</span>
+        <span class="jkListOnCards__priceArea">20-28</span>
+        <span class="jkListOnCards__pricePrice">от 5,7 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">1 комн.</span>
+        <span class="jkListOnCards__priceArea">34-46</span>
+        <span class="jkListOnCards__pricePrice">от 7,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">2 комн.</span>
+        <span class="jkListOnCards__priceArea">44-92</span>
+        <span class="jkListOnCards__pricePrice">от 9,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">3+ комн.</span>
+        <span class="jkListOnCards__priceArea">67-105</span>
+        <span class="jkListOnCards__pricePrice">от 13,9 млн ₽</span>
+      </li>
+    </ul>
+
+    <div class="jkListOnCards__actions">
+      <button class="jkListOnCards__actionsRequestCall">Перезвоните мне</button>
+      <a class="jkListOnCards__actionsCall" href="tel:+74950326655">+7 (495) 032-66-55</a>
+    </div>
+
+    <button class="favoriteButton jkListOnCards__favoriteButton">
+      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          class="favoriteButton__path"
+          d="M8.38761 2.54728L8.99973 3.41206L9.61191 2.54732C10.3871 1.45231 11.6286 0.75 13.0227 0.75C15.3373 0.75 17.25 2.6868 17.25 5.12C17.25 6.06447 16.7865 7.17599 15.9738 8.36936C15.1718 9.54704 14.0885 10.7196 12.9835 11.7685C11.8818 12.8143 10.7771 13.7198 9.9462 14.3647C9.55763 14.6663 9.23019 14.9099 8.99258 15.0833C8.75585 14.9159 8.43086 14.6812 8.04566 14.3902C7.21589 13.7633 6.11273 12.8796 5.01266 11.849C3.90938 10.8154 2.8282 9.65156 2.02779 8.46617C1.21909 7.26851 0.75 6.12648 0.75 5.11996C0.75 3.52488 1.24964 2.45967 1.96937 1.78845C2.69877 1.1082 3.74306 0.75 4.97684 0.75C6.37132 0.75 7.61255 1.45231 8.38761 2.54728Z"
+          fill="transparent" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+  </li>
+  <li class="jkListOnCards__item jkListOnCards__item--partner">
+    <div class="jkListOnCards__imageWrapper">
+      <img class="jkListOnCards__image" src="./img/contentJk/someJk/preview.jpg" alt="">
+      <span class="jkListOnCards__partnerBadge">Предложение от партнеров</span>
+    </div>
+    <a class="jkListOnCards__link" href="./jk-template.html">ЖК «Зеленый остров»</a>
+    <div class="jkListOnCards__info">
+      <span class="jkListOnCards__address">Москва, НАО, Внуковское</span>
+      <div class="JkPreviewCard__location jkListOnCards__location">
+        <span class="JkPreviewCard__metro metro">Достоевская</span>
+        <!-- если пешком '--onFoot' -->
+        <!-- если на машине '--byCar' -->
+        <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">40&nbsp;мин</span>
+      </div>
+      <span class="jkListOnCards__date">
+        Сдача в III кв. 2021 - 1 кв. 2023;
+      </span>
+      <span class="jkListOnCards__status">
+        некоторые корпуса сданы
+      </span>
+    </div>
+
+    <ul class="jkListOnCards__priceList">
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Квартиры</span>
+        <span class="jkListOnCards__priceArea">Площадь, м<sup>2</sup></span>
+        <span class="jkListOnCards__pricePrice">Цена</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Студия</span>
+        <span class="jkListOnCards__priceArea">20-28</span>
+        <span class="jkListOnCards__pricePrice">от 5,7 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">1 комн.</span>
+        <span class="jkListOnCards__priceArea">34-46</span>
+        <span class="jkListOnCards__pricePrice">от 7,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">2 комн.</span>
+        <span class="jkListOnCards__priceArea">44-92</span>
+        <span class="jkListOnCards__pricePrice">от 9,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">3+ комн.</span>
+        <span class="jkListOnCards__priceArea">67-105</span>
+        <span class="jkListOnCards__pricePrice">от 13,9 млн ₽</span>
+      </li>
+    </ul>
+
+    <div class="jkListOnCards__actions">
+      <button class="jkListOnCards__actionsRequestCall">Перезвоните мне</button>
+      <a class="jkListOnCards__actionsCall" href="tel:+74950326655">+7 (495) 032-66-55</a>
+    </div>
+
+    <button class="favoriteButton jkListOnCards__favoriteButton">
+      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          class="favoriteButton__path"
+          d="M8.38761 2.54728L8.99973 3.41206L9.61191 2.54732C10.3871 1.45231 11.6286 0.75 13.0227 0.75C15.3373 0.75 17.25 2.6868 17.25 5.12C17.25 6.06447 16.7865 7.17599 15.9738 8.36936C15.1718 9.54704 14.0885 10.7196 12.9835 11.7685C11.8818 12.8143 10.7771 13.7198 9.9462 14.3647C9.55763 14.6663 9.23019 14.9099 8.99258 15.0833C8.75585 14.9159 8.43086 14.6812 8.04566 14.3902C7.21589 13.7633 6.11273 12.8796 5.01266 11.849C3.90938 10.8154 2.8282 9.65156 2.02779 8.46617C1.21909 7.26851 0.75 6.12648 0.75 5.11996C0.75 3.52488 1.24964 2.45967 1.96937 1.78845C2.69877 1.1082 3.74306 0.75 4.97684 0.75C6.37132 0.75 7.61255 1.45231 8.38761 2.54728Z"
+          fill="transparent" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+  </li>
+  <li class="jkListOnCards__item">
+    <div class="jkListOnCards__imageWrapper">
+      <img class="jkListOnCards__image" src="./img/contentJk/aventin/preview.jpg" alt="">
+      <span class="jkListOnCards__partnerBadge">Предложение от партнеров</span>
+    </div>
+    <a class="jkListOnCards__link" href="./jk-template.html">ЖК «Домодедовский»</a>
+    <div class="jkListOnCards__info">
+      <span class="jkListOnCards__address">Москва, НАО, Внуковское</span>
+      <div class="JkPreviewCard__location jkListOnCards__location">
+        <span class="JkPreviewCard__metro metro">Бульвар Дмитрия Донского</span>
+        <!-- если пешком '--onFoot' -->
+        <!-- если на машине '--byCar' -->
+        <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">40&nbsp;мин</span>
+      </div>
+      <span class="jkListOnCards__date">
+        Сдача в III кв. 2021 - 1 кв. 2023;
+      </span>
+      <span class="jkListOnCards__status">
+        некоторые корпуса сданы
+      </span>
+    </div>
+
+    <ul class="jkListOnCards__priceList">
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Квартиры</span>
+        <span class="jkListOnCards__priceArea">Площадь, м<sup>2</sup></span>
+        <span class="jkListOnCards__pricePrice">Цена</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Студия</span>
+        <span class="jkListOnCards__priceArea">20-28</span>
+        <span class="jkListOnCards__pricePrice">от 5,7 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">1 комн.</span>
+        <span class="jkListOnCards__priceArea">34-46</span>
+        <span class="jkListOnCards__pricePrice">от 7,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">2 комн.</span>
+        <span class="jkListOnCards__priceArea">44-92</span>
+        <span class="jkListOnCards__pricePrice">от 9,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">3+ комн.</span>
+        <span class="jkListOnCards__priceArea">67-105</span>
+        <span class="jkListOnCards__pricePrice">от 13,9 млн ₽</span>
+      </li>
+    </ul>
+
+    <div class="jkListOnCards__actions">
+      <button class="jkListOnCards__actionsRequestCall">Перезвоните мне</button>
+      <a class="jkListOnCards__actionsCall" href="tel:+74950326655">+7 (495) 032-66-55</a>
+    </div>
+
+    <button class="favoriteButton jkListOnCards__favoriteButton">
+      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          class="favoriteButton__path"
+          d="M8.38761 2.54728L8.99973 3.41206L9.61191 2.54732C10.3871 1.45231 11.6286 0.75 13.0227 0.75C15.3373 0.75 17.25 2.6868 17.25 5.12C17.25 6.06447 16.7865 7.17599 15.9738 8.36936C15.1718 9.54704 14.0885 10.7196 12.9835 11.7685C11.8818 12.8143 10.7771 13.7198 9.9462 14.3647C9.55763 14.6663 9.23019 14.9099 8.99258 15.0833C8.75585 14.9159 8.43086 14.6812 8.04566 14.3902C7.21589 13.7633 6.11273 12.8796 5.01266 11.849C3.90938 10.8154 2.8282 9.65156 2.02779 8.46617C1.21909 7.26851 0.75 6.12648 0.75 5.11996C0.75 3.52488 1.24964 2.45967 1.96937 1.78845C2.69877 1.1082 3.74306 0.75 4.97684 0.75C6.37132 0.75 7.61255 1.45231 8.38761 2.54728Z"
+          fill="transparent" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+  </li>
+  <li class="jkListOnCards__item">
+    <div class="jkListOnCards__imageWrapper">
+      <img class="jkListOnCards__image" src="./img/contentJk/rasskazovo/preview.jpg" alt="">
+      <span class="jkListOnCards__partnerBadge">Предложение от партнеров</span>
+    </div>
+    <a class="jkListOnCards__link" href="./jk-template.html">ЖК «Люберецкий»</a>
+    <div class="jkListOnCards__info">
+      <span class="jkListOnCards__address">Москва, НАО, Внуковское</span>
+      <div class="JkPreviewCard__location jkListOnCards__location">
+        <span class="JkPreviewCard__metro metro">Достоевская</span>
+        <!-- если пешком '--onFoot' -->
+        <!-- если на машине '--byCar' -->
+        <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">40&nbsp;мин</span>
+      </div>
+      <span class="jkListOnCards__date">
+        Сдача в III кв. 2021 - 1 кв. 2023;
+      </span>
+      <span class="jkListOnCards__status">
+        некоторые корпуса сданы
+      </span>
+    </div>
+
+    <ul class="jkListOnCards__priceList">
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Квартиры</span>
+        <span class="jkListOnCards__priceArea">Площадь, м<sup>2</sup></span>
+        <span class="jkListOnCards__pricePrice">Цена</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Студия</span>
+        <span class="jkListOnCards__priceArea">20-28</span>
+        <span class="jkListOnCards__pricePrice">от 5,7 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">1 комн.</span>
+        <span class="jkListOnCards__priceArea">34-46</span>
+        <span class="jkListOnCards__pricePrice">от 7,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">2 комн.</span>
+        <span class="jkListOnCards__priceArea">44-92</span>
+        <span class="jkListOnCards__pricePrice">от 9,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">3+ комн.</span>
+        <span class="jkListOnCards__priceArea">67-105</span>
+        <span class="jkListOnCards__pricePrice">от 13,9 млн ₽</span>
+      </li>
+    </ul>
+
+    <div class="jkListOnCards__actions">
+      <button class="jkListOnCards__actionsRequestCall">Перезвоните мне</button>
+      <a class="jkListOnCards__actionsCall" href="tel:+74950326655">+7 (495) 032-66-55</a>
+    </div>
+
+    <button class="favoriteButton jkListOnCards__favoriteButton">
+      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          class="favoriteButton__path"
+          d="M8.38761 2.54728L8.99973 3.41206L9.61191 2.54732C10.3871 1.45231 11.6286 0.75 13.0227 0.75C15.3373 0.75 17.25 2.6868 17.25 5.12C17.25 6.06447 16.7865 7.17599 15.9738 8.36936C15.1718 9.54704 14.0885 10.7196 12.9835 11.7685C11.8818 12.8143 10.7771 13.7198 9.9462 14.3647C9.55763 14.6663 9.23019 14.9099 8.99258 15.0833C8.75585 14.9159 8.43086 14.6812 8.04566 14.3902C7.21589 13.7633 6.11273 12.8796 5.01266 11.849C3.90938 10.8154 2.8282 9.65156 2.02779 8.46617C1.21909 7.26851 0.75 6.12648 0.75 5.11996C0.75 3.52488 1.24964 2.45967 1.96937 1.78845C2.69877 1.1082 3.74306 0.75 4.97684 0.75C6.37132 0.75 7.61255 1.45231 8.38761 2.54728Z"
+          fill="transparent" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+  </li>
+  <li class="jkListOnCards__item">
+    <div class="jkListOnCards__imageWrapper">
+      <img class="jkListOnCards__image" src="./img/contentJk/someJk/preview.jpg" alt="">
+      <span class="jkListOnCards__partnerBadge">Предложение от партнеров</span>
+    </div>
+    <a class="jkListOnCards__link" href="./jk-template.html">ЖК «Зеленый остров»</a>
+    <div class="jkListOnCards__info">
+      <span class="jkListOnCards__address">Москва, НАО, Внуковское</span>
+      <div class="JkPreviewCard__location jkListOnCards__location">
+        <span class="JkPreviewCard__metro metro">Достоевская</span>
+        <!-- если пешком '--onFoot' -->
+        <!-- если на машине '--byCar' -->
+        <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">40&nbsp;мин</span>
+      </div>
+      <span class="jkListOnCards__date">
+        Сдача в III кв. 2021 - 1 кв. 2023;
+      </span>
+      <span class="jkListOnCards__status">
+        некоторые корпуса сданы
+      </span>
+    </div>
+
+    <ul class="jkListOnCards__priceList">
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Квартиры</span>
+        <span class="jkListOnCards__priceArea">Площадь, м<sup>2</sup></span>
+        <span class="jkListOnCards__pricePrice">Цена</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Студия</span>
+        <span class="jkListOnCards__priceArea">20-28</span>
+        <span class="jkListOnCards__pricePrice">от 5,7 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">1 комн.</span>
+        <span class="jkListOnCards__priceArea">34-46</span>
+        <span class="jkListOnCards__pricePrice">от 7,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">2 комн.</span>
+        <span class="jkListOnCards__priceArea">44-92</span>
+        <span class="jkListOnCards__pricePrice">от 9,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">3+ комн.</span>
+        <span class="jkListOnCards__priceArea">67-105</span>
+        <span class="jkListOnCards__pricePrice">от 13,9 млн ₽</span>
+      </li>
+    </ul>
+
+    <div class="jkListOnCards__actions">
+      <button class="jkListOnCards__actionsRequestCall">Перезвоните мне</button>
+      <a class="jkListOnCards__actionsCall" href="tel:+74950326655">+7 (495) 032-66-55</a>
+    </div>
+
+    <button class="favoriteButton jkListOnCards__favoriteButton">
+      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          class="favoriteButton__path"
+          d="M8.38761 2.54728L8.99973 3.41206L9.61191 2.54732C10.3871 1.45231 11.6286 0.75 13.0227 0.75C15.3373 0.75 17.25 2.6868 17.25 5.12C17.25 6.06447 16.7865 7.17599 15.9738 8.36936C15.1718 9.54704 14.0885 10.7196 12.9835 11.7685C11.8818 12.8143 10.7771 13.7198 9.9462 14.3647C9.55763 14.6663 9.23019 14.9099 8.99258 15.0833C8.75585 14.9159 8.43086 14.6812 8.04566 14.3902C7.21589 13.7633 6.11273 12.8796 5.01266 11.849C3.90938 10.8154 2.8282 9.65156 2.02779 8.46617C1.21909 7.26851 0.75 6.12648 0.75 5.11996C0.75 3.52488 1.24964 2.45967 1.96937 1.78845C2.69877 1.1082 3.74306 0.75 4.97684 0.75C6.37132 0.75 7.61255 1.45231 8.38761 2.54728Z"
+          fill="transparent" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+  </li>
+  <li class="jkListOnCards__item">
+    <div class="jkListOnCards__imageWrapper">
+      <img class="jkListOnCards__image" src="./img/contentJk/aventin/preview.jpg" alt="">
+      <span class="jkListOnCards__partnerBadge">Предложение от партнеров</span>
+    </div>
+    <a class="jkListOnCards__link" href="./jk-template.html">ЖК «Домодедовский»</a>
+    <div class="jkListOnCards__info">
+      <span class="jkListOnCards__address">Москва, НАО, Внуковское</span>
+      <div class="JkPreviewCard__location jkListOnCards__location">
+        <span class="JkPreviewCard__metro metro">Бульвар Дмитрия Донского</span>
+        <!-- если пешком '--onFoot' -->
+        <!-- если на машине '--byCar' -->
+        <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--onFoot">40&nbsp;мин</span>
+      </div>
+      <span class="jkListOnCards__date">
+        Сдача в III кв. 2021 - 1 кв. 2023;
+      </span>
+      <span class="jkListOnCards__status">
+        некоторые корпуса сданы
+      </span>
+    </div>
+
+    <ul class="jkListOnCards__priceList">
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Квартиры</span>
+        <span class="jkListOnCards__priceArea">Площадь, м<sup>2</sup></span>
+        <span class="jkListOnCards__pricePrice">Цена</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Студия</span>
+        <span class="jkListOnCards__priceArea">20-28</span>
+        <span class="jkListOnCards__pricePrice">от 5,7 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">1 комн.</span>
+        <span class="jkListOnCards__priceArea">34-46</span>
+        <span class="jkListOnCards__pricePrice">от 7,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">2 комн.</span>
+        <span class="jkListOnCards__priceArea">44-92</span>
+        <span class="jkListOnCards__pricePrice">от 9,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">3+ комн.</span>
+        <span class="jkListOnCards__priceArea">67-105</span>
+        <span class="jkListOnCards__pricePrice">от 13,9 млн ₽</span>
+      </li>
+    </ul>
+
+    <div class="jkListOnCards__actions">
+      <button class="jkListOnCards__actionsRequestCall">Перезвоните мне</button>
+      <a class="jkListOnCards__actionsCall" href="tel:+74950326655">+7 (495) 032-66-55</a>
+    </div>
+
+    <button class="favoriteButton jkListOnCards__favoriteButton">
+      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          class="favoriteButton__path"
+          d="M8.38761 2.54728L8.99973 3.41206L9.61191 2.54732C10.3871 1.45231 11.6286 0.75 13.0227 0.75C15.3373 0.75 17.25 2.6868 17.25 5.12C17.25 6.06447 16.7865 7.17599 15.9738 8.36936C15.1718 9.54704 14.0885 10.7196 12.9835 11.7685C11.8818 12.8143 10.7771 13.7198 9.9462 14.3647C9.55763 14.6663 9.23019 14.9099 8.99258 15.0833C8.75585 14.9159 8.43086 14.6812 8.04566 14.3902C7.21589 13.7633 6.11273 12.8796 5.01266 11.849C3.90938 10.8154 2.8282 9.65156 2.02779 8.46617C1.21909 7.26851 0.75 6.12648 0.75 5.11996C0.75 3.52488 1.24964 2.45967 1.96937 1.78845C2.69877 1.1082 3.74306 0.75 4.97684 0.75C6.37132 0.75 7.61255 1.45231 8.38761 2.54728Z"
+          fill="transparent" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+  </li>
+  <li class="jkListOnCards__item">
+    <div class="jkListOnCards__imageWrapper">
+      <img class="jkListOnCards__image" src="./img/contentJk/rasskazovo/preview.jpg" alt="">
+      <span class="jkListOnCards__partnerBadge">Предложение от партнеров</span>
+    </div>
+    <a class="jkListOnCards__link" href="./jk-template.html">ЖК «Люберецкий»</a>
+    <div class="jkListOnCards__info">
+      <span class="jkListOnCards__address">Москва, НАО, Внуковское</span>
+      <div class="JkPreviewCard__location jkListOnCards__location">
+        <span class="JkPreviewCard__metro metro">Достоевская</span>
+        <!-- если пешком '--onFoot' -->
+        <!-- если на машине '--byCar' -->
+        <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">40&nbsp;мин</span>
+      </div>
+      <span class="jkListOnCards__date">
+        Сдача в III кв. 2021 - 1 кв. 2023;
+      </span>
+      <span class="jkListOnCards__status">
+        некоторые корпуса сданы
+      </span>
+    </div>
+
+    <ul class="jkListOnCards__priceList">
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Квартиры</span>
+        <span class="jkListOnCards__priceArea">Площадь, м<sup>2</sup></span>
+        <span class="jkListOnCards__pricePrice">Цена</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Студия</span>
+        <span class="jkListOnCards__priceArea">20-28</span>
+        <span class="jkListOnCards__pricePrice">от 5,7 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">1 комн.</span>
+        <span class="jkListOnCards__priceArea">34-46</span>
+        <span class="jkListOnCards__pricePrice">от 7,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">2 комн.</span>
+        <span class="jkListOnCards__priceArea">44-92</span>
+        <span class="jkListOnCards__pricePrice">от 9,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">3+ комн.</span>
+        <span class="jkListOnCards__priceArea">67-105</span>
+        <span class="jkListOnCards__pricePrice">от 13,9 млн ₽</span>
+      </li>
+    </ul>
+
+    <div class="jkListOnCards__actions">
+      <button class="jkListOnCards__actionsRequestCall">Перезвоните мне</button>
+      <a class="jkListOnCards__actionsCall" href="tel:+74950326655">+7 (495) 032-66-55</a>
+    </div>
+
+    <button class="favoriteButton jkListOnCards__favoriteButton">
+      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          class="favoriteButton__path"
+          d="M8.38761 2.54728L8.99973 3.41206L9.61191 2.54732C10.3871 1.45231 11.6286 0.75 13.0227 0.75C15.3373 0.75 17.25 2.6868 17.25 5.12C17.25 6.06447 16.7865 7.17599 15.9738 8.36936C15.1718 9.54704 14.0885 10.7196 12.9835 11.7685C11.8818 12.8143 10.7771 13.7198 9.9462 14.3647C9.55763 14.6663 9.23019 14.9099 8.99258 15.0833C8.75585 14.9159 8.43086 14.6812 8.04566 14.3902C7.21589 13.7633 6.11273 12.8796 5.01266 11.849C3.90938 10.8154 2.8282 9.65156 2.02779 8.46617C1.21909 7.26851 0.75 6.12648 0.75 5.11996C0.75 3.52488 1.24964 2.45967 1.96937 1.78845C2.69877 1.1082 3.74306 0.75 4.97684 0.75C6.37132 0.75 7.61255 1.45231 8.38761 2.54728Z"
+          fill="transparent" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+  </li>
+  <li class="jkListOnCards__item">
+    <div class="jkListOnCards__imageWrapper">
+      <img class="jkListOnCards__image" src="./img/contentJk/rasskazovo/preview.jpg" alt="">
+      <span class="jkListOnCards__partnerBadge">Предложение от партнеров</span>
+    </div>
+    <a class="jkListOnCards__link" href="./jk-template.html">ЖК «Люберецкий»</a>
+    <div class="jkListOnCards__info">
+      <span class="jkListOnCards__address">Москва, НАО, Внуковское</span>
+      <div class="JkPreviewCard__location jkListOnCards__location">
+        <span class="JkPreviewCard__metro metro">Достоевская</span>
+        <!-- если пешком '--onFoot' -->
+        <!-- если на машине '--byCar' -->
+        <span class="JkPreviewCard__timeToMetro JkPreviewCard__timeToMetro--byCar">40&nbsp;мин</span>
+      </div>
+      <span class="jkListOnCards__date">
+        Сдача в III кв. 2021 - 1 кв. 2023;
+      </span>
+      <span class="jkListOnCards__status">
+        некоторые корпуса сданы
+      </span>
+    </div>
+
+    <ul class="jkListOnCards__priceList">
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Квартиры</span>
+        <span class="jkListOnCards__priceArea">Площадь, м<sup>2</sup></span>
+        <span class="jkListOnCards__pricePrice">Цена</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">Студия</span>
+        <span class="jkListOnCards__priceArea">20-28</span>
+        <span class="jkListOnCards__pricePrice">от 5,7 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">1 комн.</span>
+        <span class="jkListOnCards__priceArea">34-46</span>
+        <span class="jkListOnCards__pricePrice">от 7,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">2 комн.</span>
+        <span class="jkListOnCards__priceArea">44-92</span>
+        <span class="jkListOnCards__pricePrice">от 9,9 млн ₽</span>
+      </li>
+      <li class="jkListOnCards__priceItem">
+        <span class="jkListOnCards__priceRoominess">3+ комн.</span>
+        <span class="jkListOnCards__priceArea">67-105</span>
+        <span class="jkListOnCards__pricePrice">от 13,9 млн ₽</span>
+      </li>
+    </ul>
+
+    <div class="jkListOnCards__actions">
+      <button class="jkListOnCards__actionsRequestCall">Перезвоните мне</button>
+      <a class="jkListOnCards__actionsCall" href="tel:+74950326655">+7 (495) 032-66-55</a>
+    </div>
+
+    <button class="favoriteButton jkListOnCards__favoriteButton">
+      <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          class="favoriteButton__path"
+          d="M8.38761 2.54728L8.99973 3.41206L9.61191 2.54732C10.3871 1.45231 11.6286 0.75 13.0227 0.75C15.3373 0.75 17.25 2.6868 17.25 5.12C17.25 6.06447 16.7865 7.17599 15.9738 8.36936C15.1718 9.54704 14.0885 10.7196 12.9835 11.7685C11.8818 12.8143 10.7771 13.7198 9.9462 14.3647C9.55763 14.6663 9.23019 14.9099 8.99258 15.0833C8.75585 14.9159 8.43086 14.6812 8.04566 14.3902C7.21589 13.7633 6.11273 12.8796 5.01266 11.849C3.90938 10.8154 2.8282 9.65156 2.02779 8.46617C1.21909 7.26851 0.75 6.12648 0.75 5.11996C0.75 3.52488 1.24964 2.45967 1.96937 1.78845C2.69877 1.1082 3.74306 0.75 4.97684 0.75C6.37132 0.75 7.61255 1.45231 8.38761 2.54728Z"
+          fill="transparent" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+  </li>
+</ul>
+
+      </div>
+      <div class="jkList__listOnList">
+        <ul class="jkListOnList">
+  <li class="jkListOnList__item">
+    list item
+  </li>
+</ul>
+
+      </div>
+    </div>
+
+    <div class="jkList__bottom">
+      <div class="jkList__bottomContainer">
+        <div class="jkList__bottomPagination">
+          <ul class="basePagination" itemscope itemtype="https://schema.org/BreadcrumbList">
+  <li class="basePagination__item basePagination__item--prev basePagination__item--disable">
+    <a class="basePagination__link">
+      <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 1L1.6261 6.82172C1.27251 7.20478 1.27251 7.79522 1.6261 8.17828L7 14" stroke="var(--jk-color)"
+              stroke-width="1.5"/>
+      </svg>
+    </a>
+  </li>
+
+  <li
+    class="basePagination__item basePagination__item--active"
+    itemprop="itemListElement"
+    itemscope
+    itemtype="https://schema.org/ListItem"
+  >
+    <a class="basePagination__link" itemprop="item" href="#1">1</a>
+    <meta itemprop="position" content="1"/>
+  </li>
+
+  <li
+    itemprop="itemListElement"
+    itemscope
+    itemtype="https://schema.org/ListItem"
+    class="basePagination__item"
+  >
+    <a class="basePagination__link" itemprop="item" href="#2">2</a>
+    <meta itemprop="position" content="2"/>
+  </li>
+
+  <li
+    itemprop="itemListElement"
+    itemscope
+    itemtype="https://schema.org/ListItem"
+    class="basePagination__item"
+  >
+    <a class="basePagination__link" itemprop="item" href="#3">3</a>
+    <meta itemprop="position" content="3"/>
+  </li>
+
+  <li
+    itemprop="itemListElement"
+    itemscope
+    itemtype="https://schema.org/ListItem"
+    class="basePagination__item"
+  >
+    <a class="basePagination__link">...</a>
+  </li>
+
+  <li
+    itemprop="itemListElement"
+    itemscope
+    itemtype="https://schema.org/ListItem"
+    class="basePagination__item"
+  >
+    <a class="basePagination__link" itemprop="item" href="#44">44</a>
+    <meta itemprop="position" content="44"/>
+  </li>
+
+  <li class="basePagination__item basePagination__item--next">
+    <a class="basePagination__link" href="#next">
+      <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 14L6.3739 8.17828C6.72749 7.79522 6.72749 7.20478 6.3739 6.82172L1 1" stroke="var(--jk-color)"
+              stroke-width="1.5"/>
+      </svg>
+    </a>
+  </li>
+</ul>
+
+        </div>
+        <button class="jkList__bottomUp">
+          <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 5L6.16436 1.59055C5.78548 1.25376 5.21452 1.25376 4.83564 1.59055L1 5" stroke="white"
+                  stroke-width="1.5"/>
+          </svg>
+        </button>
+      </div>
+      <div class="jkList__bottomMoreWrapper">
+        <button class="jkList__bottomMore">Показать еще 12 ЖК из 224</button>
+      </div>
+    </div>
+
   </div>
 </section>
 
-    <section class="homeNewsBlog">
-  <div class="container">
-    <h2 class="homeNewsBlog__heading">Новости и материалы</h2>
-    <div class="homeNewsBlog__head">
-      <ul class="homeNewsBlog__tabs">
-        <li class="homeNewsBlog__tab homeNewsBlog__tab--active">Новости</li>
-        <li class="homeNewsBlog__tab">Статьи</li>
-        <li class="homeNewsBlog__tab">Советы</li>
-        <li class="homeNewsBlog__tab">Аналитика</li>
-      </ul>
-      <a class="homeNewsBlog__link" href="">
-        <span class="homeNewsBlog__linkText">Все новости и материалы</span>
-        <svg class="homeNewsBlog__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
-        </svg>
-      </a>
-    </div>
-    <ul class="homeNewsBlog__list">
-      <li class="homeNewsBlog__item">
-        <a class="homeNewsBlog__itemLink" href="">
-          <div class="homeNewsBlog__itemImageWrapper">
-            <img class="homeNewsBlog__itemImage" src="img/newsBlog/news-1.jpg" alt="Изображение">
-          </div>
-          <div class="homeNewsBlog__itemTextWrapper">
-            <h4 class="homeNewsBlog__itemTitle">
-              Закрытие офиса продаж «ЖК Останкино»
-            </h4>
-            <span class="homeNewsBlog__itemDate">24 марта 2021 года</span>
-          </div>
-        </a>
-      </li>
-      <li class="homeNewsBlog__item">
-        <a class="homeNewsBlog__itemLink" href="">
-          <div class="homeNewsBlog__itemImageWrapper">
-            <img class="homeNewsBlog__itemImage" src="img/newsBlog/news-2.jpg" alt="Изображение">
-          </div>
-          <div class="homeNewsBlog__itemTextWrapper">
-            <h4 class="homeNewsBlog__itemTitle">
-              Стартовали продажи квартир II очереди в проекте «Павелецкая Сити»
-            </h4>
-            <span class="homeNewsBlog__itemDate">24 марта 2021 года</span>
-          </div>
-        </a>
-      </li>
-      <li class="homeNewsBlog__item">
-        <a class="homeNewsBlog__itemLink" href="">
-          <div class="homeNewsBlog__itemImageWrapper">
-            <img class="homeNewsBlog__itemImage" src="img/newsBlog/news-3.jpg" alt="Изображение">
-          </div>
-          <div class="homeNewsBlog__itemTextWrapper">
-            <h4 class="homeNewsBlog__itemTitle">
-              Консолидированные финансовые результаты новостроек Московской области по МСФО за 2020 год
-            </h4>
-            <span class="homeNewsBlog__itemDate">24 марта 2021 года</span>
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-</section>
 
     <section class="homeFooter">
   <div class="container">
@@ -6234,7 +6812,6 @@
     </ul>
   </div>
 </section>
-
 
     <nav class="mainMobileMenu">
   <div class="container mainMobileMenu__container">
@@ -6349,8 +6926,10 @@
   </div>
 </footer>
 
+
   <script src="js/main.min.js"></script>
-  <script src="js/homepage.min.js"></script>
+  <script src="js/jkListPage.min.js"></script>
   <script src="js/vendor.min.js"></script>
 </body>
+
 </html>
