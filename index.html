@@ -556,7 +556,7 @@
   <div class="jkFiltersForm__optionsButtonsWrapper">
     <a class="jkFiltersForm__optionsButtonMap" href="./jk-on-map.html">Показать на карте</a>
     <a class="jkFiltersForm__optionsLink" href="./jk-list.html">
-      Показать <span class="jkFiltersForm__optionsLinkCount">308</span> новостроек
+      Показать <span class="jkFiltersForm__optionsLinkCount">(308)</span> новостроек
     </a>
   </div>
 </div>
@@ -1045,7 +1045,7 @@
   <div class="jkFiltersForm__optionsButtonsWrapper">
     <a class="jkFiltersForm__optionsButtonMap" href="./jk-on-map.html">Показать на карте</a>
     <a class="jkFiltersForm__optionsLink" href="./jk-list.html">
-      Показать <span class="jkFiltersForm__optionsLinkCount">308</span> новостроек
+      Показать <span class="jkFiltersForm__optionsLinkCount">(308)</span> новостроек
     </a>
   </div>
 </div>
@@ -1082,7 +1082,7 @@
           <div class="jkFiltersLocationModal__tabsContent jkFiltersLocationModal__tabsContent--active">
             <div class="locationContent locationContent--metro">
   <ul class="locationContent__smallList">
-    <li class="locationContent__smallItem locationContent__smallItem--sokolnicheskaya">
+    <li class="locationContent__smallItem locationContent__smallItem--showInMob locationContent__smallItem--sokolnicheskaya">
       <input
         class="locationContent__smallItemInput"
         name="sokolnicheskaya"
@@ -1091,7 +1091,7 @@
       >
       <label class="locationContent__smallItemLabel" for="sokolnicheskaya">Сокольническая</label>
     </li>
-    <li class="locationContent__smallItem locationContent__smallItem--zamoskvoretskaya">
+    <li class="locationContent__smallItem locationContent__smallItem--showInMob locationContent__smallItem--zamoskvoretskaya">
       <input
         class="locationContent__smallItemInput"
         name="sokolnicheskaya"
@@ -1100,7 +1100,7 @@
       >
       <label class="locationContent__smallItemLabel" for="zamoskvoretskaya">Замоскворецкая</label>
     </li>
-    <li class="locationContent__smallItem locationContent__smallItem--arbat">
+    <li class="locationContent__smallItem locationContent__smallItem--showInMob locationContent__smallItem--arbat">
       <input
         class="locationContent__smallItemInput"
         name="sokolnicheskaya"
@@ -1109,7 +1109,7 @@
       >
       <label class="locationContent__smallItemLabel" for="arbat">Арбатско-Покровская</label>
     </li>
-    <li class="locationContent__smallItem locationContent__smallItem--filyovskaya">
+    <li class="locationContent__smallItem locationContent__smallItem--showInMob locationContent__smallItem--filyovskaya">
       <input
         class="locationContent__smallItemInput"
         name="sokolnicheskaya"
@@ -1200,6 +1200,13 @@
       <label class="locationContent__smallItemLabel" for="MCC">Московское центральное кольцо</label>
     </li>
   </ul>
+
+  <button class="locationContent__showHide">
+    <span class="locationContent__showHideText">Показать все ветки метро</span>
+    <svg class="locationContent__showHideIcon" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 4.5L9 9.5L14 4.5" stroke="var(--jk-color)" stroke-width="1.5"/>
+    </svg>
+  </button>
 
   <div class="locationContent__fullList">
 
@@ -5748,7 +5755,7 @@
       <div class="jkFiltersLocationModal__footerOptions">
         <button class="jkFiltersLocationModal__footerOptionsReset">Очистить</button>
         <button class="jkFiltersLocationModal__footerOptionsSave">
-          Сохранить <span class="jkFiltersLocationModal__footerOptionsSaveCount">2</span>
+          Сохранить <span class="jkFiltersLocationModal__footerOptionsSaveCount">(2)</span>
         </button>
       </div>
     </footer>
@@ -5758,19 +5765,12 @@
 </section>
 
     <section class="homeDiscountedJk">
-  <div class="container">
+  <div class="container homeDiscountedJk__container">
     <div class="homeDiscountedJk__head">
       <h2 class="homeDiscountedJk__heading">
         Акции и скидки на квартиры
         в Новостройках
       </h2>
-      <a class="homeDiscountedJk__link" href="./jk-list.html">
-        <span class="homeDiscountedJk__linkText">Все новостройки</span>
-        <svg class="homeDiscountedJk__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
-        </svg>
-      </a>
     </div>
     <ul class="homeDiscountedJk__list">
       <li class="JkPreviewCard homeDiscountedJk__item">
@@ -5900,6 +5900,13 @@
         </ul>
       </li>
     </ul>
+    <a class="homeDiscountedJk__link" href="./jk-list.html">
+      <span class="homeDiscountedJk__linkText">Все новостройки</span>
+      <svg class="homeDiscountedJk__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
+      </svg>
+    </a>
   </div>
 </section>
 
@@ -5991,18 +5998,11 @@
 </section>
 
     <section class="homePopularJk">
-  <div class="container">
+  <div class="container homePopularJk__container">
     <div class="homePopularJk__head">
       <h2 class="homePopularJk__heading">
         Популярные новостройки
       </h2>
-      <a class="homePopularJk__link" href="">
-        <span class="homePopularJk__linkText">Все популярные новостройки</span>
-        <svg class="homePopularJk__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
-        </svg>
-      </a>
     </div>
     <ul class="homePopularJk__list">
       <li class="JkPreviewCard homePopularJk__item">
@@ -6116,11 +6116,18 @@
         </a>
       </li>
     </ul>
+    <a class="homePopularJk__link" href="">
+      <span class="homePopularJk__linkText">Все популярные новостройки</span>
+      <svg class="homePopularJk__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
+      </svg>
+    </a>
   </div>
 </section>
 
     <section class="homeNewsBlog">
-  <div class="container">
+  <div class="container homeNewsBlog__container">
     <h2 class="homeNewsBlog__heading">Новости и материалы</h2>
     <div class="homeNewsBlog__head">
       <ul class="homeNewsBlog__tabs">
@@ -6129,13 +6136,6 @@
         <li class="homeNewsBlog__tab">Советы</li>
         <li class="homeNewsBlog__tab">Аналитика</li>
       </ul>
-      <a class="homeNewsBlog__link" href="">
-        <span class="homeNewsBlog__linkText">Все новости и материалы</span>
-        <svg class="homeNewsBlog__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
-        </svg>
-      </a>
     </div>
     <ul class="homeNewsBlog__list">
       <li class="homeNewsBlog__item">
@@ -6178,6 +6178,13 @@
         </a>
       </li>
     </ul>
+    <a class="homeNewsBlog__link" href="">
+      <span class="homeNewsBlog__linkText">Все новости и материалы</span>
+      <svg class="homeNewsBlog__linkIcon" width="13" height="19" viewBox="0 0 13 19" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 14.1069L9 9.10693L4 4.10693" stroke="var(--main-color)" stroke-width="1.5"/>
+      </svg>
+    </a>
   </div>
 </section>
 
@@ -6186,7 +6193,7 @@
     <h2 class="homeFooter__heading">
       Новостройки Москвы
     </h2>
-    <div class="homeFooter__textWrapper">
+    <div class="homeFooter__textWrapper showHideContent">
       <p class="homeFooter__descr">
         Проект Метры.ру станет надежным источником информации для тех, кто ищет жилье в новостройке московского региона
         или хотел бы составить представление о ситуации на рынке первичной недвижимости Москвы и Московской области.
@@ -6215,6 +6222,14 @@
         сервиса в разделе «Реклама».
       </p>
     </div>
+
+    <button class="homeFooter__showHide showHideBtn">
+      <span class="homeFooter__showHideText">Читать дальше</span>
+      <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 4.5L9 9.5L14 4.5" stroke="var(--jk-color)" stroke-width="1.5"/>
+      </svg>
+    </button>
+
     <ul class="homeFooter__linksList">
       <li class="homeFooter__linksItem">
         <a class="homeFooter__link" href="./jk-list.html">Новостройки с отделкой в Новой Москве</a>
