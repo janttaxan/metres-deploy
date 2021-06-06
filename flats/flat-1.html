@@ -179,7 +179,7 @@
       </li>
     </ul>
 
-    <div class="flatPreview__planWrapper">
+    <div class="flatPreview__planWrapper sliderBlock__slideFullscreen">
       <img class="flatPreview__planImage" src="../img/contentJk/flats/flat-3.png" alt="планировка квартиры">
     </div>
 
@@ -224,6 +224,111 @@
       </a>
     </div>
   </div>
+  <div class="fullScreenSlider">
+  <div class="fullScreenSlider__body container">
+    <div class="fullScreenSlider__content">
+      <div class="swiper-container fullScreenSlider__slider">
+        <div class="swiper-wrapper fullScreenSlider__wrapper">
+
+          <div class="swiper-slide fullScreenSlider__slide">
+            <div class="fullScreenSlider__slideImageWrapper">
+              <img
+                class="fullScreenSlider__slideImage"
+                src="../img/contentJk/flats/flat-3.png"
+                alt="Изображение галереи"
+              >
+            </div>
+            <button class="fullScreenSlider__reqBtn">Получить консультацию</button>
+          </div>
+
+          <div class="swiper-slide fullScreenSlider__slide fullScreenSlider__slide--text">
+            <div class="fullScreenSlider__slideText">
+              <h2 class="fullScreenSlider__slideTitle">
+                Купить квартиру в новостройке &mdash; легко!
+              </h2>
+              <p class="fullScreenSlider__slideDescr">
+                Хотите купить квартиру в новостройке в Москве или области? Мы вам поможем.
+              </p>
+            </div>
+            <button class="fullScreenSlider__reqBtn">Получить консультацию</button>
+          </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination fullScreenSlider__pagination"></div>
+      </div>
+    </div>
+
+    <!-- Add Arrows -->
+    <button class="swiper-button-next fullScreenSlider__btnNext">
+      <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 10L4.40945 6.16436C4.74624 5.78548 4.74624 5.21452 4.40945 4.83564L1 1" stroke="white"
+              stroke-width="1.5"/>
+      </svg>
+    </button>
+    <button class="swiper-button-prev fullScreenSlider__btnPrev">
+      <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 10L1.59055 6.16436C1.25376 5.78548 1.25376 5.21452 1.59055 4.83564L5 1" stroke="white"
+              stroke-width="1.5"/>
+      </svg>
+    </button>
+  </div>
+  <button class="fullScreenSlider__close">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect y="14.4762" width="20.4724" height="2.15499" transform="rotate(-45 0 14.4762)" fill="white"/>
+      <rect x="1.52344" width="20.4724" height="2.15499" transform="rotate(45 1.52344 0)" fill="white"/>
+    </svg>
+  </button>
+</div>
+
+  <div class="formModal">
+  <div class="formModal__body">
+
+    <!-- Сначала показываем модалку с формой: -->
+    <div class="formModal__content formModal__content--form">
+      <span class="formModal__progressBar"></span>
+      <button class="formModal__close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect y="14.4762" width="20.4724" height="2.15499" transform="rotate(-45 0 14.4762)" fill="#121212"/>
+          <rect x="1.52344" width="20.4724" height="2.15499" transform="rotate(45 1.52344 0)" fill="#121212"/>
+        </svg>
+      </button>
+      <h3 class="formModal__heading">Заказ обратного звонка</h3>
+      <label class="formModal__descr" for="phone-input">
+        Оставьте свой номер, и&nbsp;мы&nbsp;перезвоним Вам.
+      </label>
+      <input
+        class="formModal__input"
+        type="tel"
+        name="phone"
+        id="phone-input"
+        value="+7 ("
+      >
+      <p class="formModal__agreement">
+        Нажимая кнопку &laquo;Жду звонка&raquo;, вы&nbsp;соглашаетесь
+        с&nbsp;условиями <a class="formModal__agreementLink" href="#" target="_blank">обработки личных данных.</a>
+      </p>
+      <button class="formModal__btn formModal__btn--disable" disabled id="send-phone-btn">Жду звонка</button>
+    </div>
+
+    <!-- После успешной отправки формы показываем модалку с сообщением: -->
+    <div class="formModal__content formModal__content--success">
+      <button class="formModal__close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect y="14.4762" width="20.4724" height="2.15499" transform="rotate(-45 0 14.4762)" fill="#121212"/>
+          <rect x="1.52344" width="20.4724" height="2.15499" transform="rotate(45 1.52344 0)" fill="#121212"/>
+        </svg>
+      </button>
+      <h3 class="formModal__heading">Номер успешно отправлен</h3>
+      <p class="formModal__descr">
+        В&nbsp;ближайшее время с&nbsp;вами свяжется наш менеджер.
+      </p>
+      <button class="formModal__btn" id="success-btn">Понятно</button>
+    </div>
+
+  </div>
+</div>
+
 </section>
 
     <section class="flatAbout">
